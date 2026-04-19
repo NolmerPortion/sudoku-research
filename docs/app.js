@@ -9,20 +9,20 @@ const RULE_COLORS = {
 };
 
 const ICONS = {
-  home: "🏠",
-  back: "↩️",
-  play: "▶️",
-  close: "✖️",
-  next: "⏭️",
-  ruleMenu: "🧩",
-  rule: "📘",
-  hint: "💡",
-  note: "📝",
-  clearNotes: "🧹",
-  erase: "🗑️",
-  easy: "🟢",
-  normal: "🟡",
-  hard: "🔴",
+  home: "⌂",
+  back: "←",
+  play: "▶",
+  close: "✕",
+  next: "≫",
+  ruleMenu: "◇",
+  rule: "⊞",
+  hint: "✦",
+  note: "✎",
+  clearNotes: "⌧",
+  erase: "⌫",
+  easy: "○",
+  normal: "△",
+  hard: "□",
 };
 
 const DISPLAY_NAMES = {
