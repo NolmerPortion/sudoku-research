@@ -316,6 +316,10 @@ h2 {
   justify-content: end;
 }
 
+.game-head-actions {
+  align-items: center;
+}
+
 .status-line {
   min-height: 1.5em;
   margin: -2px 0 4px;
@@ -554,20 +558,6 @@ h2 {
 
   .game-head-center {
     min-width: 0;
-  }
-
-  .game-head-actions {
-    align-items: center;
-  }
-
-  .game-head-actions:last-child {
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
-
-  .game-head-actions:last-child #pause-button {
-    order: -1;
   }
 
   #game-title,

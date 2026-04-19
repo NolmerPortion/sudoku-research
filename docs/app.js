@@ -28,6 +28,8 @@ const ICONS = {
 Object.assign(ICONS, {
   pause: "Ⅱ",
   resume: "▶",
+  reset: "↺",
+  nextPuzzle: "≫",
 });
 
 const DISPLAY_NAMES = {
@@ -102,6 +104,8 @@ const els = {
   ruleButton: document.getElementById("rule-button"),
   hintButton: document.getElementById("hint-button"),
   pauseButton: document.getElementById("pause-button"),
+  resetButton: document.getElementById("reset-button"),
+  nextButton: document.getElementById("next-button"),
   clearNotesButton: document.getElementById("clear-notes"),
   eraseCellButton: document.getElementById("erase-cell"),
   menuHome: document.getElementById("menu-home"),
@@ -508,6 +512,7 @@ function renderBoard(container, entry, values, options = {}) {
     if (!interactive) {
       cell.disabled = true;
     } else {
+      cell.dataset.index = String(index);
       cell.addEventListener("mouseenter", () => {
         state.selectedIndex = index;
         renderGameBoard();
@@ -520,6 +525,10 @@ function renderBoard(container, entry, values, options = {}) {
         state.selectedIndex = index;
         renderGameBoard();
       });
+      cell.addEventListener("touchstart", () => {
+        state.selectedIndex = index;
+        renderGameBoard();
+      }, { passive: true });
     }
 
     const labelKey = cellKey(row, col);
@@ -1080,6 +1089,19 @@ function startRandomPuzzle() {
   persistSession();
 }
 
+function resetCurrentPuzzle() {
+  if (!state.currentPuzzle) {
+    return;
+  }
+  if (els.pauseDialog.open) {
+    els.pauseDialog.close();
+  }
+  preparePuzzle(state.currentPuzzle);
+  showScreen("game");
+  syncHistory("game");
+  persistSession();
+}
+
 function openRuleDialog() {
   if (!state.currentDataset) {
     return;
@@ -1129,6 +1151,8 @@ function attachIcons() {
   els.ruleButton.textContent = ICONS.rule;
   els.hintButton.textContent = ICONS.hint;
   els.pauseButton.textContent = ICONS.pause;
+  els.resetButton.textContent = ICONS.reset;
+  els.nextButton.textContent = ICONS.nextPuzzle;
   els.resumeButton.textContent = ICONS.resume;
   els.noteToggle.textContent = ICONS.note;
   els.clearNotesButton.textContent = ICONS.clearNotes;
@@ -1152,6 +1176,8 @@ function attachGlobalEvents() {
   wirePressHaptic(els.menuHome, 10);
   wirePressHaptic(els.hintButton, 10);
   wirePressHaptic(els.pauseButton, 10);
+  wirePressHaptic(els.resetButton, 10);
+  wirePressHaptic(els.nextButton, 10);
   wirePressHaptic(els.ruleButton, 10);
   wirePressHaptic(document.getElementById("close-rule-dialog"), 10);
   wirePressHaptic(els.noteToggle, 10);
@@ -1192,12 +1218,41 @@ function attachGlobalEvents() {
   els.pauseButton.addEventListener("click", () => {
     pauseGame();
   });
+  els.resetButton.addEventListener("click", () => {
+    resetCurrentPuzzle();
+  });
+  els.nextButton.addEventListener("click", () => {
+    if (els.pauseDialog.open) {
+      els.pauseDialog.close();
+    }
+    startRandomPuzzle();
+  });
   els.resumeButton.addEventListener("click", () => {
     resumeGame();
   });
   els.pauseDialog.addEventListener("cancel", (event) => {
     event.preventDefault();
   });
+  els.gameBoard.addEventListener("touchmove", (event) => {
+    if (state.isPaused) {
+      return;
+    }
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    const cell = target?.closest?.(".cell[data-index]");
+    if (!cell) {
+      return;
+    }
+    const nextIndex = Number(cell.dataset.index);
+    if (Number.isInteger(nextIndex) && nextIndex !== state.selectedIndex) {
+      state.selectedIndex = nextIndex;
+      renderGameBoard();
+      persistSession();
+    }
+  }, { passive: true });
   document.getElementById("close-rule-dialog").addEventListener("click", () => {
     els.ruleDialog.close();
   });
