@@ -47,6 +47,22 @@ const ICONS = {
   `,
 };
 
+const DISPLAY_NAMES = {
+  standard: "Standard",
+  anti_close_adjacent_3: "D(distance)",
+  bishop_meet_digits: "N(net)",
+  checkerboard_odd: "O(odd)",
+  clone_regions_set_equal: "M(mirror)",
+  cross_monotone: "X(cross)",
+  hyper_3x3: "H(hyper)",
+  hyper3x3: "H(hyper)",
+  l_tromino_sum: "L(l tromino)",
+  local_consecutive_exists: "T(touch)",
+  special_monotone_3x3: "M(matrices)",
+};
+
+const SESSION_STORAGE_KEY = "sudoku_variants_session_v1";
+
 const state = {
   catalog: null,
   currentRule: null,
@@ -60,6 +76,7 @@ const state = {
   noteMode: false,
   hintCell: null,
   transientError: null,
+  currentScreen: "rule",
 };
 
 const screens = {
@@ -95,6 +112,7 @@ const els = {
 };
 
 function showScreen(key) {
+  state.currentScreen = key;
   for (const [name, node] of Object.entries(screens)) {
     node.classList.toggle("is-hidden", name !== key);
   }
@@ -160,9 +178,63 @@ function storeHistoryIds(dataset, ids) {
   setCookie(dataset.history_cookie_key, JSON.stringify(ids.slice(-500)));
 }
 
+function displayNameForRule(ruleMode, fallback = "") {
+  if (DISPLAY_NAMES[ruleMode]) {
+    return DISPLAY_NAMES[ruleMode];
+  }
+  return fallback || ruleMode || "Rule";
+}
+
+function decorateRule(rule) {
+  return {
+    ...rule,
+    short_name: displayNameForRule(rule.rule_mode || rule.rule_slug, rule.short_name),
+  };
+}
+
+function persistSession() {
+  try {
+    const payload = {
+      currentScreen: state.currentScreen,
+      currentRuleSlug: state.currentRule?.rule_slug || null,
+      currentDifficultyId: state.currentDifficulty?.id || null,
+      currentPuzzleId: state.currentPuzzle?.id || null,
+      board: state.board,
+      givens: state.givens,
+      notes: state.notes.map((set) => [...set]),
+      selectedIndex: state.selectedIndex,
+      noteMode: state.noteMode,
+      hintCell: state.hintCell,
+    };
+    localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(payload));
+  } catch {
+    // Keep the app usable even when storage is unavailable.
+  }
+}
+
+function loadSessionSnapshot() {
+  try {
+    const raw = localStorage.getItem(SESSION_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function syncHistory(screen, { replace = false } = {}) {
+  const payload = { screen };
+  if (replace) {
+    window.history.replaceState(payload, "", window.location.href);
+  } else {
+    window.history.pushState(payload, "", window.location.href);
+  }
+}
+
 function availableRuleEntries() {
   const available = new Set(state.catalog.datasets.map((item) => item.rule_slug));
-  return state.catalog.rules.filter((rule) => available.has(rule.rule_slug));
+  return state.catalog.rules
+    .filter((rule) => available.has(rule.rule_slug))
+    .map(decorateRule);
 }
 
 function availableDifficultyEntriesForRule(ruleSlug) {
@@ -359,6 +431,8 @@ function renderRuleScreen() {
       state.currentRule = rule;
       renderDifficultyScreen();
       showScreen("difficulty");
+      syncHistory("difficulty");
+      persistSession();
     });
     els.ruleList.appendChild(button);
   }
@@ -376,8 +450,21 @@ function renderDifficultyScreen() {
     button.addEventListener("click", async () => {
       state.currentDifficulty = difficulty;
       state.currentDataset = await loadDataset(difficulty.id, state.currentRule.rule_slug);
+      state.currentDataset.short_name = displayNameForRule(
+        state.currentDataset.rule_mode || state.currentRule.rule_mode,
+        state.currentDataset.short_name,
+      );
+      state.currentDataset.puzzles = (state.currentDataset.puzzles || []).map((puzzle) => ({
+        ...puzzle,
+        short_name: displayNameForRule(
+          puzzle.rule_mode || state.currentDataset.rule_mode,
+          puzzle.short_name,
+        ),
+      }));
       renderExampleScreen();
       showScreen("example");
+      syncHistory("example");
+      persistSession();
     });
     els.difficultyList.appendChild(button);
   }
@@ -471,6 +558,7 @@ function handleValueInput(value) {
   clearRelatedNotes(row, col, value);
   state.hintCell = null;
   renderGameBoard();
+  persistSession();
   if (state.board.every((cell) => cell !== 0)) {
     els.clearDialog.showModal();
   }
@@ -482,12 +570,15 @@ function eraseCell() {
     return;
   }
   state.board[index] = 0;
+  state.hintCell = null;
   renderGameBoard();
+  persistSession();
 }
 
 function clearNotesAtSelection() {
   state.notes[state.selectedIndex].clear();
   renderGameBoard();
+  persistSession();
 }
 
 function renderNumberButtons() {
@@ -525,10 +616,7 @@ function renderGameBoard() {
       interactive: true,
     },
   );
-  const step = nextExpectedStep();
-  els.statusLine.textContent = step
-    ? `Hint (${step.row + 1}, ${step.col + 1})`
-    : `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
+  els.statusLine.textContent = `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
   els.noteToggle.classList.toggle("is-active", state.noteMode);
   renderNumberButtons();
 }
@@ -543,8 +631,12 @@ function preparePuzzle(puzzle) {
   state.hintCell = null;
   state.transientError = null;
   els.gameTitle.textContent = state.currentDifficulty.label;
-  els.gameRuleChip.textContent = puzzle.short_name;
+  els.gameRuleChip.textContent = displayNameForRule(
+    puzzle.rule_mode || state.currentDataset?.rule_mode,
+    puzzle.short_name,
+  );
   renderGameBoard();
+  persistSession();
 }
 
 function chooseRandomPuzzle(dataset) {
@@ -564,13 +656,18 @@ function startRandomPuzzle() {
   const puzzle = chooseRandomPuzzle(state.currentDataset);
   preparePuzzle(puzzle);
   showScreen("game");
+  syncHistory("game");
+  persistSession();
 }
 
 function openRuleDialog() {
   if (!state.currentDataset) {
     return;
   }
-  els.dialogRuleChip.textContent = state.currentDataset.short_name;
+  els.dialogRuleChip.textContent = displayNameForRule(
+    state.currentDataset.rule_mode || state.currentRule?.rule_mode,
+    state.currentDataset.short_name,
+  );
   els.dialogRuleTitle.textContent = "Rule";
   els.dialogRuleCopy.textContent = state.currentDataset.description_ja;
   els.ruleDialog.showModal();
@@ -585,10 +682,22 @@ function attachIcons() {
 }
 
 function attachGlobalEvents() {
-  document.getElementById("back-to-rule").addEventListener("click", () => showScreen("rule"));
-  document.getElementById("back-to-difficulty").addEventListener("click", () => showScreen("difficulty"));
+  document.getElementById("back-to-rule").addEventListener("click", () => {
+    showScreen("rule");
+    syncHistory("rule");
+    persistSession();
+  });
+  document.getElementById("back-to-difficulty").addEventListener("click", () => {
+    showScreen("difficulty");
+    syncHistory("difficulty");
+    persistSession();
+  });
   document.getElementById("start-puzzle").addEventListener("click", startRandomPuzzle);
-  els.menuHome.addEventListener("click", () => showScreen("rule"));
+  els.menuHome.addEventListener("click", () => {
+    showScreen("rule");
+    syncHistory("rule");
+    persistSession();
+  });
   els.hintButton.addEventListener("click", () => {
     const step = nextExpectedStep();
     if (!step) {
@@ -596,12 +705,14 @@ function attachGlobalEvents() {
     }
     state.hintCell = [step.row, step.col];
     renderGameBoard();
+    persistSession();
   });
   els.ruleButton.addEventListener("click", openRuleDialog);
   document.getElementById("close-rule-dialog").addEventListener("click", () => els.ruleDialog.close());
   els.noteToggle.addEventListener("click", () => {
     state.noteMode = !state.noteMode;
     renderGameBoard();
+    persistSession();
   });
   els.clearNotesButton.addEventListener("click", clearNotesAtSelection);
   els.eraseCellButton.addEventListener("click", eraseCell);
@@ -613,10 +724,54 @@ function attachGlobalEvents() {
   document.getElementById("clear-rule").addEventListener("click", () => {
     els.clearDialog.close();
     showScreen("rule");
+    syncHistory("rule");
+    persistSession();
   });
   document.getElementById("clear-home").addEventListener("click", () => {
     els.clearDialog.close();
     showScreen("rule");
+    syncHistory("rule");
+    persistSession();
+  });
+
+  window.addEventListener("popstate", async (event) => {
+    const screen = event.state?.screen || "rule";
+    if (els.ruleDialog.open) {
+      els.ruleDialog.close();
+    }
+    if (screen === "rule") {
+      showScreen("rule");
+      persistSession();
+      return;
+    }
+    if (screen === "difficulty" && state.currentRule) {
+      renderDifficultyScreen();
+      showScreen("difficulty");
+      persistSession();
+      return;
+    }
+    if (screen === "example" && state.currentDataset) {
+      renderExampleScreen();
+      showScreen("example");
+      persistSession();
+      return;
+    }
+    if (screen === "game" && state.currentPuzzle) {
+      showScreen("game");
+      renderGameBoard();
+      persistSession();
+      return;
+    }
+    showScreen("rule");
+    persistSession();
+  });
+
+  window.addEventListener("pagehide", persistSession);
+  window.addEventListener("beforeunload", persistSession);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      persistSession();
+    }
   });
 
   window.addEventListener("keydown", (event) => {
@@ -633,6 +788,7 @@ function attachGlobalEvents() {
       event.preventDefault();
       state.noteMode = !state.noteMode;
       renderGameBoard();
+      persistSession();
       return;
     }
     if (event.key === "c" || event.key === "C") {
@@ -662,7 +818,99 @@ function attachGlobalEvents() {
     event.preventDefault();
     state.selectedIndex = indexFromCoords(nextRow, nextCol);
     renderGameBoard();
+    persistSession();
   });
+}
+
+async function restoreSession() {
+  const snapshot = loadSessionSnapshot();
+  if (!snapshot) {
+    renderRuleScreen();
+    showScreen("rule");
+    syncHistory("rule", { replace: true });
+    return;
+  }
+
+  renderRuleScreen();
+  if (!snapshot.currentRuleSlug) {
+    showScreen("rule");
+    syncHistory("rule", { replace: true });
+    return;
+  }
+
+  const rule = availableRuleEntries().find((entry) => entry.rule_slug === snapshot.currentRuleSlug);
+  if (!rule) {
+    showScreen("rule");
+    syncHistory("rule", { replace: true });
+    return;
+  }
+  state.currentRule = rule;
+
+  if (!snapshot.currentDifficultyId) {
+    renderDifficultyScreen();
+    showScreen("difficulty");
+    syncHistory("difficulty", { replace: true });
+    return;
+  }
+
+  const difficulty = state.catalog.difficulties.find((entry) => entry.id === snapshot.currentDifficultyId);
+  if (!difficulty) {
+    renderDifficultyScreen();
+    showScreen("difficulty");
+    syncHistory("difficulty", { replace: true });
+    return;
+  }
+  state.currentDifficulty = difficulty;
+  state.currentDataset = await loadDataset(difficulty.id, rule.rule_slug);
+  state.currentDataset.short_name = displayNameForRule(
+    state.currentDataset.rule_mode || state.currentRule.rule_mode,
+    state.currentDataset.short_name,
+  );
+  state.currentDataset.puzzles = (state.currentDataset.puzzles || []).map((puzzle) => ({
+    ...puzzle,
+    short_name: displayNameForRule(
+      puzzle.rule_mode || state.currentDataset.rule_mode,
+      puzzle.short_name,
+    ),
+  }));
+
+  if (snapshot.currentScreen === "difficulty") {
+    renderDifficultyScreen();
+    showScreen("difficulty");
+    syncHistory("difficulty", { replace: true });
+    return;
+  }
+
+  renderExampleScreen();
+  if (!snapshot.currentPuzzleId) {
+    showScreen(snapshot.currentScreen === "game" ? "example" : "example");
+    syncHistory("example", { replace: true });
+    return;
+  }
+
+  const puzzle = state.currentDataset.puzzles.find((entry) => entry.id === snapshot.currentPuzzleId);
+  if (!puzzle) {
+    showScreen("example");
+    syncHistory("example", { replace: true });
+    return;
+  }
+
+  preparePuzzle(puzzle);
+  if (Array.isArray(snapshot.board) && snapshot.board.length === 81) {
+    state.board = snapshot.board.map((value) => Number(value) || 0);
+  }
+  if (Array.isArray(snapshot.notes) && snapshot.notes.length === 81) {
+    state.notes = snapshot.notes.map((items) => new Set(Array.isArray(items) ? items.map((value) => Number(value)) : []));
+  }
+  if (typeof snapshot.selectedIndex === "number") {
+    state.selectedIndex = Math.max(0, Math.min(80, snapshot.selectedIndex));
+  }
+  state.noteMode = Boolean(snapshot.noteMode);
+  state.hintCell = Array.isArray(snapshot.hintCell) && snapshot.hintCell.length === 2 ? snapshot.hintCell : null;
+
+  showScreen("game");
+  renderGameBoard();
+  syncHistory("game", { replace: true });
 }
 
 async function bootstrap() {
@@ -670,11 +918,11 @@ async function bootstrap() {
   attachGlobalEvents();
   try {
     await loadCatalog();
-    renderRuleScreen();
-    showScreen("rule");
+    await restoreSession();
   } catch (error) {
     els.ruleList.innerHTML = `<p class="long-copy">${error.message}</p>`;
     showScreen("rule");
+    syncHistory("rule", { replace: true });
   }
 }
 
