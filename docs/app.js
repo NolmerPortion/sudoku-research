@@ -203,6 +203,23 @@ function vibrate(pattern) {
   }
 }
 
+function wirePressHaptic(element, pattern = 10) {
+  if (!element) {
+    return;
+  }
+  let firedAt = 0;
+  const fire = () => {
+    const now = Date.now();
+    if (now - firedAt < 80) {
+      return;
+    }
+    firedAt = now;
+    vibrate(pattern);
+  };
+  element.addEventListener("pointerdown", fire, { passive: true });
+  element.addEventListener("touchstart", fire, { passive: true });
+}
+
 function displayNameForRuleEntry(ruleLike, fallback = "") {
   if (!ruleLike || typeof ruleLike !== "object") {
     return fallback || "Rule";
@@ -487,14 +504,43 @@ function renderBoard(container, entry, values, options = {}) {
 
 function renderRuleScreen() {
   els.ruleList.innerHTML = "";
-  for (const rule of orderedRuleEntries()) {
+  const ordered = orderedRuleEntries();
+  const standard = ordered.find((rule) => rule.isStandard);
+  const variants = ordered.filter((rule) => !rule.isStandard);
+
+  const before = document.createElement("div");
+  before.className = "rule-spacer";
+  const after = document.createElement("div");
+  after.className = "rule-spacer";
+  els.ruleList.appendChild(before);
+
+  if (standard) {
     const button = document.createElement("button");
-    button.className = `rule-card${rule.isStandard ? " rule-card--standard" : ""}`;
+    button.className = "rule-card rule-card--standard";
+    button.innerHTML = `<span class="rule-card__letter"></span>`;
+    button.setAttribute("aria-label", "Standard");
+    button.title = "Standard";
+    wirePressHaptic(button, 10);
+    button.addEventListener("click", () => {
+      state.currentRule = standard;
+      renderDifficultyScreen();
+      showScreen("difficulty");
+      syncHistory("difficulty");
+      persistSession();
+    });
+    els.ruleList.appendChild(button);
+  }
+
+  els.ruleList.appendChild(after);
+
+  for (const rule of variants) {
+    const button = document.createElement("button");
+    button.className = "rule-card";
     button.innerHTML = `<span class="rule-card__letter">${rule.short_name}</span>`;
     button.setAttribute("aria-label", rule.rule_name || rule.short_name);
     button.title = rule.rule_name || rule.short_name;
+    wirePressHaptic(button, 10);
     button.addEventListener("click", () => {
-      vibrate(10);
       state.currentRule = rule;
       renderDifficultyScreen();
       showScreen("difficulty");
@@ -514,8 +560,8 @@ function renderDifficultyScreen() {
       <strong>${difficulty.label}</strong>
       <p>Min clues ${difficulty.min_clues}</p>
     `;
+    wirePressHaptic(button, 10);
     button.addEventListener("click", async () => {
-      vibrate(10);
       state.currentDifficulty = difficulty;
       state.currentDataset = await loadDataset(difficulty.id, state.currentRule.rule_slug);
       state.currentDataset.short_name = displayNameForRuleEntry(
@@ -599,6 +645,10 @@ function handleValueInput(value) {
   if (state.givens[index]) {
     return;
   }
+  const correctValue = Number(state.currentPuzzle.solution_string[index]);
+  if (state.board[index] === correctValue && correctValue !== 0) {
+    return;
+  }
 
   if (state.noteMode) {
     if (state.board[index] !== 0) {
@@ -613,7 +663,6 @@ function handleValueInput(value) {
     return;
   }
 
-  const correctValue = Number(state.currentPuzzle.solution_string[index]);
   if (value !== correctValue) {
     vibrate([24, 18, 44]);
     state.transientError = [row, col];
@@ -759,23 +808,33 @@ function attachIcons() {
 
 function attachGlobalEvents() {
   document.getElementById("back-to-rule").addEventListener("click", () => {
-    vibrate(10);
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   document.getElementById("back-to-difficulty").addEventListener("click", () => {
-    vibrate(10);
     showScreen("difficulty");
     syncHistory("difficulty");
     persistSession();
   });
+  wirePressHaptic(document.getElementById("back-to-rule"), 10);
+  wirePressHaptic(document.getElementById("back-to-difficulty"), 10);
+  wirePressHaptic(document.getElementById("start-puzzle"), 10);
+  wirePressHaptic(els.menuHome, 10);
+  wirePressHaptic(els.hintButton, 10);
+  wirePressHaptic(els.ruleButton, 10);
+  wirePressHaptic(document.getElementById("close-rule-dialog"), 10);
+  wirePressHaptic(els.noteToggle, 10);
+  wirePressHaptic(els.clearNotesButton, 10);
+  wirePressHaptic(els.eraseCellButton, 10);
+  wirePressHaptic(document.getElementById("clear-next"), 10);
+  wirePressHaptic(document.getElementById("clear-rule"), 10);
+  wirePressHaptic(document.getElementById("clear-home"), 10);
+
   document.getElementById("start-puzzle").addEventListener("click", () => {
-    vibrate(10);
     startRandomPuzzle();
   });
   els.menuHome.addEventListener("click", () => {
-    vibrate(10);
     showScreen("rule");
     syncHistory("rule");
     persistSession();
@@ -785,48 +844,39 @@ function attachGlobalEvents() {
     if (!step) {
       return;
     }
-    vibrate(10);
     state.hintCell = [step.row, step.col];
     renderGameBoard();
     persistSession();
   });
   els.ruleButton.addEventListener("click", () => {
-    vibrate(10);
     openRuleDialog();
   });
   document.getElementById("close-rule-dialog").addEventListener("click", () => {
-    vibrate(10);
     els.ruleDialog.close();
   });
   els.noteToggle.addEventListener("click", () => {
-    vibrate(10);
     state.noteMode = !state.noteMode;
     renderGameBoard();
     persistSession();
   });
   els.clearNotesButton.addEventListener("click", () => {
-    vibrate(10);
     clearNotesAtSelection();
   });
   els.eraseCellButton.addEventListener("click", () => {
-    vibrate(10);
     eraseCell();
   });
 
   document.getElementById("clear-next").addEventListener("click", () => {
-    vibrate(10);
     els.clearDialog.close();
     startRandomPuzzle();
   });
   document.getElementById("clear-rule").addEventListener("click", () => {
-    vibrate(10);
     els.clearDialog.close();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   document.getElementById("clear-home").addEventListener("click", () => {
-    vibrate(10);
     els.clearDialog.close();
     showScreen("rule");
     syncHistory("rule");

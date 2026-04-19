@@ -113,9 +113,14 @@ h2 {
 
 .rule-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 180px));
+  grid-template-columns: repeat(3, minmax(88px, 170px));
   justify-content: center;
   gap: 14px;
+}
+
+.rule-spacer {
+  width: 100%;
+  aspect-ratio: 1;
 }
 
 .choice-card {
@@ -148,7 +153,8 @@ h2 {
 }
 
 .rule-card {
-  min-height: 156px;
+  width: 100%;
+  aspect-ratio: 1;
   border: 1px solid var(--line);
   border-radius: 28px;
   background:
@@ -170,8 +176,7 @@ h2 {
 }
 
 .rule-card--standard {
-  grid-column: 2;
-  min-height: 172px;
+  grid-column: auto;
 }
 
 .rule-card__letter {
@@ -465,12 +470,11 @@ h2 {
   }
 
   .rule-card {
-    min-height: 110px;
     border-radius: 22px;
   }
 
   .rule-card--standard {
-    min-height: 124px;
+    grid-column: auto;
   }
 
   .rule-card__letter {
