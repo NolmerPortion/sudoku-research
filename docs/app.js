@@ -62,6 +62,18 @@ const DISPLAY_NAMES = {
 };
 
 const SESSION_STORAGE_KEY = "sudoku_variants_session_v1";
+const RULE_BUTTON_ORDER = [
+  "standard",
+  "O",
+  "H",
+  "L",
+  "T",
+  "X",
+  "N",
+  "D",
+  "M1",
+  "M2",
+];
 
 const state = {
   catalog: null,
@@ -185,6 +197,12 @@ function displayNameForRule(ruleMode, fallback = "") {
   return fallback || ruleMode || "Rule";
 }
 
+function vibrate(pattern) {
+  if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
+    navigator.vibrate(pattern);
+  }
+}
+
 function displayNameForRuleEntry(ruleLike, fallback = "") {
   if (!ruleLike || typeof ruleLike !== "object") {
     return fallback || "Rule";
@@ -248,6 +266,42 @@ function availableRuleEntries() {
   return state.catalog.rules
     .filter((rule) => available.has(rule.rule_slug))
     .map(decorateRule);
+}
+
+function orderedRuleEntries() {
+  const rules = availableRuleEntries();
+  const standard = rules.find((rule) => rule.rule_slug === "standard");
+  const variants = rules.filter((rule) => rule.rule_slug !== "standard");
+  const buckets = new Map();
+  for (const rule of variants) {
+    const key = rule.short_name;
+    const list = buckets.get(key) || [];
+    list.push(rule);
+    buckets.set(key, list);
+  }
+
+  const ordered = [];
+  for (const token of RULE_BUTTON_ORDER) {
+    if (token === "standard") {
+      if (standard) {
+        ordered.push({ ...standard, isStandard: true });
+      }
+      continue;
+    }
+    const key = token.startsWith("M") ? "M" : token;
+    const list = buckets.get(key) || [];
+    if (!list.length) {
+      continue;
+    }
+    ordered.push(list.shift());
+    buckets.set(key, list);
+  }
+  for (const leftover of buckets.values()) {
+    for (const rule of leftover) {
+      ordered.push(rule);
+    }
+  }
+  return ordered;
 }
 
 function availableDifficultyEntriesForRule(ruleSlug) {
@@ -433,14 +487,14 @@ function renderBoard(container, entry, values, options = {}) {
 
 function renderRuleScreen() {
   els.ruleList.innerHTML = "";
-  for (const rule of availableRuleEntries()) {
+  for (const rule of orderedRuleEntries()) {
     const button = document.createElement("button");
-    button.className = "choice-card";
-    button.innerHTML = `
-      <strong>${rule.short_name}</strong>
-      <p>${rule.description_ja}</p>
-    `;
+    button.className = `rule-card${rule.isStandard ? " rule-card--standard" : ""}`;
+    button.innerHTML = `<span class="rule-card__letter">${rule.short_name}</span>`;
+    button.setAttribute("aria-label", rule.rule_name || rule.short_name);
+    button.title = rule.rule_name || rule.short_name;
     button.addEventListener("click", () => {
+      vibrate(10);
       state.currentRule = rule;
       renderDifficultyScreen();
       showScreen("difficulty");
@@ -461,6 +515,7 @@ function renderDifficultyScreen() {
       <p>Min clues ${difficulty.min_clues}</p>
     `;
     button.addEventListener("click", async () => {
+      vibrate(10);
       state.currentDifficulty = difficulty;
       state.currentDataset = await loadDataset(difficulty.id, state.currentRule.rule_slug);
       state.currentDataset.short_name = displayNameForRuleEntry(
@@ -560,6 +615,7 @@ function handleValueInput(value) {
 
   const correctValue = Number(state.currentPuzzle.solution_string[index]);
   if (value !== correctValue) {
+    vibrate([24, 18, 44]);
     state.transientError = [row, col];
     renderGameBoard();
     window.setTimeout(() => {
@@ -570,6 +626,7 @@ function handleValueInput(value) {
   }
 
   state.board[index] = value;
+  vibrate(10);
   state.notes[index].clear();
   clearRelatedNotes(row, col, value);
   state.hintCell = null;
@@ -702,17 +759,23 @@ function attachIcons() {
 
 function attachGlobalEvents() {
   document.getElementById("back-to-rule").addEventListener("click", () => {
+    vibrate(10);
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   document.getElementById("back-to-difficulty").addEventListener("click", () => {
+    vibrate(10);
     showScreen("difficulty");
     syncHistory("difficulty");
     persistSession();
   });
-  document.getElementById("start-puzzle").addEventListener("click", startRandomPuzzle);
+  document.getElementById("start-puzzle").addEventListener("click", () => {
+    vibrate(10);
+    startRandomPuzzle();
+  });
   els.menuHome.addEventListener("click", () => {
+    vibrate(10);
     showScreen("rule");
     syncHistory("rule");
     persistSession();
@@ -722,31 +785,48 @@ function attachGlobalEvents() {
     if (!step) {
       return;
     }
+    vibrate(10);
     state.hintCell = [step.row, step.col];
     renderGameBoard();
     persistSession();
   });
-  els.ruleButton.addEventListener("click", openRuleDialog);
-  document.getElementById("close-rule-dialog").addEventListener("click", () => els.ruleDialog.close());
+  els.ruleButton.addEventListener("click", () => {
+    vibrate(10);
+    openRuleDialog();
+  });
+  document.getElementById("close-rule-dialog").addEventListener("click", () => {
+    vibrate(10);
+    els.ruleDialog.close();
+  });
   els.noteToggle.addEventListener("click", () => {
+    vibrate(10);
     state.noteMode = !state.noteMode;
     renderGameBoard();
     persistSession();
   });
-  els.clearNotesButton.addEventListener("click", clearNotesAtSelection);
-  els.eraseCellButton.addEventListener("click", eraseCell);
+  els.clearNotesButton.addEventListener("click", () => {
+    vibrate(10);
+    clearNotesAtSelection();
+  });
+  els.eraseCellButton.addEventListener("click", () => {
+    vibrate(10);
+    eraseCell();
+  });
 
   document.getElementById("clear-next").addEventListener("click", () => {
+    vibrate(10);
     els.clearDialog.close();
     startRandomPuzzle();
   });
   document.getElementById("clear-rule").addEventListener("click", () => {
+    vibrate(10);
     els.clearDialog.close();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   document.getElementById("clear-home").addEventListener("click", () => {
+    vibrate(10);
     els.clearDialog.close();
     showScreen("rule");
     syncHistory("rule");
