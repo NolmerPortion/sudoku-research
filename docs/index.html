@@ -13,32 +13,23 @@
           <p class="eyebrow">Sudoku Variants</p>
           <h1>数独コレクション</h1>
         </div>
-        <button id="menu-home" class="ghost-button">Home</button>
+        <button id="menu-home" class="icon-button icon-button--textless" aria-label="Home" title="Home"></button>
       </header>
 
       <main class="main-grid">
         <section id="screen-rule" class="screen-card">
-          <div class="section-head">
-            <p class="section-kicker">Step 1</p>
-            <h2>Rule</h2>
-          </div>
           <div id="rule-list" class="rule-grid"></div>
         </section>
 
         <section id="screen-difficulty" class="screen-card is-hidden">
-          <div class="section-head">
-            <p class="section-kicker">Step 2</p>
-            <h2>Difficulty</h2>
-          </div>
           <div class="section-actions">
-            <button id="back-to-rule" class="ghost-button">Back</button>
+            <button id="back-to-rule" class="icon-button icon-button--textless" aria-label="Back" title="Back"></button>
           </div>
-          <div id="difficulty-list" class="choice-grid"></div>
+          <div id="difficulty-list" class="difficulty-list"></div>
         </section>
 
         <section id="screen-example" class="screen-card is-hidden">
           <div class="section-head">
-            <p class="section-kicker">Step 3</p>
             <h2 id="example-title">Preview</h2>
           </div>
           <div class="example-layout">
@@ -49,8 +40,8 @@
               <p id="example-rule-name" class="rule-chip"></p>
               <p id="example-description" class="long-copy"></p>
               <div class="section-actions">
-                <button id="back-to-difficulty" class="ghost-button">Back</button>
-                <button id="start-puzzle" class="primary-button">Play</button>
+                <button id="back-to-difficulty" class="icon-button icon-button--textless" aria-label="Back" title="Back"></button>
+                <button id="start-puzzle" class="icon-button icon-button--textless" aria-label="Play" title="Play"></button>
               </div>
             </div>
           </div>
@@ -89,7 +80,7 @@
         <h2 id="dialog-rule-title">Rule</h2>
         <p id="dialog-rule-copy" class="long-copy"></p>
         <div class="dialog-actions">
-          <button id="close-rule-dialog" class="primary-button">Close</button>
+          <button id="close-rule-dialog" class="icon-button icon-button--textless" aria-label="Close" title="Close"></button>
         </div>
       </div>
     </dialog>
@@ -100,9 +91,9 @@
         <h2>クリアしました</h2>
         <p>次の問題に進むか、別のルールやメインメニューへ戻れます。</p>
         <div class="dialog-actions">
-          <button id="clear-next" class="primary-button">次の問題</button>
-          <button id="clear-rule" class="ghost-button">ルール変更</button>
-          <button id="clear-home" class="ghost-button">メインメニュー</button>
+          <button id="clear-next" class="icon-button icon-button--textless" aria-label="Next puzzle" title="Next puzzle"></button>
+          <button id="clear-rule" class="icon-button icon-button--textless" aria-label="Change rule" title="Change rule"></button>
+          <button id="clear-home" class="icon-button icon-button--textless" aria-label="Main menu" title="Main menu"></button>
         </div>
       </div>
     </dialog>

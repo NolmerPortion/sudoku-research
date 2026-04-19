@@ -9,42 +9,20 @@ const RULE_COLORS = {
 };
 
 const ICONS = {
-  rule: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 4h10a3 3 0 0 1 3 3v13H9a3 3 0 0 0-3 3z"></path>
-      <path d="M6 4v16a3 3 0 0 0 3 3"></path>
-    </svg>
-  `,
-  hint: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M9 18h6"></path>
-      <path d="M10 22h4"></path>
-      <path d="M8 14a6 6 0 1 1 8 0c-1 1-1.5 2-1.5 3h-5C9.5 16 9 15 8 14z"></path>
-    </svg>
-  `,
-  note: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 3h9l3 3v15H6z"></path>
-      <path d="M15 3v4h4"></path>
-      <path d="M9 11h6"></path>
-      <path d="M9 15h6"></path>
-    </svg>
-  `,
-  clearNotes: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4 7h16"></path>
-      <path d="M9 7V4h6v3"></path>
-      <path d="M7 7l1 12h8l1-12"></path>
-      <path d="M10 11v5"></path>
-      <path d="M14 11v5"></path>
-    </svg>
-  `,
-  erase: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4 15l8-10 8 10-4 5H8z"></path>
-      <path d="M10 20h10"></path>
-    </svg>
-  `,
+  home: "🏠",
+  back: "↩️",
+  play: "▶️",
+  close: "✖️",
+  next: "⏭️",
+  ruleMenu: "🧩",
+  rule: "📘",
+  hint: "💡",
+  note: "📝",
+  clearNotes: "🧹",
+  erase: "🗑️",
+  easy: "🟢",
+  normal: "🟡",
+  hard: "🔴",
 };
 
 const DISPLAY_NAMES = {
@@ -218,6 +196,7 @@ function wirePressHaptic(element, pattern = 10) {
   };
   element.addEventListener("pointerdown", fire, { passive: true });
   element.addEventListener("touchstart", fire, { passive: true });
+  element.addEventListener("mousedown", fire, { passive: true });
 }
 
 function displayNameForRuleEntry(ruleLike, fallback = "") {
@@ -555,11 +534,14 @@ function renderDifficultyScreen() {
   els.difficultyList.innerHTML = "";
   for (const difficulty of availableDifficultyEntriesForRule(state.currentRule.rule_slug)) {
     const button = document.createElement("button");
-    button.className = "choice-card";
+    button.className = "difficulty-button";
+    const difficultyEmoji = difficulty.id === "easy" ? ICONS.easy : difficulty.id === "normal" ? ICONS.normal : ICONS.hard;
     button.innerHTML = `
-      <strong>${difficulty.label}</strong>
-      <p>Min clues ${difficulty.min_clues}</p>
+      <span class="difficulty-button__emoji">${difficultyEmoji}</span>
+      <span class="difficulty-button__label">${difficulty.label}</span>
     `;
+    button.setAttribute("aria-label", difficulty.label);
+    button.title = difficulty.label;
     wirePressHaptic(button, 10);
     button.addEventListener("click", async () => {
       state.currentDifficulty = difficulty;
@@ -718,6 +700,7 @@ function renderNumberButtons() {
     button.className = "keypad-button";
     button.innerHTML = remaining > 0 ? `${value}<span>${remaining}</span>` : "&nbsp;";
     button.disabled = remaining <= 0;
+    wirePressHaptic(button, 10);
     button.addEventListener("click", () => handleValueInput(value));
     els.keypad.appendChild(button);
   }
@@ -799,11 +782,19 @@ function openRuleDialog() {
 }
 
 function attachIcons() {
-  els.ruleButton.innerHTML = ICONS.rule;
-  els.hintButton.innerHTML = ICONS.hint;
-  els.noteToggle.innerHTML = ICONS.note;
-  els.clearNotesButton.innerHTML = ICONS.clearNotes;
-  els.eraseCellButton.innerHTML = ICONS.erase;
+  els.menuHome.textContent = ICONS.home;
+  document.getElementById("back-to-rule").textContent = ICONS.back;
+  document.getElementById("back-to-difficulty").textContent = ICONS.back;
+  document.getElementById("start-puzzle").textContent = ICONS.play;
+  document.getElementById("close-rule-dialog").textContent = ICONS.close;
+  document.getElementById("clear-next").textContent = ICONS.next;
+  document.getElementById("clear-rule").textContent = ICONS.ruleMenu;
+  document.getElementById("clear-home").textContent = ICONS.home;
+  els.ruleButton.textContent = ICONS.rule;
+  els.hintButton.textContent = ICONS.hint;
+  els.noteToggle.textContent = ICONS.note;
+  els.clearNotesButton.textContent = ICONS.clearNotes;
+  els.eraseCellButton.textContent = ICONS.erase;
 }
 
 function attachGlobalEvents() {

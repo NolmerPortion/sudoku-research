@@ -96,6 +96,10 @@ h2 {
   margin-bottom: 18px;
 }
 
+.section-head:empty {
+  display: none;
+}
+
 .section-actions,
 .toolbar,
 .dialog-actions,
@@ -150,6 +154,44 @@ h2 {
   margin: 8px 0 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.difficulty-list {
+  display: grid;
+  gap: 14px;
+}
+
+.difficulty-button {
+  width: min(100%, 420px);
+  min-height: 92px;
+  margin: 0 auto;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(29, 36, 48, 0.96), rgba(19, 24, 33, 0.96));
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.difficulty-button:hover,
+.difficulty-button:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(88, 166, 255, 0.42);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.difficulty-button__emoji {
+  font-size: 30px;
+}
+
+.difficulty-button__label {
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
 }
 
 .rule-card {
@@ -225,16 +267,7 @@ h2 {
   display: inline-grid;
   place-items: center;
   padding: 0;
-}
-
-.icon-button svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  font-size: 22px;
 }
 
 .rule-chip {
@@ -479,5 +512,18 @@ h2 {
 
   .rule-card__letter {
     font-size: clamp(48px, 12vw, 74px);
+  }
+
+  .difficulty-button {
+    width: 100%;
+    min-height: 82px;
+  }
+
+  .difficulty-button__emoji {
+    font-size: 26px;
+  }
+
+  .difficulty-button__label {
+    font-size: 21px;
   }
 }
