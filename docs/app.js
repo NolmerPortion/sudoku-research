@@ -25,6 +25,11 @@ const ICONS = {
   hard: "□",
 };
 
+Object.assign(ICONS, {
+  pause: "Ⅱ",
+  resume: "▶",
+});
+
 const DISPLAY_NAMES = {
   standard: "Standard",
   anti_close_adjacent_3: "D",
@@ -67,6 +72,10 @@ const state = {
   hintCell: null,
   transientError: null,
   currentScreen: "rule",
+  elapsedSeconds: 0,
+  timerStartedAt: null,
+  timerIntervalId: null,
+  isPaused: false,
 };
 
 const screens = {
@@ -86,19 +95,23 @@ const els = {
   gameBoard: document.getElementById("game-board"),
   gameTitle: document.getElementById("game-title"),
   gameRuleChip: document.getElementById("game-rule-chip"),
+  timerLine: document.getElementById("timer-line"),
   statusLine: document.getElementById("status-line"),
   keypad: document.getElementById("keypad"),
   noteToggle: document.getElementById("note-toggle"),
   ruleButton: document.getElementById("rule-button"),
   hintButton: document.getElementById("hint-button"),
+  pauseButton: document.getElementById("pause-button"),
   clearNotesButton: document.getElementById("clear-notes"),
   eraseCellButton: document.getElementById("erase-cell"),
   menuHome: document.getElementById("menu-home"),
   clearDialog: document.getElementById("clear-dialog"),
   ruleDialog: document.getElementById("rule-dialog"),
+  pauseDialog: document.getElementById("pause-dialog"),
   dialogRuleChip: document.getElementById("dialog-rule-chip"),
   dialogRuleTitle: document.getElementById("dialog-rule-title"),
   dialogRuleCopy: document.getElementById("dialog-rule-copy"),
+  resumeButton: document.getElementById("resume-button"),
 };
 
 function showScreen(key) {
@@ -212,6 +225,61 @@ function displayNameForRuleEntry(ruleLike, fallback = "") {
   return fallback || ruleLike.short_name || ruleLike.rule_name || "Rule";
 }
 
+function formatElapsed(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function currentElapsedSeconds() {
+  if (state.timerStartedAt == null) {
+    return state.elapsedSeconds;
+  }
+  const runningSeconds = Math.max(0, Math.floor((Date.now() - state.timerStartedAt) / 1000));
+  return state.elapsedSeconds + runningSeconds;
+}
+
+function updateTimerDisplay() {
+  if (!els.timerLine) {
+    return;
+  }
+  els.timerLine.textContent = formatElapsed(currentElapsedSeconds());
+}
+
+function stopTimerLoop() {
+  if (state.timerIntervalId != null) {
+    window.clearInterval(state.timerIntervalId);
+    state.timerIntervalId = null;
+  }
+}
+
+function startTimerLoop() {
+  stopTimerLoop();
+  if (!state.currentPuzzle || state.isPaused) {
+    updateTimerDisplay();
+    return;
+  }
+  if (state.timerStartedAt == null) {
+    state.timerStartedAt = Date.now();
+  }
+  updateTimerDisplay();
+  state.timerIntervalId = window.setInterval(updateTimerDisplay, 1000);
+}
+
+function pauseTimer() {
+  state.elapsedSeconds = currentElapsedSeconds();
+  state.timerStartedAt = null;
+  stopTimerLoop();
+  updateTimerDisplay();
+}
+
+function ruleDescriptionText() {
+  if (state.currentRule?.rule_slug === "bishop_meet_digits") {
+    return "盤面上の 1 は、斜め方向の移動をたどると全てひとつながりになります。どの 1 から始めても、別の 1 に移り続けて他の全ての 1 に到達できます。";
+  }
+  return state.currentDataset?.description_ja || "";
+}
+
 function decorateRule(rule) {
   return {
     ...rule,
@@ -232,6 +300,8 @@ function persistSession() {
       selectedIndex: state.selectedIndex,
       noteMode: state.noteMode,
       hintCell: state.hintCell,
+      elapsedSeconds: currentElapsedSeconds(),
+      isPaused: state.isPaused,
     };
     localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(payload));
   } catch {
@@ -573,7 +643,7 @@ function renderExampleScreen() {
   const dataset = state.currentDataset;
   els.exampleTitle.textContent = "Preview";
   els.exampleRuleName.textContent = dataset.short_name;
-  els.exampleDescription.textContent = dataset.description_ja;
+  els.exampleDescription.textContent = ruleDescriptionText();
   renderBoard(
     els.exampleBoard,
     dataset.example,
@@ -619,7 +689,7 @@ function resetTransientError() {
 }
 
 function handleValueInput(value) {
-  if (!state.currentPuzzle) {
+  if (!state.currentPuzzle || state.isPaused) {
     return;
   }
   const index = state.selectedIndex;
@@ -664,11 +734,15 @@ function handleValueInput(value) {
   renderGameBoard();
   persistSession();
   if (state.board.every((cell) => cell !== 0)) {
+    pauseTimer();
     els.clearDialog.showModal();
   }
 }
 
 function eraseCell() {
+  if (state.isPaused) {
+    return;
+  }
   const index = state.selectedIndex;
   if (state.givens[index]) {
     return;
@@ -680,6 +754,9 @@ function eraseCell() {
 }
 
 function clearNotesAtSelection() {
+  if (state.isPaused) {
+    return;
+  }
   state.notes[state.selectedIndex].clear();
   renderGameBoard();
   persistSession();
@@ -721,8 +798,11 @@ function renderGameBoard() {
       interactive: true,
     },
   );
+  els.gameBoard.classList.toggle("board--paused", state.isPaused);
   els.statusLine.textContent = `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
   els.noteToggle.classList.toggle("is-active", state.noteMode);
+  els.pauseButton.classList.toggle("is-active", state.isPaused);
+  updateTimerDisplay();
   renderNumberButtons();
 }
 
@@ -735,6 +815,9 @@ function preparePuzzle(puzzle) {
   state.noteMode = false;
   state.hintCell = null;
   state.transientError = null;
+  state.elapsedSeconds = 0;
+  state.timerStartedAt = Date.now();
+  state.isPaused = false;
   els.gameTitle.textContent = state.currentDifficulty.label;
   els.gameRuleChip.textContent = displayNameForRuleEntry(
     {
@@ -744,6 +827,7 @@ function preparePuzzle(puzzle) {
     puzzle.short_name,
   );
   renderGameBoard();
+  startTimerLoop();
   persistSession();
 }
 
@@ -777,8 +861,32 @@ function openRuleDialog() {
     state.currentDataset.short_name,
   );
   els.dialogRuleTitle.textContent = "Rule";
-  els.dialogRuleCopy.textContent = state.currentDataset.description_ja;
+  els.dialogRuleCopy.textContent = ruleDescriptionText();
   els.ruleDialog.showModal();
+}
+
+function pauseGame() {
+  if (!state.currentPuzzle || state.isPaused) {
+    return;
+  }
+  state.isPaused = true;
+  pauseTimer();
+  renderGameBoard();
+  persistSession();
+  els.pauseDialog.showModal();
+}
+
+function resumeGame() {
+  if (!state.currentPuzzle) {
+    return;
+  }
+  state.isPaused = false;
+  if (els.pauseDialog.open) {
+    els.pauseDialog.close();
+  }
+  startTimerLoop();
+  renderGameBoard();
+  persistSession();
 }
 
 function attachIcons() {
@@ -792,6 +900,8 @@ function attachIcons() {
   document.getElementById("clear-home").textContent = ICONS.home;
   els.ruleButton.textContent = ICONS.rule;
   els.hintButton.textContent = ICONS.hint;
+  els.pauseButton.textContent = ICONS.pause;
+  els.resumeButton.textContent = ICONS.resume;
   els.noteToggle.textContent = ICONS.note;
   els.clearNotesButton.textContent = ICONS.clearNotes;
   els.eraseCellButton.textContent = ICONS.erase;
@@ -813,6 +923,7 @@ function attachGlobalEvents() {
   wirePressHaptic(document.getElementById("start-puzzle"), 10);
   wirePressHaptic(els.menuHome, 10);
   wirePressHaptic(els.hintButton, 10);
+  wirePressHaptic(els.pauseButton, 10);
   wirePressHaptic(els.ruleButton, 10);
   wirePressHaptic(document.getElementById("close-rule-dialog"), 10);
   wirePressHaptic(els.noteToggle, 10);
@@ -821,16 +932,21 @@ function attachGlobalEvents() {
   wirePressHaptic(document.getElementById("clear-next"), 10);
   wirePressHaptic(document.getElementById("clear-rule"), 10);
   wirePressHaptic(document.getElementById("clear-home"), 10);
+  wirePressHaptic(els.resumeButton, 10);
 
   document.getElementById("start-puzzle").addEventListener("click", () => {
     startRandomPuzzle();
   });
   els.menuHome.addEventListener("click", () => {
+    pauseTimer();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   els.hintButton.addEventListener("click", () => {
+    if (state.isPaused) {
+      return;
+    }
     const step = nextExpectedStep();
     if (!step) {
       return;
@@ -840,12 +956,27 @@ function attachGlobalEvents() {
     persistSession();
   });
   els.ruleButton.addEventListener("click", () => {
+    if (state.isPaused) {
+      return;
+    }
     openRuleDialog();
+  });
+  els.pauseButton.addEventListener("click", () => {
+    pauseGame();
+  });
+  els.resumeButton.addEventListener("click", () => {
+    resumeGame();
+  });
+  els.pauseDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
   });
   document.getElementById("close-rule-dialog").addEventListener("click", () => {
     els.ruleDialog.close();
   });
   els.noteToggle.addEventListener("click", () => {
+    if (state.isPaused) {
+      return;
+    }
     state.noteMode = !state.noteMode;
     renderGameBoard();
     persistSession();
@@ -863,12 +994,14 @@ function attachGlobalEvents() {
   });
   document.getElementById("clear-rule").addEventListener("click", () => {
     els.clearDialog.close();
+    pauseTimer();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   document.getElementById("clear-home").addEventListener("click", () => {
     els.clearDialog.close();
+    pauseTimer();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
@@ -879,18 +1012,24 @@ function attachGlobalEvents() {
     if (els.ruleDialog.open) {
       els.ruleDialog.close();
     }
+    if (els.pauseDialog.open) {
+      els.pauseDialog.close();
+    }
     if (screen === "rule") {
+      pauseTimer();
       showScreen("rule");
       persistSession();
       return;
     }
     if (screen === "difficulty" && state.currentRule) {
+      pauseTimer();
       renderDifficultyScreen();
       showScreen("difficulty");
       persistSession();
       return;
     }
     if (screen === "example" && state.currentDataset) {
+      pauseTimer();
       renderExampleScreen();
       showScreen("example");
       persistSession();
@@ -898,6 +1037,9 @@ function attachGlobalEvents() {
     }
     if (screen === "game" && state.currentPuzzle) {
       showScreen("game");
+      if (!state.isPaused) {
+        startTimerLoop();
+      }
       renderGameBoard();
       persistSession();
       return;
@@ -916,6 +1058,14 @@ function attachGlobalEvents() {
 
   window.addEventListener("keydown", (event) => {
     if (screens.game.classList.contains("is-hidden")) {
+      return;
+    }
+    if (event.key === "Escape" && state.isPaused) {
+      event.preventDefault();
+      resumeGame();
+      return;
+    }
+    if (state.isPaused) {
       return;
     }
     const [row, col] = coordsFromIndex(state.selectedIndex);
@@ -1050,8 +1200,16 @@ async function restoreSession() {
   }
   state.noteMode = Boolean(snapshot.noteMode);
   state.hintCell = Array.isArray(snapshot.hintCell) && snapshot.hintCell.length === 2 ? snapshot.hintCell : null;
+  state.elapsedSeconds = typeof snapshot.elapsedSeconds === "number" ? Math.max(0, Math.floor(snapshot.elapsedSeconds)) : 0;
+  state.timerStartedAt = null;
+  state.isPaused = Boolean(snapshot.isPaused);
 
   showScreen("game");
+  if (!state.isPaused) {
+    startTimerLoop();
+  } else {
+    updateTimerDisplay();
+  }
   renderGameBoard();
   syncHistory("game", { replace: true });
 }
@@ -1063,6 +1221,7 @@ async function bootstrap() {
     await loadCatalog();
     await restoreSession();
   } catch (error) {
+    stopTimerLoop();
     els.ruleList.innerHTML = `<p class="long-copy">${error.message}</p>`;
     showScreen("rule");
     syncHistory("rule", { replace: true });
