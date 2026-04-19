@@ -312,6 +312,10 @@ h2 {
   text-align: center;
 }
 
+.game-head-actions:first-child {
+  justify-content: start;
+}
+
 .game-head-actions:last-child {
   justify-content: end;
 }
@@ -352,6 +356,13 @@ h2 {
 
 .board--play {
   max-width: 720px;
+  touch-action: none;
+}
+
+#rule-button {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.02em;
 }
 
 .board--paused {

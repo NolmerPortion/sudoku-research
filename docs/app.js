@@ -29,7 +29,7 @@ Object.assign(ICONS, {
   pause: "Ⅱ",
   resume: "▶",
   reset: "↺",
-  nextPuzzle: "≫",
+  nextPuzzle: ">",
 });
 
 const DISPLAY_NAMES = {
@@ -96,7 +96,6 @@ const els = {
   exampleBoard: document.getElementById("example-board"),
   gameBoard: document.getElementById("game-board"),
   gameTitle: document.getElementById("game-title"),
-  gameRuleChip: document.getElementById("game-rule-chip"),
   timerLine: document.getElementById("timer-line"),
   statusLine: document.getElementById("status-line"),
   keypad: document.getElementById("keypad"),
@@ -529,6 +528,15 @@ function renderBoard(container, entry, values, options = {}) {
         state.selectedIndex = index;
         renderGameBoard();
       }, { passive: true });
+      cell.addEventListener("touchmove", (event) => {
+        const nextIndex = selectionIndexFromTouchEvent(event);
+        if (nextIndex == null || nextIndex === state.selectedIndex) {
+          return;
+        }
+        event.preventDefault();
+        state.selectedIndex = nextIndex;
+        renderGameBoard();
+      }, { passive: false });
     }
 
     const labelKey = cellKey(row, col);
@@ -913,6 +921,35 @@ function clearRelatedNotes(row, col, value) {
   }
 }
 
+function gameplayRuleButtonLabel() {
+  if (!state.currentPuzzle && !state.currentDataset && !state.currentRule) {
+    return "";
+  }
+  const label = displayNameForRuleEntry(
+    {
+      rule_slug: state.currentRule?.rule_slug || state.currentDataset?.rule_slug,
+      rule_mode: state.currentPuzzle?.rule_mode || state.currentDataset?.rule_mode,
+      short_name: state.currentPuzzle?.short_name || state.currentDataset?.short_name,
+    },
+    state.currentPuzzle?.short_name || state.currentDataset?.short_name || "",
+  );
+  return label === "Standard" ? "S" : label;
+}
+
+function selectionIndexFromTouchEvent(event) {
+  const touch = event.touches?.[0] || event.changedTouches?.[0];
+  if (!touch) {
+    return null;
+  }
+  const target = document.elementFromPoint(touch.clientX, touch.clientY);
+  const cell = target?.closest?.(".cell[data-index]");
+  if (!cell) {
+    return null;
+  }
+  const nextIndex = Number(cell.dataset.index);
+  return Number.isInteger(nextIndex) ? nextIndex : null;
+}
+
 function resetTransientError() {
   state.transientError = null;
 }
@@ -1036,6 +1073,7 @@ function renderGameBoard() {
     },
   );
   els.gameBoard.classList.toggle("board--paused", state.isPaused);
+  els.ruleButton.textContent = gameplayRuleButtonLabel();
   els.statusLine.textContent = `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
   els.noteToggle.classList.toggle("is-active", state.noteMode);
   els.pauseButton.classList.toggle("is-active", state.isPaused);
@@ -1056,13 +1094,6 @@ function preparePuzzle(puzzle) {
   state.timerStartedAt = Date.now();
   state.isPaused = false;
   els.gameTitle.textContent = state.currentDifficulty.label;
-  els.gameRuleChip.textContent = displayNameForRuleEntry(
-    {
-      rule_slug: state.currentRule?.rule_slug,
-      rule_mode: puzzle.rule_mode || state.currentDataset?.rule_mode,
-    },
-    puzzle.short_name,
-  );
   renderGameBoard();
   startTimerLoop();
   persistSession();
@@ -1144,11 +1175,9 @@ function attachIcons() {
   document.getElementById("back-to-rule").textContent = ICONS.back;
   document.getElementById("back-to-difficulty").textContent = ICONS.back;
   document.getElementById("start-puzzle").textContent = ICONS.play;
-  document.getElementById("close-rule-dialog").textContent = ICONS.close;
   document.getElementById("clear-next").textContent = ICONS.next;
   document.getElementById("clear-rule").textContent = ICONS.ruleMenu;
   document.getElementById("clear-home").textContent = ICONS.home;
-  els.ruleButton.textContent = ICONS.rule;
   els.hintButton.textContent = ICONS.hint;
   els.pauseButton.textContent = ICONS.pause;
   els.resetButton.textContent = ICONS.reset;
@@ -1179,7 +1208,6 @@ function attachGlobalEvents() {
   wirePressHaptic(els.resetButton, 10);
   wirePressHaptic(els.nextButton, 10);
   wirePressHaptic(els.ruleButton, 10);
-  wirePressHaptic(document.getElementById("close-rule-dialog"), 10);
   wirePressHaptic(els.noteToggle, 10);
   wirePressHaptic(els.clearNotesButton, 10);
   wirePressHaptic(els.eraseCellButton, 10);
@@ -1233,29 +1261,40 @@ function attachGlobalEvents() {
   els.pauseDialog.addEventListener("cancel", (event) => {
     event.preventDefault();
   });
+  els.ruleDialog.addEventListener("click", (event) => {
+    if (event.target === els.ruleDialog) {
+      els.ruleDialog.close();
+    }
+  });
+  els.pauseDialog.addEventListener("click", (event) => {
+    if (event.target === els.pauseDialog) {
+      resumeGame();
+    }
+  });
   els.gameBoard.addEventListener("touchmove", (event) => {
     if (state.isPaused) {
       return;
     }
-    const touch = event.touches[0];
-    if (!touch) {
-      return;
-    }
-    const target = document.elementFromPoint(touch.clientX, touch.clientY);
-    const cell = target?.closest?.(".cell[data-index]");
-    if (!cell) {
-      return;
-    }
-    const nextIndex = Number(cell.dataset.index);
-    if (Number.isInteger(nextIndex) && nextIndex !== state.selectedIndex) {
+    const nextIndex = selectionIndexFromTouchEvent(event);
+    if (nextIndex != null && nextIndex !== state.selectedIndex) {
+      event.preventDefault();
       state.selectedIndex = nextIndex;
       renderGameBoard();
       persistSession();
     }
-  }, { passive: true });
-  document.getElementById("close-rule-dialog").addEventListener("click", () => {
-    els.ruleDialog.close();
-  });
+  }, { passive: false });
+  els.gameBoard.addEventListener("touchstart", (event) => {
+    if (state.isPaused) {
+      return;
+    }
+    const nextIndex = selectionIndexFromTouchEvent(event);
+    if (nextIndex != null && nextIndex !== state.selectedIndex) {
+      event.preventDefault();
+      state.selectedIndex = nextIndex;
+      renderGameBoard();
+      persistSession();
+    }
+  }, { passive: false });
   els.noteToggle.addEventListener("click", () => {
     if (state.isPaused) {
       return;
