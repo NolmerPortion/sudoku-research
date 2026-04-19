@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-04-19T04:46:09.871294+00:00",
+  "difficulties": [
+    {
+      "id": "easy",
+      "label": "Easy",
+      "min_clues": 24
+    },
+    {
+      "id": "normal",
+      "label": "Normal",
+      "min_clues": 12
+    },
+    {
+      "id": "hard",
+      "label": "Hard",
+      "min_clues": 6
+    }
+  ],
+  "rules": [
+    {
+      "rule_mode": "anti_close_adjacent_3",
+      "rule_slug": "anti_close_adjacent_3",
+      "rule_name": "anti_close_adjacent_3",
+      "short_name": "Far Neighbors",
+      "description_ja": "上下左右に隣り合う2マスの数字の差は、常に3以上です。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "bishop_meet_digits",
+      "rule_slug": "bishop_meet_digits",
+      "rule_name": "bishop_meet_digits",
+      "short_name": "Bishop Meet",
+      "description_ja": "指定数字の出現位置は、角の動きと同じ斜め移動でたどったとき、飛び地にならず一つながりになります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "standard",
+      "rule_slug": "checkerboard_odd",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "clone_regions_set_equal",
+      "rule_slug": "clone_regions_set_equal",
+      "rule_name": "clone_regions_set_equal",
+      "short_name": "Clone Sets",
+      "description_ja": "対応する色付き領域どうしには、順番ではなく数字の集合が同じように入ります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "cross_monotone",
+      "rule_slug": "cross_monotone",
+      "rule_name": "cross_monotone",
+      "short_name": "Cross Monotone",
+      "description_ja": "色付きの5つの十字で、各中心から上下左右へ外側に進むと数字が厳密に増加します。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "standard",
+      "rule_slug": "hyper3x3",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "l_tromino_sum",
+      "rule_slug": "l_tromino_sum",
+      "rule_name": "l_tromino_sum",
+      "short_name": "L Tromino 13",
+      "description_ja": "色付きのL字3マス領域ごとに、3マスの数字の和が13になります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "local_consecutive_exists",
+      "rule_slug": "local_consecutive_exists",
+      "rule_name": "local_consecutive_exists",
+      "short_name": "Consecutive Touch",
+      "description_ja": "すべてのマスは、上下左右のどれか1つ以上の隣接マスと差がちょうど1になります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "special_monotone_3x3",
+      "rule_slug": "special_monotone_3x3",
+      "rule_name": "special_monotone_3x3",
+      "short_name": "Special 3x3",
+      "description_ja": "色付きの3x3ブロックは、ある90度回転をすると、各行が左から右へ、各列が上から下へ厳密に増加する並びになります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "anti_close_adjacent_3",
+      "rule_slug": "anti_close_adjacent_3",
+      "path": "easy/anti_close_adjacent_3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "anti_close_adjacent_3",
+      "rule_slug": "anti_close_adjacent_3",
+      "path": "normal/anti_close_adjacent_3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "anti_close_adjacent_3",
+      "rule_slug": "anti_close_adjacent_3",
+      "path": "hard/anti_close_adjacent_3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "bishop_meet_digits",
+      "rule_slug": "bishop_meet_digits",
+      "path": "easy/bishop_meet_digits.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "bishop_meet_digits",
+      "rule_slug": "bishop_meet_digits",
+      "path": "normal/bishop_meet_digits.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "bishop_meet_digits",
+      "rule_slug": "bishop_meet_digits",
+      "path": "hard/bishop_meet_digits.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "standard",
+      "rule_slug": "checkerboard_odd",
+      "path": "easy/checkerboard_odd.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "standard",
+      "rule_slug": "checkerboard_odd",
+      "path": "normal/checkerboard_odd.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "standard",
+      "rule_slug": "checkerboard_odd",
+      "path": "hard/checkerboard_odd.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "clone_regions_set_equal",
+      "rule_slug": "clone_regions_set_equal",
+      "path": "easy/clone_regions_set_equal.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "clone_regions_set_equal",
+      "rule_slug": "clone_regions_set_equal",
+      "path": "normal/clone_regions_set_equal.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "clone_regions_set_equal",
+      "rule_slug": "clone_regions_set_equal",
+      "path": "hard/clone_regions_set_equal.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "cross_monotone",
+      "rule_slug": "cross_monotone",
+      "path": "easy/cross_monotone.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "cross_monotone",
+      "rule_slug": "cross_monotone",
+      "path": "normal/cross_monotone.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "cross_monotone",
+      "rule_slug": "cross_monotone",
+      "path": "hard/cross_monotone.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "standard",
+      "rule_slug": "hyper3x3",
+      "path": "easy/hyper3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "standard",
+      "rule_slug": "hyper3x3",
+      "path": "normal/hyper3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "standard",
+      "rule_slug": "hyper3x3",
+      "path": "hard/hyper3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "l_tromino_sum",
+      "rule_slug": "l_tromino_sum",
+      "path": "easy/l_tromino_sum.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "l_tromino_sum",
+      "rule_slug": "l_tromino_sum",
+      "path": "normal/l_tromino_sum.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "l_tromino_sum",
+      "rule_slug": "l_tromino_sum",
+      "path": "hard/l_tromino_sum.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "local_consecutive_exists",
+      "rule_slug": "local_consecutive_exists",
+      "path": "easy/local_consecutive_exists.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "local_consecutive_exists",
+      "rule_slug": "local_consecutive_exists",
+      "path": "normal/local_consecutive_exists.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "local_consecutive_exists",
+      "rule_slug": "local_consecutive_exists",
+      "path": "hard/local_consecutive_exists.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "special_monotone_3x3",
+      "rule_slug": "special_monotone_3x3",
+      "path": "easy/special_monotone_3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "special_monotone_3x3",
+      "rule_slug": "special_monotone_3x3",
+      "path": "normal/special_monotone_3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "special_monotone_3x3",
+      "rule_slug": "special_monotone_3x3",
+      "path": "hard/special_monotone_3x3.json",
+      "count": 15
+    }
+  ]
+}

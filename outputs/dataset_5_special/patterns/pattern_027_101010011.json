@@ -1,0 +1,50 @@
+{
+  "pattern_id": "pattern_027_101010011",
+  "pattern_mask_string": "101010011",
+  "pattern_matrix": [
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "special_positions": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "pretty_pattern": "S . S\n. S .\n. S S",
+  "feasibility_status": "INFEASIBLE",
+  "feasibility_wall_time_sec": 0.0146552,
+  "solution_count_exported": 0,
+  "enumeration_status": null,
+  "enumeration_wall_time_sec": null,
+  "solutions": []
+}

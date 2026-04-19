@@ -1,0 +1,9614 @@
+{
+  "difficulty_id": "easy",
+  "difficulty_label": "Easy",
+  "min_clues": 24,
+  "rule_mode": "standard",
+  "rule_slug": "checkerboard_odd",
+  "rule_name": "standard",
+  "short_name": "Standard",
+  "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
+  "history_cookie_key": "history__easy__standard",
+  "pattern_mask": "000000000",
+  "rules": [],
+  "example": {
+    "solution_string": "194763852327854961658921734749612385812537496563498127275349618981276543436185279",
+    "solution_grid": [
+      [
+        1,
+        9,
+        4,
+        7,
+        6,
+        3,
+        8,
+        5,
+        2
+      ],
+      [
+        3,
+        2,
+        7,
+        8,
+        5,
+        4,
+        9,
+        6,
+        1
+      ],
+      [
+        6,
+        5,
+        8,
+        9,
+        2,
+        1,
+        7,
+        3,
+        4
+      ],
+      [
+        7,
+        4,
+        9,
+        6,
+        1,
+        2,
+        3,
+        8,
+        5
+      ],
+      [
+        8,
+        1,
+        2,
+        5,
+        3,
+        7,
+        4,
+        9,
+        6
+      ],
+      [
+        5,
+        6,
+        3,
+        4,
+        9,
+        8,
+        1,
+        2,
+        7
+      ],
+      [
+        2,
+        7,
+        5,
+        3,
+        4,
+        9,
+        6,
+        1,
+        8
+      ],
+      [
+        9,
+        8,
+        1,
+        2,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      [
+        4,
+        3,
+        6,
+        1,
+        8,
+        5,
+        2,
+        7,
+        9
+      ]
+    ],
+    "visual_state": {
+      "special_blocks": [],
+      "special_cells": [],
+      "hyper_cells": [],
+      "checkerboard_cells": [],
+      "sum_cells": [],
+      "sum_regions": [],
+      "cross_cells": [],
+      "cross_centers": [],
+      "crosses": [],
+      "clone_cells": [],
+      "clone_regions": [],
+      "has_bishop_rule": false
+    },
+    "circle_cells": []
+  },
+  "puzzles": [
+    {
+      "id": "easy__standard__0001",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "104000800000850001650020000040600000000007000060090027075000000001200043000100200",
+      "solution_string": "194763852327854961658921734749612385812537496563498127275349618981276543436185279",
+      "puzzle_grid": [
+        [
+          1,
+          0,
+          4,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          5,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          6,
+          5,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          9,
+          0,
+          0,
+          2,
+          7
+        ],
+        [
+          0,
+          7,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          4,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          1,
+          9,
+          4,
+          7,
+          6,
+          3,
+          8,
+          5,
+          2
+        ],
+        [
+          3,
+          2,
+          7,
+          8,
+          5,
+          4,
+          9,
+          6,
+          1
+        ],
+        [
+          6,
+          5,
+          8,
+          9,
+          2,
+          1,
+          7,
+          3,
+          4
+        ],
+        [
+          7,
+          4,
+          9,
+          6,
+          1,
+          2,
+          3,
+          8,
+          5
+        ],
+        [
+          8,
+          1,
+          2,
+          5,
+          3,
+          7,
+          4,
+          9,
+          6
+        ],
+        [
+          5,
+          6,
+          3,
+          4,
+          9,
+          8,
+          1,
+          2,
+          7
+        ],
+        [
+          2,
+          7,
+          5,
+          3,
+          4,
+          9,
+          6,
+          1,
+          8
+        ],
+        [
+          9,
+          8,
+          1,
+          2,
+          7,
+          6,
+          5,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          6,
+          1,
+          8,
+          5,
+          2,
+          7,
+          9
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 2,
+          "col": 5,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0002",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000500008500016000000007096000050120008000604360000005090000800120034000003000000",
+      "solution_string": "736549218589216347412387596947658123258193674361472985694725831125834769873961452",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          1,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          9,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          6,
+          0,
+          4
+        ],
+        [
+          3,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          3,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          7,
+          3,
+          6,
+          5,
+          4,
+          9,
+          2,
+          1,
+          8
+        ],
+        [
+          5,
+          8,
+          9,
+          2,
+          1,
+          6,
+          3,
+          4,
+          7
+        ],
+        [
+          4,
+          1,
+          2,
+          3,
+          8,
+          7,
+          5,
+          9,
+          6
+        ],
+        [
+          9,
+          4,
+          7,
+          6,
+          5,
+          8,
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          5,
+          8,
+          1,
+          9,
+          3,
+          6,
+          7,
+          4
+        ],
+        [
+          3,
+          6,
+          1,
+          4,
+          7,
+          2,
+          9,
+          8,
+          5
+        ],
+        [
+          6,
+          9,
+          4,
+          7,
+          2,
+          5,
+          8,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          5,
+          8,
+          3,
+          4,
+          7,
+          6,
+          9
+        ],
+        [
+          8,
+          7,
+          3,
+          9,
+          6,
+          1,
+          4,
+          5,
+          2
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 2,
+          "col": 6,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0003",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "608000400003090005504000078000438020030000000000206040806100000000050700000009000",
+      "solution_string": "618527493723894165594361278167438529432975816985216347876143952349652781251789634",
+      "puzzle_grid": [
+        [
+          6,
+          0,
+          8,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          9,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          5,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          7,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          3,
+          8,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          6,
+          0,
+          4,
+          0
+        ],
+        [
+          8,
+          0,
+          6,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          6,
+          1,
+          8,
+          5,
+          2,
+          7,
+          4,
+          9,
+          3
+        ],
+        [
+          7,
+          2,
+          3,
+          8,
+          9,
+          4,
+          1,
+          6,
+          5
+        ],
+        [
+          5,
+          9,
+          4,
+          3,
+          6,
+          1,
+          2,
+          7,
+          8
+        ],
+        [
+          1,
+          6,
+          7,
+          4,
+          3,
+          8,
+          5,
+          2,
+          9
+        ],
+        [
+          4,
+          3,
+          2,
+          9,
+          7,
+          5,
+          8,
+          1,
+          6
+        ],
+        [
+          9,
+          8,
+          5,
+          2,
+          1,
+          6,
+          3,
+          4,
+          7
+        ],
+        [
+          8,
+          7,
+          6,
+          1,
+          4,
+          3,
+          9,
+          5,
+          2
+        ],
+        [
+          3,
+          4,
+          9,
+          6,
+          5,
+          2,
+          7,
+          8,
+          1
+        ],
+        [
+          2,
+          5,
+          1,
+          7,
+          8,
+          9,
+          6,
+          3,
+          4
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 1,
+          "col": 5,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0004",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000000890060000340032000000005400001698700000007800000019007006700610500000000000",
+      "solution_string": "574163892961278345832945617325496781698731254147852963219587436783614529456329178",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          9,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          6,
+          9,
+          8,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          9,
+          0,
+          0,
+          7,
+          0,
+          0,
+          6
+        ],
+        [
+          7,
+          0,
+          0,
+          6,
+          1,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          5,
+          7,
+          4,
+          1,
+          6,
+          3,
+          8,
+          9,
+          2
+        ],
+        [
+          9,
+          6,
+          1,
+          2,
+          7,
+          8,
+          3,
+          4,
+          5
+        ],
+        [
+          8,
+          3,
+          2,
+          9,
+          4,
+          5,
+          6,
+          1,
+          7
+        ],
+        [
+          3,
+          2,
+          5,
+          4,
+          9,
+          6,
+          7,
+          8,
+          1
+        ],
+        [
+          6,
+          9,
+          8,
+          7,
+          3,
+          1,
+          2,
+          5,
+          4
+        ],
+        [
+          1,
+          4,
+          7,
+          8,
+          5,
+          2,
+          9,
+          6,
+          3
+        ],
+        [
+          2,
+          1,
+          9,
+          5,
+          8,
+          7,
+          4,
+          3,
+          6
+        ],
+        [
+          7,
+          8,
+          3,
+          6,
+          1,
+          4,
+          5,
+          2,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          3,
+          2,
+          9,
+          1,
+          7,
+          8
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 1,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0005",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000000430080000009000720006000800040000000000523690000000960204701000900600500010",
+      "solution_string": "256189437387456129914723856169872543478315692523694781835961274741238965692547318",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          3,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          2,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          2,
+          3,
+          6,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          6,
+          0,
+          2,
+          0,
+          4
+        ],
+        [
+          7,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          2,
+          5,
+          6,
+          1,
+          8,
+          9,
+          4,
+          3,
+          7
+        ],
+        [
+          3,
+          8,
+          7,
+          4,
+          5,
+          6,
+          1,
+          2,
+          9
+        ],
+        [
+          9,
+          1,
+          4,
+          7,
+          2,
+          3,
+          8,
+          5,
+          6
+        ],
+        [
+          1,
+          6,
+          9,
+          8,
+          7,
+          2,
+          5,
+          4,
+          3
+        ],
+        [
+          4,
+          7,
+          8,
+          3,
+          1,
+          5,
+          6,
+          9,
+          2
+        ],
+        [
+          5,
+          2,
+          3,
+          6,
+          9,
+          4,
+          7,
+          8,
+          1
+        ],
+        [
+          8,
+          3,
+          5,
+          9,
+          6,
+          1,
+          2,
+          7,
+          4
+        ],
+        [
+          7,
+          4,
+          1,
+          2,
+          3,
+          8,
+          9,
+          6,
+          5
+        ],
+        [
+          6,
+          9,
+          2,
+          5,
+          4,
+          7,
+          3,
+          1,
+          8
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 0,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0006",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "032900600045006080090500002000014009600030008000000340200000000000000500070120000",
+      "solution_string": "832941675145276983796583412523814769614739258987652341258367194361498527479125836",
+      "puzzle_grid": [
+        [
+          0,
+          3,
+          2,
+          9,
+          0,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          0,
+          0,
+          6,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          9,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0,
+          9
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          8,
+          3,
+          2,
+          9,
+          4,
+          1,
+          6,
+          7,
+          5
+        ],
+        [
+          1,
+          4,
+          5,
+          2,
+          7,
+          6,
+          9,
+          8,
+          3
+        ],
+        [
+          7,
+          9,
+          6,
+          5,
+          8,
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          5,
+          2,
+          3,
+          8,
+          1,
+          4,
+          7,
+          6,
+          9
+        ],
+        [
+          6,
+          1,
+          4,
+          7,
+          3,
+          9,
+          2,
+          5,
+          8
+        ],
+        [
+          9,
+          8,
+          7,
+          6,
+          5,
+          2,
+          3,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          8,
+          3,
+          6,
+          7,
+          1,
+          9,
+          4
+        ],
+        [
+          3,
+          6,
+          1,
+          4,
+          9,
+          8,
+          5,
+          2,
+          7
+        ],
+        [
+          4,
+          7,
+          9,
+          1,
+          2,
+          5,
+          8,
+          3,
+          6
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 1,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0007",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000080600300070000000065402001030040000709010027800000698000000000000105002000090",
+      "solution_string": "214983657365472981879165432581236749436759218927814563698521374743698125152347896",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          6,
+          5,
+          4,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          3,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          0,
+          9,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          7,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          9,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          2,
+          1,
+          4,
+          9,
+          8,
+          3,
+          6,
+          5,
+          7
+        ],
+        [
+          3,
+          6,
+          5,
+          4,
+          7,
+          2,
+          9,
+          8,
+          1
+        ],
+        [
+          8,
+          7,
+          9,
+          1,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        [
+          5,
+          8,
+          1,
+          2,
+          3,
+          6,
+          7,
+          4,
+          9
+        ],
+        [
+          4,
+          3,
+          6,
+          7,
+          5,
+          9,
+          2,
+          1,
+          8
+        ],
+        [
+          9,
+          2,
+          7,
+          8,
+          1,
+          4,
+          5,
+          6,
+          3
+        ],
+        [
+          6,
+          9,
+          8,
+          5,
+          2,
+          1,
+          3,
+          7,
+          4
+        ],
+        [
+          7,
+          4,
+          3,
+          6,
+          9,
+          8,
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          5,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          6
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 2,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0008",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "050100004047000009000300800900200000200090600301070000008000000520006003000005410",
+      "solution_string": "853169274147852369692347851965238147274591638381674925418723596529416783736985412",
+      "puzzle_grid": [
+        [
+          0,
+          5,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          4,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          9,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          2,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          4,
+          1,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          8,
+          5,
+          3,
+          1,
+          6,
+          9,
+          2,
+          7,
+          4
+        ],
+        [
+          1,
+          4,
+          7,
+          8,
+          5,
+          2,
+          3,
+          6,
+          9
+        ],
+        [
+          6,
+          9,
+          2,
+          3,
+          4,
+          7,
+          8,
+          5,
+          1
+        ],
+        [
+          9,
+          6,
+          5,
+          2,
+          3,
+          8,
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          7,
+          4,
+          5,
+          9,
+          1,
+          6,
+          3,
+          8
+        ],
+        [
+          3,
+          8,
+          1,
+          6,
+          7,
+          4,
+          9,
+          2,
+          5
+        ],
+        [
+          4,
+          1,
+          8,
+          7,
+          2,
+          3,
+          5,
+          9,
+          6
+        ],
+        [
+          5,
+          2,
+          9,
+          4,
+          1,
+          6,
+          7,
+          8,
+          3
+        ],
+        [
+          7,
+          3,
+          6,
+          9,
+          8,
+          5,
+          4,
+          1,
+          2
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 7,
+          "col": 4,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0009",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "002700036500006049070000000000600023008000050005030100000000000020874000610000090",
+      "solution_string": "192745836583216749476389215741658923238197654965432187854961372329874561617523498",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          2,
+          7,
+          0,
+          0,
+          0,
+          3,
+          6
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          4,
+          9
+        ],
+        [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          8,
+          7,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          1,
+          9,
+          2,
+          7,
+          4,
+          5,
+          8,
+          3,
+          6
+        ],
+        [
+          5,
+          8,
+          3,
+          2,
+          1,
+          6,
+          7,
+          4,
+          9
+        ],
+        [
+          4,
+          7,
+          6,
+          3,
+          8,
+          9,
+          2,
+          1,
+          5
+        ],
+        [
+          7,
+          4,
+          1,
+          6,
+          5,
+          8,
+          9,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          8,
+          1,
+          9,
+          7,
+          6,
+          5,
+          4
+        ],
+        [
+          9,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          8,
+          7
+        ],
+        [
+          8,
+          5,
+          4,
+          9,
+          6,
+          1,
+          3,
+          7,
+          2
+        ],
+        [
+          3,
+          2,
+          9,
+          8,
+          7,
+          4,
+          5,
+          6,
+          1
+        ],
+        [
+          6,
+          1,
+          7,
+          5,
+          2,
+          3,
+          4,
+          9,
+          8
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 1,
+          "col": 6,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0010",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "003000806009000003050100900000800360090000450040602000010009000005006700002000008",
+      "solution_string": "473925816169478523258163974521894367896317452347652189614789235985236741732541698",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          8,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          5,
+          0,
+          1,
+          0,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          3,
+          6,
+          0
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          6,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0,
+          6,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "solution_grid": [
+        [
+          4,
+          7,
+          3,
+          9,
+          2,
+          5,
+          8,
+          1,
+          6
+        ],
+        [
+          1,
+          6,
+          9,
+          4,
+          7,
+          8,
+          5,
+          2,
+          3
+        ],
+        [
+          2,
+          5,
+          8,
+          1,
+          6,
+          3,
+          9,
+          7,
+          4
+        ],
+        [
+          5,
+          2,
+          1,
+          8,
+          9,
+          4,
+          3,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          6,
+          3,
+          1,
+          7,
+          4,
+          5,
+          2
+        ],
+        [
+          3,
+          4,
+          7,
+          6,
+          5,
+          2,
+          1,
+          8,
+          9
+        ],
+        [
+          6,
+          1,
+          4,
+          7,
+          8,
+          9,
+          2,
+          3,
+          5
+        ],
+        [
+          9,
+          8,
+          5,
+          2,
+          3,
+          6,
+          7,
+          4,
+          1
+        ],
+        [
+          7,
+          3,
+          2,
+          5,
+          4,
+          1,
+          6,
+          9,
+          8
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 5,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0011",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "037001050000000709690000000000090007200300090100608020002100006000402000800000005",
+      "solution_string": "437921658521836749698547312385294167276315894149678523952183476763452981814769235",
+      "puzzle_grid": [
+        [
+          0,
+          3,
+          7,
+          0,
+          0,
+          1,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          9
+        ],
+        [
+          6,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          7
+        ],
+        [
+          2,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          9,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          6,
+          0,
+          8,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      ],
+      "solution_grid": [
+        [
+          4,
+          3,
+          7,
+          9,
+          2,
+          1,
+          6,
+          5,
+          8
+        ],
+        [
+          5,
+          2,
+          1,
+          8,
+          3,
+          6,
+          7,
+          4,
+          9
+        ],
+        [
+          6,
+          9,
+          8,
+          5,
+          4,
+          7,
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          8,
+          5,
+          2,
+          9,
+          4,
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          7,
+          6,
+          3,
+          1,
+          5,
+          8,
+          9,
+          4
+        ],
+        [
+          1,
+          4,
+          9,
+          6,
+          7,
+          8,
+          5,
+          2,
+          3
+        ],
+        [
+          9,
+          5,
+          2,
+          1,
+          8,
+          3,
+          4,
+          7,
+          6
+        ],
+        [
+          7,
+          6,
+          3,
+          4,
+          5,
+          2,
+          9,
+          8,
+          1
+        ],
+        [
+          8,
+          1,
+          4,
+          7,
+          6,
+          9,
+          2,
+          3,
+          5
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0012",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000060018000400900290000000100200700070013090500000000000701400700600000002000873",
+      "solution_string": "457369218381452967296187534163294785874513692529876341938721456745638129612945873",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          1,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          2,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          0,
+          1,
+          3,
+          0,
+          9,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          7,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          8,
+          7,
+          3
+        ]
+      ],
+      "solution_grid": [
+        [
+          4,
+          5,
+          7,
+          3,
+          6,
+          9,
+          2,
+          1,
+          8
+        ],
+        [
+          3,
+          8,
+          1,
+          4,
+          5,
+          2,
+          9,
+          6,
+          7
+        ],
+        [
+          2,
+          9,
+          6,
+          1,
+          8,
+          7,
+          5,
+          3,
+          4
+        ],
+        [
+          1,
+          6,
+          3,
+          2,
+          9,
+          4,
+          7,
+          8,
+          5
+        ],
+        [
+          8,
+          7,
+          4,
+          5,
+          1,
+          3,
+          6,
+          9,
+          2
+        ],
+        [
+          5,
+          2,
+          9,
+          8,
+          7,
+          6,
+          3,
+          4,
+          1
+        ],
+        [
+          9,
+          3,
+          8,
+          7,
+          2,
+          1,
+          4,
+          5,
+          6
+        ],
+        [
+          7,
+          4,
+          5,
+          6,
+          3,
+          8,
+          1,
+          2,
+          9
+        ],
+        [
+          6,
+          1,
+          2,
+          9,
+          4,
+          5,
+          8,
+          7,
+          3
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 8,
+          "col": 1,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0013",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000081002040000300000000007000000740094010000380690000006020050700000063500900200",
+      "solution_string": "673581492941276385852349617165832749294715836387694521436127958729458163518963274",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          4,
+          0
+        ],
+        [
+          0,
+          9,
+          4,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          8,
+          0,
+          6,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          2,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          3
+        ],
+        [
+          5,
+          0,
+          0,
+          9,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          6,
+          7,
+          3,
+          5,
+          8,
+          1,
+          4,
+          9,
+          2
+        ],
+        [
+          9,
+          4,
+          1,
+          2,
+          7,
+          6,
+          3,
+          8,
+          5
+        ],
+        [
+          8,
+          5,
+          2,
+          3,
+          4,
+          9,
+          6,
+          1,
+          7
+        ],
+        [
+          1,
+          6,
+          5,
+          8,
+          3,
+          2,
+          7,
+          4,
+          9
+        ],
+        [
+          2,
+          9,
+          4,
+          7,
+          1,
+          5,
+          8,
+          3,
+          6
+        ],
+        [
+          3,
+          8,
+          7,
+          6,
+          9,
+          4,
+          5,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          6,
+          1,
+          2,
+          7,
+          9,
+          5,
+          8
+        ],
+        [
+          7,
+          2,
+          9,
+          4,
+          5,
+          8,
+          1,
+          6,
+          3
+        ],
+        [
+          5,
+          1,
+          8,
+          9,
+          6,
+          3,
+          2,
+          7,
+          4
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 0,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0014",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "008020000520094000300000090009406700000370008060000000076080900040000100001900000",
+      "solution_string": "698123475527894361314765892189456723452379618763218549276581934945632187831947256",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          8,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          2,
+          0,
+          0,
+          9,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          9,
+          4,
+          0,
+          6,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          7,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          6,
+          0,
+          8,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          6,
+          9,
+          8,
+          1,
+          2,
+          3,
+          4,
+          7,
+          5
+        ],
+        [
+          5,
+          2,
+          7,
+          8,
+          9,
+          4,
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          1,
+          4,
+          7,
+          6,
+          5,
+          8,
+          9,
+          2
+        ],
+        [
+          1,
+          8,
+          9,
+          4,
+          5,
+          6,
+          7,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          2,
+          3,
+          7,
+          9,
+          6,
+          1,
+          8
+        ],
+        [
+          7,
+          6,
+          3,
+          2,
+          1,
+          8,
+          5,
+          4,
+          9
+        ],
+        [
+          2,
+          7,
+          6,
+          5,
+          8,
+          1,
+          9,
+          3,
+          4
+        ],
+        [
+          9,
+          4,
+          5,
+          6,
+          3,
+          2,
+          1,
+          8,
+          7
+        ],
+        [
+          8,
+          3,
+          1,
+          9,
+          4,
+          7,
+          2,
+          5,
+          6
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 1,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    },
+    {
+      "id": "easy__standard__0015",
+      "difficulty_id": "easy",
+      "difficulty_label": "Easy",
+      "min_clues": 24,
+      "pattern_mask": "000000000",
+      "rule_mode": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "rules": [],
+      "puzzle_string": "000180200100000300094000000300000065002001008041006700000560000060000040058007000",
+      "solution_string": "736185294125694387894723651389472165672951438541836729413569872967218543258347916",
+      "puzzle_grid": [
+        [
+          0,
+          0,
+          0,
+          1,
+          8,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          5
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          4,
+          1,
+          0,
+          0,
+          6,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          8,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ]
+      ],
+      "solution_grid": [
+        [
+          7,
+          3,
+          6,
+          1,
+          8,
+          5,
+          2,
+          9,
+          4
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          9,
+          4,
+          3,
+          8,
+          7
+        ],
+        [
+          8,
+          9,
+          4,
+          7,
+          2,
+          3,
+          6,
+          5,
+          1
+        ],
+        [
+          3,
+          8,
+          9,
+          4,
+          7,
+          2,
+          1,
+          6,
+          5
+        ],
+        [
+          6,
+          7,
+          2,
+          9,
+          5,
+          1,
+          4,
+          3,
+          8
+        ],
+        [
+          5,
+          4,
+          1,
+          8,
+          3,
+          6,
+          7,
+          2,
+          9
+        ],
+        [
+          4,
+          1,
+          3,
+          5,
+          6,
+          9,
+          8,
+          7,
+          2
+        ],
+        [
+          9,
+          6,
+          7,
+          2,
+          1,
+          8,
+          5,
+          4,
+          3
+        ],
+        [
+          2,
+          5,
+          8,
+          3,
+          4,
+          7,
+          9,
+          1,
+          6
+        ]
+      ],
+      "clue_count": 24,
+      "guide_steps": [
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        }
+      ],
+      "visual_state": {
+        "special_blocks": [],
+        "special_cells": [],
+        "hyper_cells": [],
+        "checkerboard_cells": [],
+        "sum_cells": [],
+        "sum_regions": [],
+        "cross_cells": [],
+        "cross_centers": [],
+        "crosses": [],
+        "clone_cells": [],
+        "clone_regions": [],
+        "has_bishop_rule": false
+      },
+      "source_file": "outputs\\rules\\checkerboard_odd\\generated_completed_grid\\checkerboard_odd__completed_grids_001.json"
+    }
+  ]
+}

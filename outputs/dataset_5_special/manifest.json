@@ -1,0 +1,291 @@
+{
+  "dataset_name": "sudoku_5_special_blocks",
+  "max_solutions_per_pattern": 50,
+  "feasibility_time_limit_sec": 20.0,
+  "enumeration_time_limit_sec": 300.0,
+  "pattern_count_checked": 45,
+  "feasible_pattern_count": 9,
+  "infeasible_pattern_count": 36,
+  "partial_pattern_count": 0,
+  "patterns": [
+    {
+      "pattern_id": "pattern_001_001011110",
+      "pattern_mask_string": "001011110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_002_001101110",
+      "pattern_mask_string": "001101110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_003_001110011",
+      "pattern_mask_string": "001110011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_004_001110101",
+      "pattern_mask_string": "001110101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_005_001110110",
+      "pattern_mask_string": "001110110",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_006_010011101",
+      "pattern_mask_string": "010011101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_007_010101011",
+      "pattern_mask_string": "010101011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_008_010101101",
+      "pattern_mask_string": "010101101",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_009_010101110",
+      "pattern_mask_string": "010101110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_010_010110101",
+      "pattern_mask_string": "010110101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_011_011001110",
+      "pattern_mask_string": "011001110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_012_011010101",
+      "pattern_mask_string": "011010101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_013_011011100",
+      "pattern_mask_string": "011011100",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_014_011100011",
+      "pattern_mask_string": "011100011",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_015_011100101",
+      "pattern_mask_string": "011100101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_016_011100110",
+      "pattern_mask_string": "011100110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_017_011101010",
+      "pattern_mask_string": "011101010",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_018_011101100",
+      "pattern_mask_string": "011101100",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_019_011110001",
+      "pattern_mask_string": "011110001",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_020_011110100",
+      "pattern_mask_string": "011110100",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_021_100011011",
+      "pattern_mask_string": "100011011",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_022_100011101",
+      "pattern_mask_string": "100011101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_023_100011110",
+      "pattern_mask_string": "100011110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_024_100101011",
+      "pattern_mask_string": "100101011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_025_100110011",
+      "pattern_mask_string": "100110011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_026_101001110",
+      "pattern_mask_string": "101001110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_027_101010011",
+      "pattern_mask_string": "101010011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_028_101010101",
+      "pattern_mask_string": "101010101",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_029_101010110",
+      "pattern_mask_string": "101010110",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_030_101011010",
+      "pattern_mask_string": "101011010",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_031_101011100",
+      "pattern_mask_string": "101011100",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_032_101100011",
+      "pattern_mask_string": "101100011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_033_101101010",
+      "pattern_mask_string": "101101010",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_034_101110001",
+      "pattern_mask_string": "101110001",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_035_101110010",
+      "pattern_mask_string": "101110010",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_036_110001011",
+      "pattern_mask_string": "110001011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_037_110001101",
+      "pattern_mask_string": "110001101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_038_110001110",
+      "pattern_mask_string": "110001110",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    },
+    {
+      "pattern_id": "pattern_039_110010101",
+      "pattern_mask_string": "110010101",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_040_110011001",
+      "pattern_mask_string": "110011001",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_041_110011100",
+      "pattern_mask_string": "110011100",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_042_110100011",
+      "pattern_mask_string": "110100011",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_043_110101001",
+      "pattern_mask_string": "110101001",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_044_110101010",
+      "pattern_mask_string": "110101010",
+      "feasibility_status": "INFEASIBLE",
+      "solution_count_exported": 0
+    },
+    {
+      "pattern_id": "pattern_045_110110001",
+      "pattern_mask_string": "110110001",
+      "feasibility_status": "OPTIMAL",
+      "enumeration_status": "FEASIBLE",
+      "solution_count_exported": 50
+    }
+  ]
+}

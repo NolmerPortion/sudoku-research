@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sudoku Variants</title>
+    <link rel="stylesheet" href="./app.css">
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Sudoku Variants</p>
+          <h1>数独コレクション</h1>
+        </div>
+        <button id="menu-home" class="ghost-button">メインメニュー</button>
+      </header>
+
+      <main class="main-grid">
+        <section id="screen-difficulty" class="screen-card">
+          <div class="section-head">
+            <p class="section-kicker">Step 1</p>
+            <h2>難易度を選ぶ</h2>
+          </div>
+          <div id="difficulty-list" class="choice-grid"></div>
+        </section>
+
+        <section id="screen-rule" class="screen-card is-hidden">
+          <div class="section-head">
+            <p class="section-kicker">Step 2</p>
+            <h2>ルールを選ぶ</h2>
+          </div>
+          <div class="section-actions">
+            <button id="back-to-difficulty" class="ghost-button">戻る</button>
+          </div>
+          <div id="rule-list" class="choice-grid"></div>
+        </section>
+
+        <section id="screen-example" class="screen-card is-hidden">
+          <div class="section-head">
+            <p class="section-kicker">Step 3</p>
+            <h2 id="example-title">ルール説明</h2>
+          </div>
+          <div class="example-layout">
+            <div class="board-panel">
+              <div id="example-board" class="board board--example"></div>
+            </div>
+            <div class="text-panel">
+              <p id="example-rule-name" class="rule-chip"></p>
+              <p id="example-description" class="long-copy"></p>
+              <div class="section-actions">
+                <button id="back-to-rule" class="ghost-button">ルール一覧へ</button>
+                <button id="start-puzzle" class="primary-button">このルールで遊ぶ</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="screen-game" class="screen-card is-hidden">
+          <div class="game-layout">
+            <div class="game-main">
+              <div class="game-head">
+                <div>
+                  <p id="game-rule-chip" class="rule-chip"></p>
+                  <h2 id="game-title">Puzzle</h2>
+                </div>
+                <div class="game-head-actions">
+                  <button id="hint-button" class="ghost-button">ヒント</button>
+                  <button id="rule-button" class="ghost-button">ルール</button>
+                </div>
+              </div>
+              <div id="game-board" class="board board--play"></div>
+              <div class="toolbar">
+                <button id="note-toggle" class="ghost-button">メモ</button>
+                <button id="clear-notes" class="ghost-button">メモ消去</button>
+                <button id="erase-cell" class="ghost-button">消す</button>
+              </div>
+              <div id="keypad" class="keypad"></div>
+            </div>
+            <aside class="game-side">
+              <div class="info-card">
+                <h3>進行</h3>
+                <p id="status-text" class="status-text">データを読み込み中です。</p>
+                <p id="guess-text" class="status-subtle"></p>
+              </div>
+              <div class="info-card">
+                <h3>ルール</h3>
+                <p id="rule-copy" class="long-copy"></p>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="clear-dialog" class="clear-dialog">
+      <div class="dialog-inner">
+        <p class="section-kicker">Clear</p>
+        <h2>クリアしました</h2>
+        <p>次の問題に進むか、別のルールやメインメニューへ戻れます。</p>
+        <div class="dialog-actions">
+          <button id="clear-next" class="primary-button">次の問題</button>
+          <button id="clear-rule" class="ghost-button">ルール変更</button>
+          <button id="clear-home" class="ghost-button">メインメニュー</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
