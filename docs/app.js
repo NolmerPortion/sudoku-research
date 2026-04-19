@@ -682,6 +682,212 @@ function nextExpectedStep() {
   return null;
 }
 
+function activeRules() {
+  return state.currentPuzzle?.rules || state.currentDataset?.rules || [];
+}
+
+function hasRule(type) {
+  return activeRules().some((rule) => rule?.type === type);
+}
+
+function valueAt(row, col, candidateRow = -1, candidateCol = -1, candidateValue = 0) {
+  if (row === candidateRow && col === candidateCol) {
+    return candidateValue;
+  }
+  return state.board[indexFromCoords(row, col)] || 0;
+}
+
+function normalizeRegionCells(region) {
+  return (region || []).map(([row, col]) => {
+    if (row >= 1 && row <= 9 && col >= 1 && col <= 9) {
+      return [row - 1, col - 1];
+    }
+    return [row, col];
+  });
+}
+
+function hyperRegions() {
+  return [
+    [1, 1], [1, 5], [5, 1], [5, 5],
+  ].map(([topRow, leftCol]) => {
+    const cells = [];
+    for (let row = topRow; row < topRow + 3; row += 1) {
+      for (let col = leftCol; col < leftCol + 3; col += 1) {
+        cells.push([row, col]);
+      }
+    }
+    return cells;
+  });
+}
+
+function cellsInSameBlock(row, col) {
+  const top = Math.floor(row / 3) * 3;
+  const left = Math.floor(col / 3) * 3;
+  const cells = [];
+  for (let rr = top; rr < top + 3; rr += 1) {
+    for (let cc = left; cc < left + 3; cc += 1) {
+      cells.push([rr, cc]);
+    }
+  }
+  return cells;
+}
+
+function candidateViolatesStandardRules(row, col, value) {
+  for (let index = 0; index < 9; index += 1) {
+    if (index !== col && state.board[indexFromCoords(row, index)] === value) {
+      return true;
+    }
+    if (index !== row && state.board[indexFromCoords(index, col)] === value) {
+      return true;
+    }
+  }
+  for (const [rr, cc] of cellsInSameBlock(row, col)) {
+    if ((rr !== row || cc !== col) && state.board[indexFromCoords(rr, cc)] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function candidateViolatesCheckerboard(row, col, value) {
+  return hasRule("checkerboard_odd") && ((row + col) % 2 === 1) && (value % 2 === 0);
+}
+
+function candidateViolatesHyper(row, col, value) {
+  if (!hasRule("hyper_3x3")) {
+    return false;
+  }
+  return hyperRegions()
+    .filter((cells) => cells.some(([rr, cc]) => rr === row && cc === col))
+    .some((cells) =>
+      cells.some(([rr, cc]) => (rr !== row || cc !== col) && state.board[indexFromCoords(rr, cc)] === value));
+}
+
+function candidateViolatesFarNeighbors(row, col, value) {
+  if (!hasRule("anti_close_adjacent_3")) {
+    return false;
+  }
+  const neighbors = [
+    [row - 1, col],
+    [row + 1, col],
+    [row, col - 1],
+    [row, col + 1],
+  ].filter(([rr, cc]) => rr >= 0 && rr < 9 && cc >= 0 && cc < 9);
+  return neighbors.some(([rr, cc]) => {
+    const neighborValue = state.board[indexFromCoords(rr, cc)];
+    return neighborValue !== 0 && Math.abs(neighborValue - value) < 3;
+  });
+}
+
+function candidateViolatesTouchRule(row, col, value) {
+  if (!hasRule("local_consecutive_exists")) {
+    return false;
+  }
+  const neighbors = [
+    [row - 1, col],
+    [row + 1, col],
+    [row, col - 1],
+    [row, col + 1],
+  ].filter(([rr, cc]) => rr >= 0 && rr < 9 && cc >= 0 && cc < 9);
+  const filledNeighbors = neighbors
+    .map(([rr, cc]) => state.board[indexFromCoords(rr, cc)])
+    .filter((neighborValue) => neighborValue !== 0);
+  return filledNeighbors.length === neighbors.length
+    && !filledNeighbors.some((neighborValue) => Math.abs(neighborValue - value) === 1);
+}
+
+function candidateViolatesLTromino(row, col, value) {
+  const rule = activeRules().find((entry) => entry?.type === "l_tromino_sum");
+  if (!rule) {
+    return false;
+  }
+  const regions = (rule.regions || []).map(normalizeRegionCells);
+  return regions
+    .filter((cells) => cells.some(([rr, cc]) => rr === row && cc === col))
+    .some((cells) => {
+      let sum = 0;
+      let emptyCount = 0;
+      for (const [rr, cc] of cells) {
+        const cellValue = valueAt(rr, cc, row, col, value);
+        if (cellValue === 0) {
+          emptyCount += 1;
+        }
+        sum += cellValue;
+      }
+      if (sum > 13) {
+        return true;
+      }
+      if (sum + emptyCount * 9 < 13) {
+        return true;
+      }
+      if (sum + emptyCount > 13) {
+        return true;
+      }
+      return false;
+    });
+}
+
+function candidateViolatesCross(row, col, value) {
+  const rule = activeRules().find((entry) => entry?.type === "cross_monotone");
+  if (!rule) {
+    return false;
+  }
+  const crosses = rule.crosses || [];
+  const makeSequence = (centerRow, centerCol, deltaRow, deltaCol, length) => {
+    const sequence = [[centerRow, centerCol]];
+    for (let step = 1; step <= length; step += 1) {
+      const rr = centerRow + deltaRow * step;
+      const cc = centerCol + deltaCol * step;
+      if (rr < 0 || rr >= 9 || cc < 0 || cc >= 9) {
+        break;
+      }
+      sequence.push([rr, cc]);
+    }
+    return sequence;
+  };
+  for (const cross of crosses) {
+    const center = Array.isArray(cross.center) ? cross.center : null;
+    if (!center || center.length !== 2) {
+      continue;
+    }
+    const centerRow = center[0] >= 1 ? center[0] - 1 : center[0];
+    const centerCol = center[1] >= 1 ? center[1] - 1 : center[1];
+    const sequences = [
+      makeSequence(centerRow, centerCol, -1, 0, cross.up_len ?? 0),
+      makeSequence(centerRow, centerCol, 1, 0, cross.down_len ?? 0),
+      makeSequence(centerRow, centerCol, 0, -1, cross.left_len ?? 0),
+      makeSequence(centerRow, centerCol, 0, 1, cross.right_len ?? 0),
+    ];
+    for (const sequence of sequences) {
+      if (!sequence.some(([rr, cc]) => rr === row && cc === col)) {
+        continue;
+      }
+      for (let index = 0; index < sequence.length - 1; index += 1) {
+        const [r1, c1] = sequence[index];
+        const [r2, c2] = sequence[index + 1];
+        const v1 = valueAt(r1, c1, row, col, value);
+        const v2 = valueAt(r2, c2, row, col, value);
+        if (v1 !== 0 && v2 !== 0 && !(v1 < v2)) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+function candidateViolatesLocalRules(row, col, value) {
+  return (
+    candidateViolatesStandardRules(row, col, value)
+    || candidateViolatesCheckerboard(row, col, value)
+    || candidateViolatesHyper(row, col, value)
+    || candidateViolatesFarNeighbors(row, col, value)
+    || candidateViolatesTouchRule(row, col, value)
+    || candidateViolatesLTromino(row, col, value)
+    || candidateViolatesCross(row, col, value)
+  );
+}
+
 function clearRelatedNotes(row, col, value) {
   for (let c = 0; c < 9; c += 1) {
     state.notes[indexFromCoords(row, c)].delete(value);
@@ -702,6 +908,16 @@ function resetTransientError() {
   state.transientError = null;
 }
 
+function triggerInvalidEntry(row, col) {
+  vibrate([24, 18, 44]);
+  state.transientError = [row, col];
+  renderGameBoard();
+  window.setTimeout(() => {
+    resetTransientError();
+    renderGameBoard();
+  }, 900);
+}
+
 function handleValueInput(value) {
   if (!state.currentPuzzle || state.isPaused) {
     return;
@@ -720,6 +936,10 @@ function handleValueInput(value) {
     if (state.board[index] !== 0) {
       return;
     }
+    if (candidateViolatesLocalRules(row, col, value)) {
+      triggerInvalidEntry(row, col);
+      return;
+    }
     if (state.notes[index].has(value)) {
       state.notes[index].delete(value);
     } else {
@@ -730,13 +950,7 @@ function handleValueInput(value) {
   }
 
   if (value !== correctValue) {
-    vibrate([24, 18, 44]);
-    state.transientError = [row, col];
-    renderGameBoard();
-    window.setTimeout(() => {
-      resetTransientError();
-      renderGameBoard();
-    }, 900);
+    triggerInvalidEntry(row, col);
     return;
   }
 
