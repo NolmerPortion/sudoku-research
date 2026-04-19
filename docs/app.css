@@ -306,6 +306,8 @@ h2 {
 }
 
 .game-head-center {
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
@@ -538,6 +540,32 @@ h2 {
 
   .game-head {
     grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .game-head-center {
+    min-width: 0;
+  }
+
+  .game-head-actions {
+    align-items: center;
+  }
+
+  .game-head-actions:last-child {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .game-head-actions:last-child #pause-button {
+    order: -1;
+  }
+
+  #game-title,
+  .timer-line,
+  .status-line {
+    text-align: center;
   }
 
   .rule-grid {

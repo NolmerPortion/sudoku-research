@@ -119,6 +119,11 @@ function showScreen(key) {
   for (const [name, node] of Object.entries(screens)) {
     node.classList.toggle("is-hidden", name !== key);
   }
+  if (key === "game" && state.currentPuzzle && !state.isPaused) {
+    startTimerLoop();
+  } else if (key !== "game") {
+    stopTimerLoop();
+  }
 }
 
 function parseGrid(text) {
@@ -248,9 +253,19 @@ function updateTimerDisplay() {
 
 function stopTimerLoop() {
   if (state.timerIntervalId != null) {
-    window.clearInterval(state.timerIntervalId);
+    window.clearTimeout(state.timerIntervalId);
     state.timerIntervalId = null;
   }
+}
+
+function scheduleNextTimerTick() {
+  if (!state.currentPuzzle || state.isPaused || state.currentScreen !== "game") {
+    state.timerIntervalId = null;
+    return;
+  }
+  updateTimerDisplay();
+  const delay = 1000 - (Date.now() % 1000);
+  state.timerIntervalId = window.setTimeout(scheduleNextTimerTick, delay);
 }
 
 function startTimerLoop() {
@@ -262,8 +277,7 @@ function startTimerLoop() {
   if (state.timerStartedAt == null) {
     state.timerStartedAt = Date.now();
   }
-  updateTimerDisplay();
-  state.timerIntervalId = window.setInterval(updateTimerDisplay, 1000);
+  scheduleNextTimerTick();
 }
 
 function pauseTimer() {
@@ -1052,7 +1066,12 @@ function attachGlobalEvents() {
   window.addEventListener("beforeunload", persistSession);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
+      pauseTimer();
       persistSession();
+      return;
+    }
+    if (state.currentScreen === "game" && state.currentPuzzle && !state.isPaused) {
+      startTimerLoop();
     }
   });
 
