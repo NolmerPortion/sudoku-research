@@ -877,7 +877,7 @@
           "type": "local_consecutive_exists"
         }
       ],
-      "puzzle_string": "000000040040000000007040000000000027000000000002000000000200000100000000000000090",
+      "puzzle_string": "000000040040000000007040000000000027000000000002000000000200000100000000000000000",
       "solution_string": "521896743643127985897543216986451327475382169312679458769218534158934672234765891",
       "puzzle_grid": [
         [
@@ -976,7 +976,7 @@
           0,
           0,
           0,
-          9,
+          0,
           0
         ]
       ],
@@ -1081,166 +1081,159 @@
           1
         ]
       ],
-      "clue_count": 10,
+      "clue_count": 9,
       "guide_steps": [
         {
-          "row": 2,
-          "col": 7,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 5
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 4
-        },
-        {
-          "row": 5,
-          "col": 7,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 7,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 7,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 0,
-          "col": 8,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 5
-        },
-        {
-          "row": 1,
-          "col": 8,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 4
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 6,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 6,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 6,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
           "col": 0,
-          "value": 6,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 6
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 5
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 2,
           "reason": "guided_min_candidate",
           "candidate_count": 3
         },
         {
-          "row": 1,
-          "col": 2,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 3,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 4,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 5,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 5,
+          "row": 8,
+          "col": 0,
           "value": 2,
           "reason": "hidden_single",
           "candidate_count": 7
         },
         {
-          "row": 2,
-          "col": 0,
+          "row": 0,
+          "col": 8,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 3,
           "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 3
         },
         {
           "row": 2,
-          "col": 1,
-          "value": 9,
+          "col": 5,
+          "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 0,
-          "value": 5,
+          "row": 1,
+          "col": 4,
+          "value": 2,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 2,
-          "value": 1,
+          "row": 1,
+          "col": 5,
+          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 0,
-          "col": 1,
+          "row": 4,
+          "col": 5,
           "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -1248,236 +1241,334 @@
           "row": 7,
           "col": 8,
           "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 8,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 9,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
-          "row": 8,
-          "col": 0,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 5,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 8,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
           "row": 6,
-          "col": 8,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 8,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 8,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 0,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 0,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 2,
+          "col": 1,
           "value": 6,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 3,
-          "col": 1,
+          "row": 6,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
           "value": 8,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 3,
-          "col": 3,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
+          "row": 6,
           "col": 6,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 6,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 4,
           "value": 5,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 4,
-          "col": 6,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
+          "row": 7,
           "col": 1,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 1,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 4,
-          "col": 3,
-          "value": 3,
+          "value": 5,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 4,
-          "col": 4,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 4,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 3,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
+          "row": 7,
           "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
           "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 5,
-          "col": 5,
-          "value": 9,
+          "row": 7,
+          "col": 4,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 6,
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
           "col": 2,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 7,
           "col": 3,
           "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 6,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 5,
-          "col": 4,
+          "row": 7,
+          "col": 7,
           "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
@@ -1490,93 +1581,9 @@
           "candidate_count": 1
         },
         {
-          "row": 6,
-          "col": 1,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 5,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 6,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 2,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 4,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 8,
-          "col": 1,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 2,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 4,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 6,
-          "value": 8,
+          "col": 7,
+          "value": 9,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -2338,45 +2345,12 @@
           "type": "local_consecutive_exists"
         }
       ],
-      "puzzle_string": "003100000001000070000003000080000000000000020000000040000000000050000000000000800",
+      "puzzle_string": "000000000000006000000040200000000000000000000002600000000010000000900000004000090",
       "solution_string": "643127985521896374897543216986452137475381629312679548769218453158934762234765891",
       "puzzle_grid": [
         [
           0,
           0,
-          3,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          8,
           0,
           0,
           0,
@@ -2391,20 +2365,31 @@
           0,
           0,
           0,
+          6,
           0,
           0,
-          2,
           0
         ],
         [
-          0,
-          0,
-          0,
           0,
           0,
           0,
           0,
           4,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0
         ],
         [
@@ -2420,9 +2405,9 @@
         ],
         [
           0,
-          5,
           0,
-          0,
+          2,
+          6,
           0,
           0,
           0,
@@ -2434,10 +2419,32 @@
           0,
           0,
           0,
+          1,
           0,
           0,
-          8,
           0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          9,
           0
         ]
       ],
@@ -2542,245 +2549,322 @@
           1
         ]
       ],
-      "clue_count": 10,
+      "clue_count": 9,
       "guide_steps": [
         {
+          "row": 2,
+          "col": 3,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 5
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 4
+        },
+        {
           "row": 0,
-          "col": 7,
-          "value": 8,
+          "col": 3,
+          "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 4
         },
         {
           "row": 1,
-          "col": 1,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 4
-        },
-        {
-          "row": 0,
-          "col": 1,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 4
-        },
-        {
-          "row": 2,
-          "col": 1,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
-          "col": 0,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 0,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 0,
+          "col": 3,
           "value": 8,
           "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 2,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 6,
-          "value": 9,
-          "reason": "guided_min_candidate",
           "candidate_count": 3
         },
         {
-          "row": 0,
-          "col": 8,
-          "value": 5,
+          "row": 2,
+          "col": 5,
+          "value": 3,
           "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "candidate_count": 3
         },
         {
           "row": 0,
           "col": 4,
           "value": 2,
           "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "candidate_count": 3
         },
         {
           "row": 0,
           "col": 5,
           "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 9,
           "reason": "naked_single",
           "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 4
         },
         {
           "row": 2,
           "col": 7,
           "value": 1,
           "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "candidate_count": 3
         },
         {
           "row": 1,
           "col": 6,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 8,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 6,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 4,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 3,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 4,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 5,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 7,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 7,
           "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 3
         },
         {
           "row": 6,
-          "col": 7,
-          "value": 5,
+          "col": 6,
+          "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 8,
-          "col": 7,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 8,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 4,
+          "row": 5,
+          "col": 6,
           "value": 5,
           "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 4
+          "candidate_count": 2
         },
         {
           "row": 3,
           "col": 6,
           "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 6,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 5,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
           "row": 4,
-          "col": 8,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
           "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 5,
           "reason": "guided_min_candidate",
           "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 5,
@@ -2790,57 +2874,50 @@
           "candidate_count": 1
         },
         {
-          "row": 6,
-          "col": 6,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 0,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 3,
-          "value": 4,
+          "row": 5,
+          "col": 1,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 5,
-          "col": 2,
-          "value": 2,
+          "col": 0,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 8,
+          "row": 0,
           "col": 2,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 1,
           "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
@@ -2853,51 +2930,107 @@
           "candidate_count": 4
         },
         {
-          "row": 7,
-          "col": 5,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 4,
-          "col": 3,
-          "value": 3,
+          "row": 1,
+          "col": 0,
+          "value": 5,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 4,
-          "col": 1,
+          "row": 1,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 8,
           "value": 7,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
           "row": 4,
-          "col": 4,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 5,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 5,
+          "col": 8,
           "value": 9,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
+          "row": 3,
+          "col": 0,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
           "row": 6,
-          "col": 5,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
           "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -2910,134 +3043,15 @@
         },
         {
           "row": 7,
+          "col": 1,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
           "col": 2,
           "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 3,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 1,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 4,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 3,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 3,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 8,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 4,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 8,
-          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -6721,10 +6735,44 @@
           "type": "local_consecutive_exists"
         }
       ],
-      "puzzle_string": "000010000020090000000000000000000020000080000000000050000000000000030000030000802",
+      "puzzle_string": "003000000001000000800503000000001000400000000000070000000100000000000000000000092",
       "solution_string": "643217985521896734897543216986451327475382169312679458769128543258934671134765892",
       "puzzle_grid": [
         [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          5,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
           0,
           0,
           0,
@@ -6732,95 +6780,61 @@
           1,
           0,
           0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0
         ],
         [
           0,
-          2,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           9,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          2,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          8,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          5,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          3,
-          0,
-          0,
-          0,
-          0,
-          8,
-          0,
           2
         ]
       ],
@@ -6925,152 +6939,194 @@
           2
         ]
       ],
-      "clue_count": 10,
+      "clue_count": 11,
       "guide_steps": [
         {
-          "row": 3,
-          "col": 4,
+          "row": 0,
+          "col": 0,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 5
+        },
+        {
+          "row": 1,
+          "col": 0,
           "value": 5,
           "reason": "guided_min_candidate",
           "candidate_count": 4
         },
         {
           "row": 8,
-          "col": 4,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 2,
-          "col": 4,
-          "value": 4,
+          "col": 0,
+          "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 3
         },
         {
           "row": 5,
-          "col": 4,
+          "col": 0,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 0,
           "value": 7,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 6,
-          "col": 4,
+          "row": 7,
+          "col": 0,
           "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 8,
-          "col": 7,
-          "value": 9,
+          "row": 0,
+          "col": 1,
+          "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 4
         },
         {
-          "row": 7,
-          "col": 7,
-          "value": 7,
+          "row": 1,
+          "col": 1,
+          "value": 2,
           "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 1,
+          "reason": "hidden_single",
           "candidate_count": 4
         },
         {
+          "row": 2,
+          "col": 6,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 0,
           "col": 7,
           "value": 8,
           "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 2,
-          "col": 7,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
           "row": 1,
           "col": 7,
           "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 6,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 8,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 6,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 6,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 6,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 5,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
@@ -7082,114 +7138,212 @@
           "candidate_count": 1
         },
         {
-          "row": 4,
+          "row": 6,
           "col": 8,
-          "value": 9,
+          "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 8,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
         },
         {
           "row": 3,
           "col": 8,
           "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 0,
+          "row": 4,
           "col": 1,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
-          "col": 0,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 3,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 5,
           "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "hidden_single",
+          "candidate_count": 5
         },
         {
-          "row": 1,
-          "col": 0,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
+          "row": 7,
+          "col": 7,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 4
         },
         {
-          "row": 1,
-          "col": 2,
+          "row": 5,
+          "col": 1,
           "value": 1,
           "reason": "hidden_single",
-          "candidate_count": 2
+          "candidate_count": 4
         },
         {
-          "row": 1,
-          "col": 3,
+          "row": 5,
+          "col": 8,
           "value": 8,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 1,
-          "col": 5,
-          "value": 6,
+          "row": 7,
+          "col": 8,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 2,
+          "row": 4,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
           "col": 3,
-          "value": 5,
+          "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 5,
+          "row": 4,
+          "col": 3,
           "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 7,
           "col": 3,
           "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 2,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
+          "row": 5,
+          "col": 6,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 6,
-          "col": 3,
-          "value": 1,
+          "col": 7,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 6,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
@@ -7197,216 +7351,55 @@
           "row": 6,
           "col": 5,
           "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 8,
-          "col": 0,
-          "value": 1,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 8,
-          "col": 3,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 3,
+          "col": 1,
           "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 3,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 6,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 5,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 5,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 6,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 2,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 4,
-          "col": 0,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 0,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 0,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 1,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 2,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 1,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 2,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 2,
-          "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -7419,8 +7412,22 @@
         },
         {
           "row": 8,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
           "col": 5,
           "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T04:46:09.871294+00:00",
+  "generated_at": "2026-04-19T11:12:41.829613+00:00",
   "difficulties": [
     {
       "id": "easy",
@@ -43,11 +43,11 @@
       ]
     },
     {
-      "rule_mode": "standard",
+      "rule_mode": "checkerboard_odd",
       "rule_slug": "checkerboard_odd",
-      "rule_name": "standard",
-      "short_name": "Standard",
-      "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
+      "rule_name": "checkerboard_odd",
+      "short_name": "Checkerboard Odd",
+      "description_ja": "左上を黒とした市松模様で、色付きの白マスには奇数だけが入ります。",
       "available_difficulties": [
         "easy",
         "normal",
@@ -79,11 +79,11 @@
       ]
     },
     {
-      "rule_mode": "standard",
+      "rule_mode": "hyper_3x3",
       "rule_slug": "hyper3x3",
-      "rule_name": "standard",
-      "short_name": "Standard",
-      "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
+      "rule_name": "hyper_3x3",
+      "short_name": "Hyper 3x3",
+      "description_ja": "通常の数独の条件に加えて、中央寄りの4つの色付き3x3領域にも1から9を一度ずつ入れます。",
       "available_difficulties": [
         "easy",
         "normal",
@@ -120,6 +120,18 @@
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
       "description_ja": "色付きの3x3ブロックは、ある90度回転をすると、各行が左から右へ、各列が上から下へ厳密に増加する並びになります。",
+      "available_difficulties": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    {
+      "rule_mode": "standard",
+      "rule_slug": "standard",
+      "rule_name": "standard",
+      "short_name": "Standard",
+      "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
       "available_difficulties": [
         "easy",
         "normal",
@@ -172,21 +184,21 @@
     },
     {
       "difficulty_id": "easy",
-      "rule_mode": "standard",
+      "rule_mode": "checkerboard_odd",
       "rule_slug": "checkerboard_odd",
       "path": "easy/checkerboard_odd.json",
       "count": 15
     },
     {
       "difficulty_id": "normal",
-      "rule_mode": "standard",
+      "rule_mode": "checkerboard_odd",
       "rule_slug": "checkerboard_odd",
       "path": "normal/checkerboard_odd.json",
       "count": 15
     },
     {
       "difficulty_id": "hard",
-      "rule_mode": "standard",
+      "rule_mode": "checkerboard_odd",
       "rule_slug": "checkerboard_odd",
       "path": "hard/checkerboard_odd.json",
       "count": 15
@@ -235,21 +247,21 @@
     },
     {
       "difficulty_id": "easy",
-      "rule_mode": "standard",
+      "rule_mode": "hyper_3x3",
       "rule_slug": "hyper3x3",
       "path": "easy/hyper3x3.json",
       "count": 15
     },
     {
       "difficulty_id": "normal",
-      "rule_mode": "standard",
+      "rule_mode": "hyper_3x3",
       "rule_slug": "hyper3x3",
       "path": "normal/hyper3x3.json",
       "count": 15
     },
     {
       "difficulty_id": "hard",
-      "rule_mode": "standard",
+      "rule_mode": "hyper_3x3",
       "rule_slug": "hyper3x3",
       "path": "hard/hyper3x3.json",
       "count": 15
@@ -315,6 +327,27 @@
       "rule_mode": "special_monotone_3x3",
       "rule_slug": "special_monotone_3x3",
       "path": "hard/special_monotone_3x3.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "easy",
+      "rule_mode": "standard",
+      "rule_slug": "standard",
+      "path": "easy/standard.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "normal",
+      "rule_mode": "standard",
+      "rule_slug": "standard",
+      "path": "normal/standard.json",
+      "count": 15
+    },
+    {
+      "difficulty_id": "hard",
+      "rule_mode": "standard",
+      "rule_slug": "standard",
+      "path": "hard/standard.json",
       "count": 15
     }
   ]

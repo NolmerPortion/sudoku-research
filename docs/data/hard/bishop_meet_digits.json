@@ -191,50 +191,50 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "030000200080070000400030700000000800000007002079000000002004008000300500096800000",
+      "puzzle_string": "907000080600000040020000706003000000000007002000080600002004000008300500190800000",
       "solution_string": "937456281685172943421938756213649875864517392579283614352794168748361529196825437",
       "puzzle_grid": [
         [
+          9,
           0,
-          3,
+          7,
           0,
           0,
           0,
+          0,
+          8,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
           0,
           2,
           0,
-          0
-        ],
-        [
           0,
-          8,
           0,
           0,
           7,
           0,
-          0,
-          0,
-          0
+          6
         ],
         [
-          4,
-          0,
           0,
           0,
           3,
           0,
-          7,
-          0,
-          0
-        ],
-        [
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          8,
           0,
           0
         ],
@@ -251,12 +251,12 @@
         ],
         [
           0,
-          7,
-          9,
           0,
           0,
           0,
+          8,
           0,
+          6,
           0,
           0
         ],
@@ -269,12 +269,12 @@
           4,
           0,
           0,
-          8
+          0
         ],
         [
           0,
           0,
-          0,
+          8,
           3,
           0,
           0,
@@ -283,9 +283,9 @@
           0
         ],
         [
-          0,
+          1,
           9,
-          6,
+          0,
           8,
           0,
           0,
@@ -395,16 +395,9 @@
           7
         ]
       ],
-      "clue_count": 20,
+      "clue_count": 21,
       "guide_steps": [
         {
-          "row": 6,
-          "col": 3,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
           "row": 1,
           "col": 2,
           "value": 5,
@@ -415,195 +408,97 @@
           "row": 2,
           "col": 2,
           "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 0,
-          "value": 9,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 1,
-          "col": 0,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
+          "row": 0,
           "col": 1,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 2,
           "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 5,
+          "row": 1,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
           "col": 5,
-          "value": 3,
-          "reason": "hidden_single",
-          "candidate_count": 6
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 2,
           "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 1,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 0,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 0,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 2,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 1,
-          "col": 5,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
           "row": 6,
           "col": 0,
           "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 4,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 7,
-          "value": 2,
           "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 9,
-          "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 5,
-          "value": 8,
+          "row": 6,
+          "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 2,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
           "row": 0,
+          "col": 8,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
           "col": 7,
-          "value": 8,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 3,
           "reason": "hidden_single",
           "candidate_count": 5
         },
@@ -615,6 +510,76 @@
           "candidate_count": 2
         },
         {
+          "row": 0,
+          "col": 3,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
           "row": 7,
           "col": 5,
           "value": 1,
@@ -623,85 +588,92 @@
         },
         {
           "row": 3,
-          "col": 3,
-          "value": 6,
+          "col": 7,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 7,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
-          "row": 3,
-          "col": 4,
-          "value": 4,
+          "row": 5,
+          "col": 7,
+          "value": 1,
           "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 4,
-          "value": 5,
-          "reason": "guided_min_candidate",
+          "row": 6,
+          "col": 6,
+          "value": 1,
+          "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 3,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "row": 6,
+          "col": 8,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 4,
-          "col": 4,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "col": 0,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 2
         },
         {
           "row": 4,
           "col": 3,
           "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 3,
-          "value": 4,
-          "reason": "guided_min_candidate",
+          "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 8,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
+          "row": 5,
           "col": 3,
-          "value": 1,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 2,
-          "col": 7,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
+          "row": 3,
+          "col": 3,
           "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
+          "row": 5,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 3,
-          "col": 7,
-          "value": 7,
+          "col": 0,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -709,12 +681,40 @@
           "row": 3,
           "col": 8,
           "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 5,
-          "col": 8,
+          "row": 4,
+          "col": 4,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 1,
           "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
@@ -727,9 +727,58 @@
           "candidate_count": 1
         },
         {
-          "row": 1,
+          "row": 5,
           "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
           "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -741,44 +790,16 @@
           "candidate_count": 1
         },
         {
-          "row": 6,
+          "row": 8,
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
           "col": 4,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 8,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 6,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 7,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 9,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -793,34 +814,6 @@
           "row": 8,
           "col": 7,
           "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 6,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 7,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 6,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -1539,14 +1532,14 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "000720003530000000006004000000000300200030900900000007000000002005400000004006000",
+      "puzzle_string": "000020003530000000006004000000000300200030900900000007000000002005400000004006000",
       "solution_string": "149728653532961874876354129467192385258637941913845267681573492325489716794216538",
       "puzzle_grid": [
         [
           0,
           0,
           0,
-          7,
+          0,
           2,
           0,
           0,
@@ -1743,14 +1736,14 @@
           8
         ]
       ],
-      "clue_count": 18,
+      "clue_count": 17,
       "guide_steps": [
         {
           "row": 2,
           "col": 3,
           "value": 3,
           "reason": "hidden_single",
-          "candidate_count": 5
+          "candidate_count": 6
         },
         {
           "row": 5,
@@ -1767,6 +1760,13 @@
           "candidate_count": 5
         },
         {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
           "row": 0,
           "col": 0,
           "value": 1,
@@ -1777,46 +1777,158 @@
           "row": 3,
           "col": 0,
           "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 2,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
           "row": 0,
-          "col": 1,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
           "col": 5,
           "value": 8,
           "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 4,
-          "value": 5,
-          "reason": "hidden_single",
           "candidate_count": 3
         },
         {
           "row": 0,
+          "col": 3,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
           "col": 6,
           "value": 6,
           "reason": "guided_min_candidate",
@@ -1837,39 +1949,60 @@
           "candidate_count": 2
         },
         {
-          "row": 1,
-          "col": 3,
+          "row": 7,
+          "col": 5,
           "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 4,
-          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 1,
-          "col": 8,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 4
+          "row": 6,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 6,
           "col": 6,
           "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 9,
           "reason": "hidden_single",
-          "candidate_count": 5
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
         },
         {
           "row": 1,
@@ -1880,24 +2013,31 @@
         },
         {
           "row": 1,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
           "col": 7,
           "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 2,
-          "col": 0,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "row": 4,
+          "col": 7,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
         },
         {
-          "row": 2,
-          "col": 1,
+          "row": 7,
+          "col": 6,
           "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "hidden_single",
+          "candidate_count": 2
         },
         {
           "row": 2,
@@ -1908,22 +2048,8 @@
         },
         {
           "row": 2,
-          "col": 8,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
           "col": 7,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -1949,65 +2075,9 @@
           "candidate_count": 1
         },
         {
-          "row": 4,
-          "col": 5,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 6,
-          "col": 3,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
           "row": 3,
           "col": 5,
           "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 8,
-          "col": 3,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 2,
-          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -2082,69 +2152,6 @@
           "candidate_count": 1
         },
         {
-          "row": 8,
-          "col": 8,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 5,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 7,
           "col": 7,
           "value": 1,
@@ -2159,16 +2166,9 @@
           "candidate_count": 1
         },
         {
-          "row": 8,
-          "col": 0,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 1,
-          "value": 9,
+          "row": 7,
+          "col": 8,
+          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -2181,8 +2181,8 @@
         },
         {
           "row": 8,
-          "col": 7,
-          "value": 3,
+          "col": 8,
+          "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -4235,17 +4235,17 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "000070806000000500520080090000500080680000000000020000000906004053000000000000000",
+      "puzzle_string": "000400006000090500520600000000000903600000002004000000200000004950007000000008070",
       "solution_string": "139475826846192537527683491712564983685739142394821765278916354953247618461358279",
       "puzzle_grid": [
         [
           0,
           0,
           0,
+          4,
           0,
-          7,
           0,
-          8,
+          0,
           0,
           6
         ],
@@ -4254,7 +4254,7 @@
           0,
           0,
           0,
-          0,
+          9,
           0,
           5,
           0,
@@ -4264,28 +4264,39 @@
           5,
           2,
           0,
+          6,
           0,
-          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           9,
-          0
-        ],
-        [
           0,
-          0,
-          0,
-          5,
-          0,
-          0,
-          0,
-          8,
-          0
+          3
         ],
         [
           6,
-          8,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          4,
           0,
           0,
           0,
@@ -4294,34 +4305,23 @@
           0
         ],
         [
-          0,
-          0,
-          0,
-          0,
           2,
           0,
           0,
           0,
-          0
-        ],
-        [
           0,
           0,
-          0,
-          9,
-          0,
-          6,
           0,
           0,
           4
         ],
         [
-          0,
+          9,
           5,
-          3,
           0,
           0,
           0,
+          7,
           0,
           0,
           0
@@ -4332,9 +4332,9 @@
           0,
           0,
           0,
+          8,
           0,
-          0,
-          0,
+          7,
           0
         ]
       ],
@@ -4439,82 +4439,138 @@
           9
         ]
       ],
-      "clue_count": 18,
+      "clue_count": 19,
       "guide_steps": [
         {
-          "row": 0,
-          "col": 5,
+          "row": 7,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 4,
+          "col": 2,
           "value": 5,
           "reason": "hidden_single",
           "candidate_count": 6
         },
         {
-          "row": 6,
-          "col": 1,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 4,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
-          "col": 1,
+          "row": 2,
+          "col": 5,
           "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 3,
-          "value": 4,
+          "row": 1,
+          "col": 5,
+          "value": 2,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
           "row": 0,
-          "col": 7,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "col": 5,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 1,
-          "col": 1,
-          "value": 4,
+          "col": 8,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 7,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
           "row": 2,
-          "col": 6,
-          "value": 4,
+          "col": 4,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 6,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
           "row": 8,
+          "col": 0,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
           "col": 1,
-          "value": 6,
+          "value": 4,
           "reason": "hidden_single",
           "candidate_count": 3
         },
@@ -4526,261 +4582,177 @@
           "candidate_count": 2
         },
         {
-          "row": 6,
-          "col": 0,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 2,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 2,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 1,
-          "col": 2,
-          "value": 6,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 2,
+          "row": 0,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
           "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
+          "row": 5,
+          "col": 0,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 2,
-          "col": 3,
-          "value": 6,
+          "col": 6,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 5,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
           "row": 3,
+          "col": 1,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
           "col": 4,
           "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 5,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 2,
-          "col": 5,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 3,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
+          "row": 5,
           "col": 4,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 5,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 7,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 8,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 0,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 8,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 2,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 4,
           "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 4,
-          "col": 7,
-          "value": 4,
+          "row": 6,
+          "col": 5,
+          "value": 6,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
-          "row": 4,
-          "col": 5,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 6,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 8,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 8,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 8,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
+          "row": 6,
           "col": 3,
-          "value": 7,
-          "reason": "guided_min_candidate",
+          "value": 9,
+          "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 4,
-          "col": 6,
+          "row": 6,
+          "col": 4,
           "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "hidden_single",
+          "candidate_count": 2
         },
         {
           "row": 4,
           "col": 4,
           "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 5,
-          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -4792,22 +4764,57 @@
           "candidate_count": 1
         },
         {
-          "row": 7,
-          "col": 3,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "row": 4,
+          "col": 1,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 7,
-          "col": 5,
+          "row": 4,
+          "col": 3,
           "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 7,
+          "row": 4,
           "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 7,
           "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
@@ -4820,13 +4827,6 @@
           "candidate_count": 1
         },
         {
-          "row": 5,
-          "col": 7,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 7,
           "col": 7,
           "value": 1,
@@ -4834,15 +4834,29 @@
           "candidate_count": 1
         },
         {
-          "row": 6,
-          "col": 7,
-          "value": 5,
+          "row": 7,
+          "col": 2,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 6,
-          "col": 4,
+          "row": 7,
+          "col": 3,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
           "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
@@ -4856,29 +4870,8 @@
         },
         {
           "row": 8,
-          "col": 4,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
           "col": 6,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 7,
-          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -4916,7 +4909,7 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "000500600000080090600030040000008000020009008008000530004000000000960000050007000",
+      "puzzle_string": "000500620000000000600030000000000400006000008700600009004800950073000000050240000",
       "solution_string": "187594623432186795695732841519378462326459178748621539264813957873965214951247386",
       "puzzle_grid": [
         [
@@ -4927,7 +4920,7 @@
           0,
           0,
           6,
-          0,
+          2,
           0
         ],
         [
@@ -4935,10 +4928,10 @@
           0,
           0,
           0,
-          8,
           0,
           0,
-          9,
+          0,
+          0,
           0
         ],
         [
@@ -4949,59 +4942,59 @@
           3,
           0,
           0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           4,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          8,
-          0,
           0,
           0
         ],
         [
           0,
-          2,
+          0,
+          6,
           0,
           0,
           0,
-          9,
           0,
           0,
           8
         ],
         [
+          7,
           0,
           0,
-          8,
+          6,
           0,
           0,
           0,
-          5,
-          3,
-          0
+          0,
+          9
         ],
         [
           0,
           0,
           4,
+          8,
           0,
           0,
-          0,
-          0,
-          0,
+          9,
+          5,
           0
         ],
         [
           0,
+          7,
+          3,
           0,
           0,
-          9,
-          6,
           0,
           0,
           0,
@@ -5011,9 +5004,9 @@
           0,
           5,
           0,
+          2,
+          4,
           0,
-          0,
-          7,
           0,
           0,
           0
@@ -5120,390 +5113,418 @@
           6
         ]
       ],
-      "clue_count": 19,
+      "clue_count": 20,
       "guide_steps": [
         {
-          "row": 0,
-          "col": 4,
-          "value": 9,
+          "row": 6,
+          "col": 1,
+          "value": 6,
           "reason": "hidden_single",
-          "candidate_count": 5
+          "candidate_count": 3
         },
         {
-          "row": 2,
-          "col": 5,
-          "value": 2,
+          "row": 5,
+          "col": 7,
+          "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 0,
-          "col": 5,
-          "value": 4,
+          "row": 4,
+          "col": 7,
+          "value": 7,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 1,
-          "col": 5,
+          "row": 3,
+          "col": 7,
           "value": 6,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 5,
-          "col": 5,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "row": 6,
+          "col": 0,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 1,
-          "col": 3,
+          "row": 6,
+          "col": 4,
           "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
+          "row": 7,
           "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 8,
           "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 2,
+          "row": 8,
+          "col": 5,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
           "col": 6,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 0,
           "value": 8,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 1,
-          "value": 9,
+          "row": 8,
+          "col": 7,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 6,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 2,
+          "row": 7,
+          "col": 5,
           "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 1,
+          "col": 5,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
           "col": 8,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 6,
           "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 2,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 0,
-          "col": 7,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 6,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 1,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 1,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
           "row": 1,
           "col": 2,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 0,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 7,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 0,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 3,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 4,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 3,
-          "value": 3,
           "reason": "hidden_single",
           "candidate_count": 2
         },
         {
-          "row": 3,
-          "col": 0,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 8,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 8,
-          "col": 4,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 1,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 8,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 8,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 6,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 8,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 3,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
+          "row": 2,
           "col": 5,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
           "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 7,
-          "col": 5,
+          "row": 4,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 4,
           "value": 5,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 8,
-          "col": 3,
-          "value": 2,
+          "row": 3,
+          "col": 4,
+          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 6,
+          "row": 4,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
           "col": 0,
-          "value": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 6,
-          "col": 6,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 8,
+          "row": 2,
+          "col": 8,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -5516,43 +5537,8 @@
         },
         {
           "row": 7,
-          "col": 2,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 2,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 6,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 7,
-          "value": 8,
+          "col": 8,
+          "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -5590,52 +5576,52 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "503800000000400002000000300300000400000070260000500000000608000400030007000004500",
+      "puzzle_string": "020007000000400750000000098300080009000070205090006000000000000085000600600000500",
       "solution_string": "523897146918463752764215398356182479841379265297546813172658934485931627639724581",
       "puzzle_grid": [
         [
-          5,
           0,
+          2,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          7,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          8
+        ],
+        [
           3,
+          0,
+          0,
+          0,
           8,
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          4,
-          0,
-          0,
-          0,
-          0,
-          2
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0
-        ],
-        [
-          3,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4,
-          0,
-          0
+          9
         ],
         [
           0,
@@ -5645,49 +5631,49 @@
           7,
           0,
           2,
+          0,
+          5
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          0,
           6,
+          0,
+          0,
           0
         ],
         [
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
           5,
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
           6,
           0,
-          8,
-          0,
-          0,
           0
         ],
         [
-          4,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0,
-          7
-        ],
-        [
+          6,
           0,
           0,
           0,
           0,
           0,
-          4,
           5,
           0,
           0
@@ -5794,238 +5780,98 @@
           1
         ]
       ],
-      "clue_count": 19,
+      "clue_count": 20,
       "guide_steps": [
         {
-          "row": 1,
-          "col": 5,
-          "value": 3,
-          "reason": "hidden_single",
-          "candidate_count": 6
-        },
-        {
-          "row": 4,
-          "col": 3,
-          "value": 3,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 6
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 8,
-          "col": 3,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 4,
-          "col": 5,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 3,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 3,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 1,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 6
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 5,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 5,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 5,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 4,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 6,
-          "col": 4,
-          "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 7,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 3,
-          "col": 7,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
           "col": 6,
-          "value": 7,
+          "value": 9,
           "reason": "hidden_single",
           "candidate_count": 5
         },
         {
-          "row": 3,
-          "col": 8,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 8,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 2,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 7,
-          "col": 7,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 0,
+          "row": 5,
+          "col": 6,
           "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 1,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 2,
-          "value": 4,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
           "row": 1,
-          "col": 2,
-          "value": 8,
+          "col": 8,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 8,
-          "col": 2,
-          "value": 9,
+          "row": 0,
+          "col": 7,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 5,
+          "row": 0,
+          "col": 0,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
           "col": 1,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 4,
           "value": 9,
           "reason": "guided_min_candidate",
           "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 1,
@@ -6033,6 +5879,27 @@
           "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 6
         },
         {
           "row": 1,
@@ -6043,101 +5910,24 @@
         },
         {
           "row": 1,
-          "col": 4,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 4,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 4,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 7,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 6,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 6,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 7,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 6,
+          "col": 2,
           "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 7,
-          "col": 6,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
+          "row": 4,
+          "col": 0,
           "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 8,
-          "value": 4,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
           "row": 8,
-          "col": 7,
-          "value": 8,
+          "col": 2,
+          "value": 9,
           "reason": "hidden_single",
-          "candidate_count": 3
+          "candidate_count": 5
         },
         {
           "row": 2,
@@ -6149,6 +5939,160 @@
         {
           "row": 2,
           "col": 1,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 7,
           "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
@@ -6169,31 +6113,31 @@
         },
         {
           "row": 6,
-          "col": 0,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
           "col": 2,
           "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 6,
+          "row": 7,
           "col": 7,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
         },
         {
           "row": 5,
           "col": 7,
           "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 5,
@@ -6203,23 +6147,58 @@
           "candidate_count": 1
         },
         {
+          "row": 8,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 6,
-          "col": 1,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 1,
+          "col": 7,
           "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -6264,72 +6243,39 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "000004000904030000003060200000000900290000000000005600000307500008000000000980006",
+      "puzzle_string": "800004090070200060050800200000400000000070000000000680009007500300006700000080000",
       "solution_string": "862754391974231865153869274586423917291678453437195682629317548318546729745982136",
       "puzzle_grid": [
         [
-          0,
+          8,
           0,
           0,
           0,
           0,
           4,
           0,
-          0,
-          0
-        ],
-        [
           9,
-          0,
-          4,
-          0,
-          3,
-          0,
-          0,
-          0,
           0
         ],
         [
           0,
+          7,
           0,
-          3,
+          2,
+          0,
+          0,
           0,
           6,
-          0,
-          2,
-          0,
           0
         ],
         [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          9,
-          0,
-          0
-        ],
-        [
-          2,
-          9,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
           0,
           5,
-          6,
+          0,
+          8,
+          0,
+          0,
+          2,
           0,
           0
         ],
@@ -6337,7 +6283,40 @@
           0,
           0,
           0,
-          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          9,
+          0,
           0,
           7,
           5,
@@ -6345,13 +6324,13 @@
           0
         ],
         [
-          0,
-          0,
-          8,
+          3,
           0,
           0,
           0,
           0,
+          6,
+          7,
           0,
           0
         ],
@@ -6359,12 +6338,12 @@
           0,
           0,
           0,
-          9,
+          0,
           8,
           0,
           0,
           0,
-          6
+          0
         ]
       ],
       "solution_grid": [
@@ -6468,201 +6447,75 @@
           6
         ]
       ],
-      "clue_count": 19,
+      "clue_count": 20,
       "guide_steps": [
         {
-          "row": 5,
-          "col": 4,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 6,
-          "col": 2,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 2,
-          "col": 5,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 5,
-          "col": 2,
+          "row": 0,
+          "col": 3,
           "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 1,
-          "col": 3,
-          "value": 2,
           "reason": "hidden_single",
           "candidate_count": 5
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 1,
-          "col": 5,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 0,
-          "col": 4,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 3,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 3
         },
         {
           "row": 4,
-          "col": 4,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
           "col": 3,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 6,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 6,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 7,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 9,
+          "value": 6,
           "reason": "hidden_single",
           "candidate_count": 5
         },
         {
           "row": 1,
-          "col": 7,
-          "value": 6,
+          "col": 6,
+          "value": 8,
           "reason": "hidden_single",
-          "candidate_count": 3
+          "candidate_count": 4
         },
         {
           "row": 0,
-          "col": 0,
-          "value": 8,
+          "col": 6,
+          "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
           "row": 0,
-          "col": 1,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 1,
-          "value": 7,
+          "col": 8,
+          "value": 1,
           "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 5,
+          "reason": "hidden_single",
           "candidate_count": 2
         },
         {
           "row": 1,
           "col": 8,
           "value": 5,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
+          "reason": "hidden_single",
           "candidate_count": 2
         },
         {
           "row": 2,
+          "col": 4,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
           "col": 1,
-          "value": 5,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -6681,32 +6534,88 @@
           "candidate_count": 1
         },
         {
-          "row": 3,
-          "col": 8,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 3
+          "row": 2,
+          "col": 0,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 3,
+          "row": 2,
+          "col": 2,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
           "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
           "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 4,
+          "row": 1,
           "col": 5,
-          "value": 8,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
+          "row": 3,
+          "col": 6,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
           "row": 4,
+          "col": 1,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 2,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 3,
           "col": 8,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 3,
@@ -6716,53 +6625,46 @@
           "candidate_count": 2
         },
         {
-          "row": 4,
-          "col": 7,
-          "value": 5,
+          "row": 3,
+          "col": 2,
+          "value": 6,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
-          "row": 8,
-          "col": 2,
+          "row": 4,
+          "col": 7,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 5,
           "value": 5,
           "reason": "hidden_single",
           "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 2,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
         },
         {
           "row": 4,
           "col": 6,
           "value": 4,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 4,
-          "col": 3,
-          "value": 6,
+          "col": 8,
+          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 1,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
         },
         {
           "row": 3,
@@ -6772,16 +6674,37 @@
           "candidate_count": 1
         },
         {
+          "row": 4,
+          "col": 5,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
           "row": 3,
-          "col": 3,
-          "value": 4,
+          "col": 5,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 5,
-          "col": 3,
-          "value": 1,
+          "col": 2,
+          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -6789,8 +6712,8 @@
           "row": 5,
           "col": 0,
           "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 5,
@@ -6798,13 +6721,6 @@
           "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 7,
-          "value": 8,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
         },
         {
           "row": 5,
@@ -6815,8 +6731,120 @@
         },
         {
           "row": 6,
+          "col": 0,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
           "col": 8,
           "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 5,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -6824,8 +6852,15 @@
           "row": 6,
           "col": 4,
           "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 7,
@@ -6835,72 +6870,9 @@
           "candidate_count": 1
         },
         {
-          "row": 6,
-          "col": 1,
-          "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 7,
           "col": 7,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 0,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 1,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 6,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 7,
-          "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
         }
@@ -6938,7 +6910,7 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "940000300000075000000006090020000500000000080008000039090802000000004000300050060",
+      "puzzle_string": "940000300000005000000006090020000500000000080008000039090802000000004000300050060",
       "solution_string": "945218376613975824872346195429683517136597482758421639591862743267134958384759261",
       "puzzle_grid": [
         [
@@ -6957,7 +6929,7 @@
           0,
           0,
           0,
-          7,
+          0,
           5,
           0,
           0,
@@ -7142,75 +7114,152 @@
           1
         ]
       ],
-      "clue_count": 20,
+      "clue_count": 19,
       "guide_steps": [
         {
+          "row": 5,
+          "col": 5,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 6
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": 1,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 5,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 5,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": 3,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
           "row": 1,
           "col": 3,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 2,
           "value": 9,
           "reason": "hidden_single",
           "candidate_count": 5
         },
         {
-          "row": 0,
-          "col": 3,
+          "row": 4,
+          "col": 4,
+          "value": 9,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 5,
+          "col": 4,
           "value": 2,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 4,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 5,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 8,
           "reason": "hidden_single",
-          "candidate_count": 5
+          "candidate_count": 3
         },
         {
-          "row": 0,
-          "col": 7,
+          "row": 1,
+          "col": 4,
           "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 8,
-          "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 5
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 3,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
@@ -7220,6 +7269,13 @@
           "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
           "row": 3,
@@ -7261,7 +7317,7 @@
           "col": 2,
           "value": 4,
           "reason": "hidden_single",
-          "candidate_count": 4
+          "candidate_count": 3
         },
         {
           "row": 2,
@@ -7274,6 +7330,20 @@
           "row": 6,
           "col": 6,
           "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": 4,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -7292,13 +7362,6 @@
           "candidate_count": 1
         },
         {
-          "row": 3,
-          "col": 8,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
           "row": 4,
           "col": 8,
           "value": 2,
@@ -7306,53 +7369,11 @@
           "candidate_count": 1
         },
         {
-          "row": 5,
-          "col": 4,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
           "row": 8,
           "col": 6,
           "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 7,
-          "col": 6,
-          "value": 9,
           "reason": "naked_single",
           "candidate_count": 1
-        },
-        {
-          "row": 8,
-          "col": 5,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 2,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 4,
-          "value": 9,
-          "reason": "hidden_single",
-          "candidate_count": 2
         },
         {
           "row": 1,
@@ -7362,16 +7383,16 @@
           "candidate_count": 2
         },
         {
-          "row": 3,
+          "row": 4,
           "col": 0,
-          "value": 4,
+          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 3,
-          "col": 3,
-          "value": 6,
+          "row": 5,
+          "col": 0,
+          "value": 7,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -7391,106 +7412,120 @@
         },
         {
           "row": 4,
-          "col": 1,
-          "value": 3,
-          "reason": "hidden_single",
-          "candidate_count": 4
+          "col": 2,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 4,
           "col": 3,
           "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 6,
-          "value": 6,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 4,
-          "col": 2,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 6,
-          "col": 2,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 8,
+          "col": 1,
           "value": 3,
           "reason": "naked_single",
           "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 6,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 4,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 3,
-          "value": 4,
-          "reason": "hidden_single",
-          "candidate_count": 3
         },
         {
           "row": 5,
           "col": 1,
           "value": 5,
-          "reason": "hidden_single",
-          "candidate_count": 2
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": 3,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 7,
           "col": 1,
           "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 2,
-          "col": 1,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 2,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 0,
-          "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -7498,27 +7533,6 @@
           "row": 7,
           "col": 2,
           "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 0,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 3,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 8,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -7531,42 +7545,7 @@
         },
         {
           "row": 8,
-          "col": 3,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 8,
           "col": 8,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 5,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 5,
           "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
@@ -8953,95 +8932,84 @@
           "type": "bishop_meet_digits"
         }
       ],
-      "puzzle_string": "300800000000000020000060709030000000400506000002000500007900008000000650000030004",
+      "puzzle_string": "370050060000000000005300000530000800000020000000000546607900030000008007008000004",
       "solution_string": "379852461864791325125364789536479812481526973792183546647915238913248657258637194",
       "puzzle_grid": [
         [
           3,
+          7,
           0,
           0,
-          8,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          2,
-          0
-        ],
-        [
-          0,
-          0,
+          5,
           0,
           0,
           6,
-          0,
-          7,
-          0,
-          9
+          0
         ],
         [
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
           3,
           0,
           0,
           0,
           0,
-          0,
-          0,
           0
         ],
         [
-          4,
-          0,
-          0,
           5,
+          3,
           0,
-          6,
           0,
+          0,
+          0,
+          8,
           0,
           0
         ],
         [
+          0,
+          0,
           0,
           0,
           2,
           0,
           0,
           0,
-          5,
-          0,
           0
         ],
         [
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          4,
+          6
+        ],
+        [
+          6,
           0,
           7,
           9,
           0,
           0,
           0,
-          0,
-          8
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          6,
-          5,
+          3,
           0
         ],
         [
@@ -9049,7 +9017,18 @@
           0,
           0,
           0,
-          3,
+          0,
+          8,
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
           0,
           0,
           0,
@@ -9157,8 +9136,22 @@
           4
         ]
       ],
-      "clue_count": 19,
+      "clue_count": 21,
       "guide_steps": [
+        {
+          "row": 6,
+          "col": 8,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 4
+        },
         {
           "row": 7,
           "col": 2,
@@ -9167,67 +9160,39 @@
           "candidate_count": 5
         },
         {
-          "row": 8,
-          "col": 3,
-          "value": 6,
+          "row": 5,
+          "col": 4,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 5
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": 3,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 0,
-          "col": 6,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 7,
-          "value": 6,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 8,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "row": 8,
+          "col": 4,
+          "value": 3,
+          "reason": "hidden_single",
+          "candidate_count": 4
         },
         {
           "row": 1,
           "col": 8,
           "value": 5,
           "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 2,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
+          "candidate_count": 5
         },
         {
           "row": 1,
           "col": 6,
           "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 7,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 7,
-          "value": 3,
           "reason": "hidden_single",
-          "candidate_count": 2
+          "candidate_count": 6
         },
         {
           "row": 4,
@@ -9237,268 +9202,114 @@
           "candidate_count": 3
         },
         {
-          "row": 4,
-          "col": 2,
+          "row": 5,
+          "col": 3,
           "value": 1,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 2,
-          "col": 2,
-          "value": 5,
+          "row": 5,
+          "col": 0,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": 9,
           "reason": "guided_min_candidate",
           "candidate_count": 2
         },
         {
-          "row": 8,
+          "row": 5,
           "col": 2,
-          "value": 8,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 3,
-          "col": 2,
-          "value": 6,
+          "row": 6,
+          "col": 4,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 1,
-          "col": 2,
+          "row": 6,
+          "col": 1,
           "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": 5,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 3,
-          "col": 0,
+          "row": 4,
+          "col": 3,
           "value": 5,
           "reason": "hidden_single",
           "candidate_count": 4
         },
         {
-          "row": 5,
-          "col": 8,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 1,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 5,
-          "col": 0,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 0,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 1,
-          "col": 1,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 0,
-          "value": 6,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 0,
+          "row": 7,
           "col": 4,
-          "value": 5,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 0,
-          "col": 5,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 1,
-          "col": 3,
-          "value": 7,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 4,
-          "value": 9,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 1,
-          "col": 5,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 0,
-          "value": 1,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 1,
-          "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 2,
-          "col": 3,
-          "value": 3,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 2,
-          "col": 5,
           "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 6,
-          "col": 5,
+          "row": 7,
+          "col": 3,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": 6,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": 9,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": 1,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 7,
+          "col": 7,
           "value": 5,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
           "row": 8,
-          "col": 5,
-          "value": 7,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 5,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 3,
-          "col": 5,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 5,
-          "value": 3,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 8,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 8,
+          "col": 0,
           "value": 2,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 4,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 4,
-          "col": 7,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 3,
-          "col": 4,
-          "value": 7,
-          "reason": "hidden_single",
-          "candidate_count": 4
-        },
-        {
-          "row": 3,
-          "col": 6,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 4,
-          "col": 6,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 4,
-          "col": 1,
-          "value": 8,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 1,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 5,
-          "col": 4,
-          "value": 8,
-          "reason": "hidden_single",
-          "candidate_count": 3
-        },
-        {
-          "row": 6,
-          "col": 6,
-          "value": 2,
-          "reason": "hidden_single",
-          "candidate_count": 2
-        },
-        {
-          "row": 8,
-          "col": 6,
-          "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
@@ -9510,39 +9321,200 @@
           "candidate_count": 1
         },
         {
-          "row": 8,
-          "col": 7,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
+          "row": 4,
+          "col": 1,
+          "value": 8,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
         },
         {
-          "row": 8,
-          "col": 0,
+          "row": 1,
+          "col": 1,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 2,
+          "col": 1,
           "value": 2,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 7,
-          "col": 0,
-          "value": 9,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
+          "row": 1,
           "col": 3,
-          "value": 2,
+          "value": 7,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "value": 9,
           "reason": "hidden_single",
           "candidate_count": 3
         },
         {
-          "row": 3,
-          "col": 3,
+          "row": 0,
+          "col": 6,
           "value": 4,
           "reason": "guided_min_candidate",
           "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "value": 2,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": 7,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": 8,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": 2,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": 8,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": 7,
+          "reason": "hidden_single",
+          "candidate_count": 3
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": 4,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": 4,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": 6,
+          "reason": "guided_min_candidate",
+          "candidate_count": 2
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
         },
         {
           "row": 3,
@@ -9552,44 +9524,37 @@
           "candidate_count": 1
         },
         {
-          "row": 5,
-          "col": 3,
+          "row": 4,
+          "col": 2,
           "value": 1,
           "reason": "naked_single",
           "candidate_count": 1
         },
         {
-          "row": 5,
+          "row": 4,
+          "col": 5,
+          "value": 6,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": 9,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": 1,
+          "reason": "naked_single",
+          "candidate_count": 1
+        },
+        {
+          "row": 8,
           "col": 7,
-          "value": 4,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 6,
-          "col": 1,
-          "value": 4,
-          "reason": "guided_min_candidate",
-          "candidate_count": 2
-        },
-        {
-          "row": 6,
-          "col": 4,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 1,
-          "value": 1,
-          "reason": "naked_single",
-          "candidate_count": 1
-        },
-        {
-          "row": 7,
-          "col": 4,
-          "value": 4,
+          "value": 9,
           "reason": "naked_single",
           "candidate_count": 1
         }

@@ -1,17 +1,56 @@
-const BASE_BG = [252, 251, 248];
+const BASE_BG = [15, 20, 28];
 const RULE_COLORS = {
-  special: [242, 221, 149],
-  hyper: [235, 214, 140],
-  checker: [247, 231, 173],
-  sum: [239, 212, 132],
-  cross: [242, 224, 167],
-  clone: [221, 228, 168],
+  special: [116, 134, 216],
+  hyper: [92, 147, 204],
+  checker: [86, 114, 184],
+  sum: [60, 145, 173],
+  cross: [102, 120, 206],
+  clone: [123, 97, 178],
+};
+
+const ICONS = {
+  rule: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 4h10a3 3 0 0 1 3 3v13H9a3 3 0 0 0-3 3z"></path>
+      <path d="M6 4v16a3 3 0 0 0 3 3"></path>
+    </svg>
+  `,
+  hint: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 18h6"></path>
+      <path d="M10 22h4"></path>
+      <path d="M8 14a6 6 0 1 1 8 0c-1 1-1.5 2-1.5 3h-5C9.5 16 9 15 8 14z"></path>
+    </svg>
+  `,
+  note: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 3h9l3 3v15H6z"></path>
+      <path d="M15 3v4h4"></path>
+      <path d="M9 11h6"></path>
+      <path d="M9 15h6"></path>
+    </svg>
+  `,
+  clearNotes: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 7h16"></path>
+      <path d="M9 7V4h6v3"></path>
+      <path d="M7 7l1 12h8l1-12"></path>
+      <path d="M10 11v5"></path>
+      <path d="M14 11v5"></path>
+    </svg>
+  `,
+  erase: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 15l8-10 8 10-4 5H8z"></path>
+      <path d="M10 20h10"></path>
+    </svg>
+  `,
 };
 
 const state = {
   catalog: null,
-  currentDifficulty: null,
   currentRule: null,
+  currentDifficulty: null,
   currentDataset: null,
   currentPuzzle: null,
   board: [],
@@ -24,15 +63,15 @@ const state = {
 };
 
 const screens = {
-  difficulty: document.getElementById("screen-difficulty"),
   rule: document.getElementById("screen-rule"),
+  difficulty: document.getElementById("screen-difficulty"),
   example: document.getElementById("screen-example"),
   game: document.getElementById("screen-game"),
 };
 
 const els = {
-  difficultyList: document.getElementById("difficulty-list"),
   ruleList: document.getElementById("rule-list"),
+  difficultyList: document.getElementById("difficulty-list"),
   exampleTitle: document.getElementById("example-title"),
   exampleRuleName: document.getElementById("example-rule-name"),
   exampleDescription: document.getElementById("example-description"),
@@ -40,12 +79,19 @@ const els = {
   gameBoard: document.getElementById("game-board"),
   gameTitle: document.getElementById("game-title"),
   gameRuleChip: document.getElementById("game-rule-chip"),
-  statusText: document.getElementById("status-text"),
-  guessText: document.getElementById("guess-text"),
-  ruleCopy: document.getElementById("rule-copy"),
+  statusLine: document.getElementById("status-line"),
   keypad: document.getElementById("keypad"),
   noteToggle: document.getElementById("note-toggle"),
+  ruleButton: document.getElementById("rule-button"),
+  hintButton: document.getElementById("hint-button"),
+  clearNotesButton: document.getElementById("clear-notes"),
+  eraseCellButton: document.getElementById("erase-cell"),
+  menuHome: document.getElementById("menu-home"),
   clearDialog: document.getElementById("clear-dialog"),
+  ruleDialog: document.getElementById("rule-dialog"),
+  dialogRuleChip: document.getElementById("dialog-rule-chip"),
+  dialogRuleTitle: document.getElementById("dialog-rule-title"),
+  dialogRuleCopy: document.getElementById("dialog-rule-copy"),
 };
 
 function showScreen(key) {
@@ -114,10 +160,18 @@ function storeHistoryIds(dataset, ids) {
   setCookie(dataset.history_cookie_key, JSON.stringify(ids.slice(-500)));
 }
 
-function availableRuleEntriesForDifficulty(difficultyId) {
-  const datasets = state.catalog.datasets.filter((item) => item.difficulty_id === difficultyId);
-  const available = new Set(datasets.map((item) => item.rule_slug));
+function availableRuleEntries() {
+  const available = new Set(state.catalog.datasets.map((item) => item.rule_slug));
   return state.catalog.rules.filter((rule) => available.has(rule.rule_slug));
+}
+
+function availableDifficultyEntriesForRule(ruleSlug) {
+  const ids = new Set(
+    state.catalog.datasets
+      .filter((item) => item.rule_slug === ruleSlug)
+      .map((item) => item.difficulty_id),
+  );
+  return state.catalog.difficulties.filter((difficulty) => ids.has(difficulty.id));
 }
 
 async function loadCatalog() {
@@ -133,55 +187,13 @@ async function loadDataset(difficultyId, ruleSlug) {
     (item) => item.difficulty_id === difficultyId && item.rule_slug === ruleSlug,
   );
   if (!entry) {
-    throw new Error("選択した難易度とルールのデータセットが見つかりません。");
+    throw new Error("選択した組み合わせのデータセットが見つかりません。");
   }
   const response = await fetch(`./data/${entry.path}`);
   if (!response.ok) {
     throw new Error(`データセットを読み込めませんでした: ${entry.path}`);
   }
   return response.json();
-}
-
-function renderDifficultyScreen() {
-  els.difficultyList.innerHTML = "";
-  const available = new Set(state.catalog.datasets.map((item) => item.difficulty_id));
-  for (const difficulty of state.catalog.difficulties) {
-    if (!available.has(difficulty.id)) {
-      continue;
-    }
-    const button = document.createElement("button");
-    button.className = "choice-card";
-    button.innerHTML = `
-      <strong>${difficulty.label}</strong>
-      <p>最小手がかり数 ${difficulty.min_clues} のデータセットから出題します。</p>
-    `;
-    button.addEventListener("click", () => {
-      state.currentDifficulty = difficulty;
-      renderRuleScreen();
-      showScreen("rule");
-    });
-    els.difficultyList.appendChild(button);
-  }
-}
-
-function renderRuleScreen() {
-  els.ruleList.innerHTML = "";
-  const rules = availableRuleEntriesForDifficulty(state.currentDifficulty.id);
-  for (const rule of rules) {
-    const button = document.createElement("button");
-    button.className = "choice-card";
-    button.innerHTML = `
-      <strong>${rule.short_name}</strong>
-      <p>${rule.description_ja}</p>
-    `;
-    button.addEventListener("click", async () => {
-      state.currentRule = rule;
-      state.currentDataset = await loadDataset(state.currentDifficulty.id, rule.rule_slug);
-      renderExampleScreen();
-      showScreen("example");
-    });
-    els.ruleList.appendChild(button);
-  }
 }
 
 function visualSet(list) {
@@ -205,35 +217,36 @@ function cellBackground(entry, row, col, selected, hint, error, isExample = fals
   const visual = entry.visual_state || {};
   let rgb = [...BASE_BG];
   const key = cellKey(row, col);
+
   if (visualSet(visual.special_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.special, 0.36);
+    rgb = blendRgb(rgb, RULE_COLORS.special, 0.34);
   }
   if (visualSet(visual.hyper_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.hyper, 0.28);
+    rgb = blendRgb(rgb, RULE_COLORS.hyper, 0.26);
   }
   if (visualSet(visual.checkerboard_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.checker, 0.24);
+    rgb = blendRgb(rgb, RULE_COLORS.checker, 0.22);
   }
   if (visualSet(visual.sum_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.sum, 0.33);
+    rgb = blendRgb(rgb, RULE_COLORS.sum, 0.32);
   }
   if (visualSet(visual.cross_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.cross, 0.26);
+    rgb = blendRgb(rgb, RULE_COLORS.cross, 0.28);
   }
   if (visualSet(visual.clone_cells).has(key)) {
-    rgb = blendRgb(rgb, RULE_COLORS.clone, 0.26);
+    rgb = blendRgb(rgb, RULE_COLORS.clone, 0.28);
   }
   if (!isExample && selected && isPeerCell(visual, selected[0], selected[1], row, col)) {
-    rgb = blendRgb(rgb, [215, 171, 58], 0.34);
+    rgb = blendRgb(rgb, [88, 166, 255], 0.26);
   }
   if (hint && hint[0] === row && hint[1] === col) {
-    rgb = blendRgb(rgb, [233, 188, 69], 0.48);
+    rgb = blendRgb(rgb, [96, 196, 255], 0.46);
   }
   if (selected && selected[0] === row && selected[1] === col) {
-    rgb = blendRgb(rgb, [233, 188, 69], 0.62);
+    rgb = blendRgb(rgb, [88, 166, 255], 0.58);
   }
   if (error && error[0] === row && error[1] === col) {
-    rgb = blendRgb(rgb, [211, 87, 87], 0.52);
+    rgb = blendRgb(rgb, [226, 91, 91], 0.54);
   }
   return rgbToCss(rgb);
 }
@@ -276,6 +289,14 @@ function renderBoard(container, entry, values, options = {}) {
     if (!interactive) {
       cell.disabled = true;
     } else {
+      cell.addEventListener("mouseenter", () => {
+        state.selectedIndex = index;
+        renderGameBoard();
+      });
+      cell.addEventListener("focus", () => {
+        state.selectedIndex = index;
+        renderGameBoard();
+      });
       cell.addEventListener("click", () => {
         state.selectedIndex = index;
         renderGameBoard();
@@ -325,9 +346,46 @@ function renderBoard(container, entry, values, options = {}) {
   }
 }
 
+function renderRuleScreen() {
+  els.ruleList.innerHTML = "";
+  for (const rule of availableRuleEntries()) {
+    const button = document.createElement("button");
+    button.className = "choice-card";
+    button.innerHTML = `
+      <strong>${rule.short_name}</strong>
+      <p>${rule.description_ja}</p>
+    `;
+    button.addEventListener("click", () => {
+      state.currentRule = rule;
+      renderDifficultyScreen();
+      showScreen("difficulty");
+    });
+    els.ruleList.appendChild(button);
+  }
+}
+
+function renderDifficultyScreen() {
+  els.difficultyList.innerHTML = "";
+  for (const difficulty of availableDifficultyEntriesForRule(state.currentRule.rule_slug)) {
+    const button = document.createElement("button");
+    button.className = "choice-card";
+    button.innerHTML = `
+      <strong>${difficulty.label}</strong>
+      <p>Min clues ${difficulty.min_clues}</p>
+    `;
+    button.addEventListener("click", async () => {
+      state.currentDifficulty = difficulty;
+      state.currentDataset = await loadDataset(difficulty.id, state.currentRule.rule_slug);
+      renderExampleScreen();
+      showScreen("example");
+    });
+    els.difficultyList.appendChild(button);
+  }
+}
+
 function renderExampleScreen() {
   const dataset = state.currentDataset;
-  els.exampleTitle.textContent = `${dataset.short_name} の説明`;
+  els.exampleTitle.textContent = "Preview";
   els.exampleRuleName.textContent = dataset.short_name;
   els.exampleDescription.textContent = dataset.description_ja;
   renderBoard(
@@ -374,17 +432,6 @@ function resetTransientError() {
   state.transientError = null;
 }
 
-function setGuessMessage(text, cell = null) {
-  els.guessText.textContent = text;
-  state.transientError = cell;
-  if (cell) {
-    window.setTimeout(() => {
-      resetTransientError();
-      renderGameBoard();
-    }, 900);
-  }
-}
-
 function handleValueInput(value) {
   if (!state.currentPuzzle) {
     return;
@@ -408,18 +455,14 @@ function handleValueInput(value) {
     return;
   }
 
-  const step = nextExpectedStep();
-  if (!step) {
-    return;
-  }
-  if (step.row !== row || step.col !== col) {
-    setGuessMessage("この手順では、そのマスを開くとあてずっぽう扱いになります。", [row, col]);
+  const correctValue = Number(state.currentPuzzle.solution_string[index]);
+  if (value !== correctValue) {
+    state.transientError = [row, col];
     renderGameBoard();
-    return;
-  }
-  if (value !== step.value) {
-    setGuessMessage("その数字は正しくありません。", [row, col]);
-    renderGameBoard();
+    window.setTimeout(() => {
+      resetTransientError();
+      renderGameBoard();
+    }, 900);
     return;
   }
 
@@ -427,9 +470,8 @@ function handleValueInput(value) {
   state.notes[index].clear();
   clearRelatedNotes(row, col, value);
   state.hintCell = null;
-  els.guessText.textContent = "";
   renderGameBoard();
-  if (!nextExpectedStep()) {
+  if (state.board.every((cell) => cell !== 0)) {
     els.clearDialog.showModal();
   }
 }
@@ -444,8 +486,7 @@ function eraseCell() {
 }
 
 function clearNotesAtSelection() {
-  const index = state.selectedIndex;
-  state.notes[index].clear();
+  state.notes[state.selectedIndex].clear();
   renderGameBoard();
 }
 
@@ -462,7 +503,7 @@ function renderNumberButtons() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "keypad-button";
-    button.innerHTML = remaining > 0 ? `${value}<span>残り ${remaining}</span>` : "&nbsp;";
+    button.innerHTML = remaining > 0 ? `${value}<span>${remaining}</span>` : "&nbsp;";
     button.disabled = remaining <= 0;
     button.addEventListener("click", () => handleValueInput(value));
     els.keypad.appendChild(button);
@@ -485,11 +526,11 @@ function renderGameBoard() {
     },
   );
   const step = nextExpectedStep();
-  els.statusText.textContent = step
-    ? `次に進める位置を一つだけ前計算しています。現在の手は (${step.row + 1}, ${step.col + 1}) です。`
-    : "盤面が完成しました。";
+  els.statusLine.textContent = step
+    ? `Hint (${step.row + 1}, ${step.col + 1})`
+    : `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
+  els.noteToggle.classList.toggle("is-active", state.noteMode);
   renderNumberButtons();
-  els.noteToggle.textContent = state.noteMode ? "メモ ON" : "メモ";
 }
 
 function preparePuzzle(puzzle) {
@@ -497,16 +538,12 @@ function preparePuzzle(puzzle) {
   state.board = parseGrid(puzzle.puzzle_string);
   state.givens = state.board.map((value) => value !== 0);
   state.notes = Array.from({ length: 81 }, () => new Set());
-  state.selectedIndex = state.board.findIndex((value) => value === 0);
-  if (state.selectedIndex < 0) {
-    state.selectedIndex = 0;
-  }
+  state.selectedIndex = Math.max(0, state.board.findIndex((value) => value === 0));
   state.noteMode = false;
   state.hintCell = null;
   state.transientError = null;
-  els.gameTitle.textContent = `${state.currentDifficulty.label} / ${puzzle.short_name}`;
+  els.gameTitle.textContent = state.currentDifficulty.label;
   els.gameRuleChip.textContent = puzzle.short_name;
-  els.ruleCopy.textContent = state.currentDataset.description_ja;
   renderGameBoard();
 }
 
@@ -529,12 +566,30 @@ function startRandomPuzzle() {
   showScreen("game");
 }
 
+function openRuleDialog() {
+  if (!state.currentDataset) {
+    return;
+  }
+  els.dialogRuleChip.textContent = state.currentDataset.short_name;
+  els.dialogRuleTitle.textContent = "Rule";
+  els.dialogRuleCopy.textContent = state.currentDataset.description_ja;
+  els.ruleDialog.showModal();
+}
+
+function attachIcons() {
+  els.ruleButton.innerHTML = ICONS.rule;
+  els.hintButton.innerHTML = ICONS.hint;
+  els.noteToggle.innerHTML = ICONS.note;
+  els.clearNotesButton.innerHTML = ICONS.clearNotes;
+  els.eraseCellButton.innerHTML = ICONS.erase;
+}
+
 function attachGlobalEvents() {
-  document.getElementById("back-to-difficulty").addEventListener("click", () => showScreen("difficulty"));
   document.getElementById("back-to-rule").addEventListener("click", () => showScreen("rule"));
+  document.getElementById("back-to-difficulty").addEventListener("click", () => showScreen("difficulty"));
   document.getElementById("start-puzzle").addEventListener("click", startRandomPuzzle);
-  document.getElementById("menu-home").addEventListener("click", () => showScreen("difficulty"));
-  document.getElementById("hint-button").addEventListener("click", () => {
+  els.menuHome.addEventListener("click", () => showScreen("rule"));
+  els.hintButton.addEventListener("click", () => {
     const step = nextExpectedStep();
     if (!step) {
       return;
@@ -542,13 +597,14 @@ function attachGlobalEvents() {
     state.hintCell = [step.row, step.col];
     renderGameBoard();
   });
-  document.getElementById("rule-button").addEventListener("click", () => showScreen("example"));
+  els.ruleButton.addEventListener("click", openRuleDialog);
+  document.getElementById("close-rule-dialog").addEventListener("click", () => els.ruleDialog.close());
   els.noteToggle.addEventListener("click", () => {
     state.noteMode = !state.noteMode;
     renderGameBoard();
   });
-  document.getElementById("clear-notes").addEventListener("click", clearNotesAtSelection);
-  document.getElementById("erase-cell").addEventListener("click", eraseCell);
+  els.clearNotesButton.addEventListener("click", clearNotesAtSelection);
+  els.eraseCellButton.addEventListener("click", eraseCell);
 
   document.getElementById("clear-next").addEventListener("click", () => {
     els.clearDialog.close();
@@ -560,7 +616,7 @@ function attachGlobalEvents() {
   });
   document.getElementById("clear-home").addEventListener("click", () => {
     els.clearDialog.close();
-    showScreen("difficulty");
+    showScreen("rule");
   });
 
   window.addEventListener("keydown", (event) => {
@@ -610,14 +666,15 @@ function attachGlobalEvents() {
 }
 
 async function bootstrap() {
+  attachIcons();
   attachGlobalEvents();
   try {
     await loadCatalog();
-    renderDifficultyScreen();
-    showScreen("difficulty");
+    renderRuleScreen();
+    showScreen("rule");
   } catch (error) {
-    els.difficultyList.innerHTML = `<p class="long-copy">${error.message}</p>`;
-    showScreen("difficulty");
+    els.ruleList.innerHTML = `<p class="long-copy">${error.message}</p>`;
+    showScreen("rule");
   }
 }
 

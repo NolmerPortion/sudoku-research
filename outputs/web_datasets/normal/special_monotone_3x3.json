@@ -9,7 +9,12 @@
   "description_ja": "色付きの3x3ブロックは、ある90度回転をすると、各行が左から右へ、各列が上から下へ厳密に増加する並びになります。",
   "history_cookie_key": "history__normal__special_monotone_3x3",
   "pattern_mask": "101010101",
-  "rules": [],
+  "rules": [
+    {
+      "type": "special_monotone_3x3",
+      "pattern_mask": "101010101"
+    }
+  ],
   "example": {
     "solution_string": "125843679347691258689752134476135892593268417218479365964387521852916743731524986",
     "solution_grid": [
@@ -522,7 +527,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000800000000000000609000034000005000000000017000000300064000000000006000000000000",
       "solution_string": "125843679347691258689752134476135892593268417218479365964387521852916743731524986",
       "puzzle_grid": [
@@ -1440,7 +1450,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "070000000000100000000000700000000000000804200090000000000000500007000000005003070",
       "solution_string": "976438125852197346431256789268975413513864297794321658689742531347519862125683974",
       "puzzle_grid": [
@@ -2358,7 +2373,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000000000005800000000540000000790098000000000000000000000000800000000500000089",
       "solution_string": "125846973347195862689372541453621798298753614716984235974538126862419357531267489",
       "puzzle_grid": [
@@ -3276,7 +3296,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "300500000200000000000270900002700000006000000000000000000000000000000008001300000",
       "solution_string": "379586421268419753145273986892731564516842397734965812987624135653197248421358679",
       "puzzle_grid": [
@@ -4194,7 +4219,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "020000009003001000000620000000040000000000003000000000000000000000003050030070000",
       "solution_string": "421835679653791248987624135395147862716258493842369517579486321268913754134572986",
       "puzzle_grid": [
@@ -5112,7 +5142,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "003048000000000000000000000000020040000000000000009000000070000000000057000030120",
       "solution_string": "123648975457391862689752431798123546315467298264589713531274689842916357976835124",
       "puzzle_grid": [
@@ -6030,7 +6065,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000000000300060100080000008060000000000300000000090000003000000000000000028600",
       "solution_string": "689547123257319468134286579318964257796852314542731896421673985863195742975428631",
       "puzzle_grid": [
@@ -6948,7 +6988,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "500000000008000003000207000002000007000000004000000600000000000003090000000000300",
       "solution_string": "579386421248519763136247985652431897397862514814975632985723146763194258421658379",
       "puzzle_grid": [
@@ -7866,7 +7911,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000000000000000000800000000900000000000800508300000000240000050000000020700009",
       "solution_string": "431572986862419753975863421246987315713654892598321674689245137357196248124738569",
       "puzzle_grid": [
@@ -8784,7 +8834,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "005000000043000000000004080400000000000040090000100000000070000000000008000002000",
       "solution_string": "975628431843917652621354987456789213318246795792135864589473126267591348134862579",
       "puzzle_grid": [
@@ -9702,7 +9757,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000205000000010040009000000097000000000000000000000000085000000000100800000060000",
       "solution_string": "136245789258719346479836125597321468813654297642987513985472631764193852321568974",
       "puzzle_grid": [
@@ -10620,7 +10680,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000070000000008000067000310000000090050000000000007000040000000000060000030000",
       "solution_string": "135284679267391458489567123318679245792458316654123897976842531843915762521736984",
       "puzzle_grid": [
@@ -11538,7 +11603,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000000000000000000000600004000000800000000600030000006000700003000840020300000",
       "solution_string": "379865124268419357145723689534987216817642593692531478986254731753196842421378965",
       "puzzle_grid": [
@@ -12456,7 +12526,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "400060000000000006000000000000130000000000000040000502000003000000090000001000900",
       "solution_string": "479862135358917246126354789297135468815246397643789512984573621762491853531628974",
       "puzzle_grid": [
@@ -13374,7 +13449,12 @@
       "rule_mode": "special_monotone_3x3",
       "rule_name": "special_monotone_3x3",
       "short_name": "Special 3x3",
-      "rules": [],
+      "rules": [
+        {
+          "type": "special_monotone_3x3",
+          "pattern_mask": "101010101"
+        }
+      ],
       "puzzle_string": "000000005000000000000500400807000000000000000040000000000003000060010800084000000",
       "solution_string": "479386125258491367136527489897135246615248793342679518521863974763914852984752631",
       "puzzle_grid": [
