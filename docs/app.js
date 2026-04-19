@@ -49,16 +49,16 @@ const ICONS = {
 
 const DISPLAY_NAMES = {
   standard: "Standard",
-  anti_close_adjacent_3: "D(distance)",
-  bishop_meet_digits: "N(net)",
-  checkerboard_odd: "O(odd)",
-  clone_regions_set_equal: "M(mirror)",
-  cross_monotone: "X(cross)",
-  hyper_3x3: "H(hyper)",
-  hyper3x3: "H(hyper)",
-  l_tromino_sum: "L(l tromino)",
-  local_consecutive_exists: "T(touch)",
-  special_monotone_3x3: "M(matrices)",
+  anti_close_adjacent_3: "D",
+  bishop_meet_digits: "N",
+  checkerboard_odd: "O",
+  clone_regions_set_equal: "M",
+  cross_monotone: "X",
+  hyper_3x3: "H",
+  hyper3x3: "H",
+  l_tromino_sum: "L",
+  local_consecutive_exists: "T",
+  special_monotone_3x3: "M",
 };
 
 const SESSION_STORAGE_KEY = "sudoku_variants_session_v1";
@@ -185,10 +185,23 @@ function displayNameForRule(ruleMode, fallback = "") {
   return fallback || ruleMode || "Rule";
 }
 
+function displayNameForRuleEntry(ruleLike, fallback = "") {
+  if (!ruleLike || typeof ruleLike !== "object") {
+    return fallback || "Rule";
+  }
+  const keys = [ruleLike.rule_slug, ruleLike.rule_mode, ruleLike.type];
+  for (const key of keys) {
+    if (typeof key === "string" && DISPLAY_NAMES[key]) {
+      return DISPLAY_NAMES[key];
+    }
+  }
+  return fallback || ruleLike.short_name || ruleLike.rule_name || "Rule";
+}
+
 function decorateRule(rule) {
   return {
     ...rule,
-    short_name: displayNameForRule(rule.rule_mode || rule.rule_slug, rule.short_name),
+    short_name: displayNameForRuleEntry(rule, rule.short_name),
   };
 }
 
@@ -450,14 +463,17 @@ function renderDifficultyScreen() {
     button.addEventListener("click", async () => {
       state.currentDifficulty = difficulty;
       state.currentDataset = await loadDataset(difficulty.id, state.currentRule.rule_slug);
-      state.currentDataset.short_name = displayNameForRule(
-        state.currentDataset.rule_mode || state.currentRule.rule_mode,
+      state.currentDataset.short_name = displayNameForRuleEntry(
+        { rule_slug: state.currentRule.rule_slug, rule_mode: state.currentDataset.rule_mode },
         state.currentDataset.short_name,
       );
       state.currentDataset.puzzles = (state.currentDataset.puzzles || []).map((puzzle) => ({
         ...puzzle,
-        short_name: displayNameForRule(
-          puzzle.rule_mode || state.currentDataset.rule_mode,
+        short_name: displayNameForRuleEntry(
+          {
+            rule_slug: state.currentRule.rule_slug,
+            rule_mode: puzzle.rule_mode || state.currentDataset.rule_mode,
+          },
           puzzle.short_name,
         ),
       }));
@@ -631,8 +647,11 @@ function preparePuzzle(puzzle) {
   state.hintCell = null;
   state.transientError = null;
   els.gameTitle.textContent = state.currentDifficulty.label;
-  els.gameRuleChip.textContent = displayNameForRule(
-    puzzle.rule_mode || state.currentDataset?.rule_mode,
+  els.gameRuleChip.textContent = displayNameForRuleEntry(
+    {
+      rule_slug: state.currentRule?.rule_slug,
+      rule_mode: puzzle.rule_mode || state.currentDataset?.rule_mode,
+    },
     puzzle.short_name,
   );
   renderGameBoard();
@@ -665,7 +684,7 @@ function openRuleDialog() {
     return;
   }
   els.dialogRuleChip.textContent = displayNameForRule(
-    state.currentDataset.rule_mode || state.currentRule?.rule_mode,
+    state.currentRule?.rule_slug || state.currentDataset.rule_mode || state.currentRule?.rule_mode,
     state.currentDataset.short_name,
   );
   els.dialogRuleTitle.textContent = "Rule";
@@ -862,14 +881,17 @@ async function restoreSession() {
   }
   state.currentDifficulty = difficulty;
   state.currentDataset = await loadDataset(difficulty.id, rule.rule_slug);
-  state.currentDataset.short_name = displayNameForRule(
-    state.currentDataset.rule_mode || state.currentRule.rule_mode,
+  state.currentDataset.short_name = displayNameForRuleEntry(
+    { rule_slug: rule.rule_slug, rule_mode: state.currentDataset.rule_mode },
     state.currentDataset.short_name,
   );
   state.currentDataset.puzzles = (state.currentDataset.puzzles || []).map((puzzle) => ({
     ...puzzle,
-    short_name: displayNameForRule(
-      puzzle.rule_mode || state.currentDataset.rule_mode,
+    short_name: displayNameForRuleEntry(
+      {
+        rule_slug: rule.rule_slug,
+        rule_mode: puzzle.rule_mode || state.currentDataset.rule_mode,
+      },
       puzzle.short_name,
     ),
   }));

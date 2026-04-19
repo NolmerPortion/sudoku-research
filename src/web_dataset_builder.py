@@ -41,39 +41,39 @@ RULE_METADATA: dict[str, dict[str, str]] = {
         "description_ja": "通常の数独です。各行・各列・各3x3ブロックに1から9を一度ずつ入れます。",
     },
     "special_monotone_3x3": {
-        "short_name": "M(matrices)",
+        "short_name": "M",
         "description_ja": "色付きの3x3ブロックは、ある90度回転をすると、各行が左から右へ、各列が上から下へ厳密に増加する並びになります。",
     },
     "hyper_3x3": {
-        "short_name": "H(hyper)",
+        "short_name": "H",
         "description_ja": "通常の数独の条件に加えて、中央寄りの4つの色付き3x3領域にも1から9を一度ずつ入れます。",
     },
     "checkerboard_odd": {
-        "short_name": "O(odd)",
+        "short_name": "O",
         "description_ja": "左上を黒とした市松模様で、色付きの白マスには奇数だけが入ります。",
     },
     "l_tromino_sum": {
-        "short_name": "L(l tromino)",
+        "short_name": "L",
         "description_ja": "色付きのL字3マス領域ごとに、3マスの数字の和が13になります。",
     },
     "cross_monotone": {
-        "short_name": "X(cross)",
+        "short_name": "X",
         "description_ja": "色付きの5つの十字で、各中心から上下左右へ外側に進むと数字が厳密に増加します。",
     },
     "local_consecutive_exists": {
-        "short_name": "T(touch)",
+        "short_name": "T",
         "description_ja": "すべてのマスは、上下左右のどれか1つ以上の隣接マスと差がちょうど1になります。",
     },
     "bishop_meet_digits": {
-        "short_name": "N(net)",
+        "short_name": "N",
         "description_ja": "指定数字の出現位置は、角の動きと同じ斜め移動でたどったとき、飛び地にならず一つながりになります。",
     },
     "anti_close_adjacent_3": {
-        "short_name": "D(distance)",
+        "short_name": "D",
         "description_ja": "上下左右に隣り合う2マスの数字の差は、常に3以上です。",
     },
     "clone_regions_set_equal": {
-        "short_name": "M(mirror)",
+        "short_name": "M",
         "description_ja": "対応する色付き領域どうしには、順番ではなく数字の集合が同じように入ります。",
     },
 }
