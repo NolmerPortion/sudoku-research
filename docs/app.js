@@ -78,6 +78,8 @@ const state = {
   timerStartedAt: null,
   timerIntervalId: null,
   isPaused: false,
+  autoFillTimerId: null,
+  isAutoFilling: false,
 };
 
 const screens = {
@@ -917,17 +919,40 @@ function clearRelatedNotes(row, col, value) {
   }
 }
 
-function fillRemainingCells() {
-  if (!state.currentPuzzle) {
+function stopAutoFill() {
+  if (state.autoFillTimerId != null) {
+    window.clearTimeout(state.autoFillTimerId);
+    state.autoFillTimerId = null;
+  }
+  state.isAutoFilling = false;
+}
+
+function startAutoFill() {
+  if (!state.currentPuzzle || state.isAutoFilling) {
     return;
   }
   const solution = parseGrid(state.currentPuzzle.solution_string);
-  for (let index = 0; index < 81; index += 1) {
-    if (state.board[index] === 0) {
-      state.board[index] = solution[index];
-      state.notes[index].clear();
+  state.isAutoFilling = true;
+
+  const step = () => {
+    const nextIndex = state.board.findIndex((cell) => cell === 0);
+    if (nextIndex < 0) {
+      stopAutoFill();
+      renderGameBoard();
+      persistSession();
+      pauseTimer();
+      els.clearDialog.showModal();
+      return;
     }
-  }
+    state.board[nextIndex] = solution[nextIndex];
+    state.notes[nextIndex].clear();
+    renderGameBoard();
+    persistSession();
+    state.autoFillTimerId = window.setTimeout(step, 300);
+  };
+
+  renderGameBoard();
+  state.autoFillTimerId = window.setTimeout(step, 300);
 }
 
 function gameplayRuleButtonLabel() {
@@ -974,7 +999,7 @@ function triggerInvalidEntry(row, col) {
 }
 
 function handleValueInput(value) {
-  if (!state.currentPuzzle || state.isPaused) {
+  if (!state.currentPuzzle || state.isPaused || state.isAutoFilling) {
     return;
   }
   const index = state.selectedIndex;
@@ -1016,7 +1041,9 @@ function handleValueInput(value) {
   state.hintCell = null;
   const remainingEmpty = state.board.filter((cell) => cell === 0).length;
   if (remainingEmpty === 9) {
-    fillRemainingCells();
+    startAutoFill();
+    persistSession();
+    return;
   }
   renderGameBoard();
   persistSession();
@@ -1027,7 +1054,7 @@ function handleValueInput(value) {
 }
 
 function eraseCell() {
-  if (state.isPaused) {
+  if (state.isPaused || state.isAutoFilling) {
     return;
   }
   const index = state.selectedIndex;
@@ -1041,7 +1068,7 @@ function eraseCell() {
 }
 
 function clearNotesAtSelection() {
-  if (state.isPaused) {
+  if (state.isPaused || state.isAutoFilling) {
     return;
   }
   state.notes[state.selectedIndex].clear();
@@ -1090,11 +1117,19 @@ function renderGameBoard() {
   els.statusLine.textContent = `${state.currentDifficulty.label} / ${state.currentPuzzle.short_name}`;
   els.noteToggle.classList.toggle("is-active", state.noteMode);
   els.pauseButton.classList.toggle("is-active", state.isPaused);
+  els.resetButton.disabled = state.isAutoFilling;
+  els.nextButton.disabled = state.isAutoFilling;
+  els.hintButton.disabled = state.isAutoFilling;
+  els.ruleButton.disabled = state.isAutoFilling;
+  els.noteToggle.disabled = state.isAutoFilling;
+  els.clearNotesButton.disabled = state.isAutoFilling;
+  els.eraseCellButton.disabled = state.isAutoFilling;
   updateTimerDisplay();
   renderNumberButtons();
 }
 
 function preparePuzzle(puzzle) {
+  stopAutoFill();
   state.currentPuzzle = puzzle;
   state.board = parseGrid(puzzle.puzzle_string);
   state.givens = state.board.map((value) => value !== 0);
@@ -1160,7 +1195,7 @@ function openRuleDialog() {
 }
 
 function pauseGame() {
-  if (!state.currentPuzzle || state.isPaused) {
+  if (!state.currentPuzzle || state.isPaused || state.isAutoFilling) {
     return;
   }
   state.isPaused = true;
@@ -1232,13 +1267,14 @@ function attachGlobalEvents() {
     startRandomPuzzle();
   });
   els.menuHome.addEventListener("click", () => {
+    stopAutoFill();
     pauseTimer();
     showScreen("rule");
     syncHistory("rule");
     persistSession();
   });
   els.hintButton.addEventListener("click", () => {
-    if (state.isPaused) {
+    if (state.isPaused || state.isAutoFilling) {
       return;
     }
     const step = nextExpectedStep();
@@ -1250,7 +1286,7 @@ function attachGlobalEvents() {
     persistSession();
   });
   els.ruleButton.addEventListener("click", () => {
-    if (state.isPaused) {
+    if (state.isPaused || state.isAutoFilling) {
       return;
     }
     openRuleDialog();
@@ -1259,9 +1295,15 @@ function attachGlobalEvents() {
     pauseGame();
   });
   els.resetButton.addEventListener("click", () => {
+    if (state.isAutoFilling) {
+      return;
+    }
     resetCurrentPuzzle();
   });
   els.nextButton.addEventListener("click", () => {
+    if (state.isAutoFilling) {
+      return;
+    }
     if (els.pauseDialog.open) {
       els.pauseDialog.close();
     }
@@ -1284,7 +1326,7 @@ function attachGlobalEvents() {
     }
   });
   els.gameBoard.addEventListener("touchmove", (event) => {
-    if (state.isPaused) {
+    if (state.isPaused || state.isAutoFilling) {
       return;
     }
     const nextIndex = selectionIndexFromTouchEvent(event);
@@ -1296,7 +1338,7 @@ function attachGlobalEvents() {
     }
   }, { passive: false });
   els.gameBoard.addEventListener("touchstart", (event) => {
-    if (state.isPaused) {
+    if (state.isPaused || state.isAutoFilling) {
       return;
     }
     const nextIndex = selectionIndexFromTouchEvent(event);
@@ -1308,7 +1350,7 @@ function attachGlobalEvents() {
     }
   }, { passive: false });
   els.noteToggle.addEventListener("click", () => {
-    if (state.isPaused) {
+    if (state.isPaused || state.isAutoFilling) {
       return;
     }
     state.noteMode = !state.noteMode;
@@ -1343,6 +1385,7 @@ function attachGlobalEvents() {
 
   window.addEventListener("popstate", async (event) => {
     const screen = event.state?.screen || "rule";
+    stopAutoFill();
     if (els.ruleDialog.open) {
       els.ruleDialog.close();
     }
@@ -1386,6 +1429,7 @@ function attachGlobalEvents() {
   window.addEventListener("beforeunload", persistSession);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
+      stopAutoFill();
       pauseTimer();
       persistSession();
       return;
@@ -1397,6 +1441,9 @@ function attachGlobalEvents() {
 
   window.addEventListener("keydown", (event) => {
     if (screens.game.classList.contains("is-hidden")) {
+      return;
+    }
+    if (state.isAutoFilling) {
       return;
     }
     if (event.key === "Escape" && state.isPaused) {
