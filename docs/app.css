@@ -386,7 +386,7 @@ h2 {
 }
 
 .board--paused::after {
-  content: "PAUSE";
+  content: "";
   position: absolute;
   inset: 0;
   display: grid;
