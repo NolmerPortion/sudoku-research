@@ -43,7 +43,7 @@ const DISPLAY_NAMES = {
   hyper3x3: "H",
   l_tromino_sum: "L",
   local_consecutive_exists: "T",
-  special_monotone_3x3: "M",
+  special_monotone_3x3: "I",
 };
 
 const SESSION_STORAGE_KEY = "sudoku_variants_session_v1";
@@ -56,8 +56,8 @@ const RULE_BUTTON_ORDER = [
   "X",
   "N",
   "D",
-  "M1",
-  "M2",
+  "I",
+  "M",
 ];
 
 const state = {
@@ -636,11 +636,7 @@ function renderDifficultyScreen() {
   for (const difficulty of availableDifficultyEntriesForRule(state.currentRule.rule_slug)) {
     const button = document.createElement("button");
     button.className = "difficulty-button";
-    const difficultyEmoji = difficulty.id === "easy" ? ICONS.easy : difficulty.id === "normal" ? ICONS.normal : ICONS.hard;
-    button.innerHTML = `
-      <span class="difficulty-button__emoji">${difficultyEmoji}</span>
-      <span class="difficulty-button__label">${difficulty.label}</span>
-    `;
+    button.innerHTML = `<span class="difficulty-button__label">${difficulty.label}</span>`;
     button.setAttribute("aria-label", difficulty.label);
     button.title = difficulty.label;
     wirePressHaptic(button, 10);
@@ -921,6 +917,19 @@ function clearRelatedNotes(row, col, value) {
   }
 }
 
+function fillRemainingCells() {
+  if (!state.currentPuzzle) {
+    return;
+  }
+  const solution = parseGrid(state.currentPuzzle.solution_string);
+  for (let index = 0; index < 81; index += 1) {
+    if (state.board[index] === 0) {
+      state.board[index] = solution[index];
+      state.notes[index].clear();
+    }
+  }
+}
+
 function gameplayRuleButtonLabel() {
   if (!state.currentPuzzle && !state.currentDataset && !state.currentRule) {
     return "";
@@ -1005,6 +1014,10 @@ function handleValueInput(value) {
   state.notes[index].clear();
   clearRelatedNotes(row, col, value);
   state.hintCell = null;
+  const remainingEmpty = state.board.filter((cell) => cell === 0).length;
+  if (remainingEmpty === 9) {
+    fillRemainingCells();
+  }
   renderGameBoard();
   persistSession();
   if (state.board.every((cell) => cell !== 0)) {
@@ -1171,7 +1184,6 @@ function resumeGame() {
 }
 
 function attachIcons() {
-  els.menuHome.textContent = ICONS.home;
   document.getElementById("back-to-rule").textContent = ICONS.back;
   document.getElementById("back-to-difficulty").textContent = ICONS.back;
   document.getElementById("start-puzzle").textContent = ICONS.play;
