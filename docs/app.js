@@ -1222,9 +1222,9 @@ function attachIcons() {
   document.getElementById("back-to-rule").textContent = ICONS.back;
   document.getElementById("back-to-difficulty").textContent = ICONS.back;
   document.getElementById("start-puzzle").textContent = ICONS.play;
-  document.getElementById("clear-next").textContent = ICONS.next;
-  document.getElementById("clear-rule").textContent = ICONS.ruleMenu;
-  document.getElementById("clear-home").textContent = ICONS.home;
+  document.getElementById("clear-next").textContent = "Next";
+  document.getElementById("clear-rule").textContent = "Rules";
+  document.getElementById("clear-home").textContent = "Home";
   els.hintButton.textContent = ICONS.hint;
   els.pauseButton.textContent = ICONS.pause;
   els.resetButton.textContent = ICONS.reset;

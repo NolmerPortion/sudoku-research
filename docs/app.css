@@ -556,6 +556,17 @@ h2 {
   min-width: min(92vw, 420px);
 }
 
+.clear-dialog .dialog-inner {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.clear-dialog .dialog-actions {
+  justify-content: center;
+}
+
 .dialog-inner--pause {
   display: grid;
   gap: 18px;
