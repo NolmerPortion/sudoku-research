@@ -80,6 +80,7 @@ const state = {
   isPaused: false,
   autoFillTimerId: null,
   isAutoFilling: false,
+  audioContext: null,
 };
 
 const screens = {
@@ -201,6 +202,69 @@ function displayNameForRule(ruleMode, fallback = "") {
 function vibrate(pattern) {
   if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
     navigator.vibrate(pattern);
+  }
+}
+
+function ensureAudioContext() {
+  const AudioCtor = window.AudioContext || window.webkitAudioContext;
+  if (!AudioCtor) {
+    return null;
+  }
+  if (!state.audioContext) {
+    state.audioContext = new AudioCtor();
+  }
+  if (state.audioContext.state === "suspended") {
+    state.audioContext.resume().catch(() => {});
+  }
+  return state.audioContext;
+}
+
+function playTone({ frequency, duration = 0.08, type = "sine", gain = 0.03, delay = 0 }) {
+  const audio = ensureAudioContext();
+  if (!audio) {
+    return;
+  }
+  const startAt = audio.currentTime + delay;
+  const endAt = startAt + duration;
+  const oscillator = audio.createOscillator();
+  const gainNode = audio.createGain();
+  oscillator.type = type;
+  oscillator.frequency.setValueAtTime(frequency, startAt);
+  gainNode.gain.setValueAtTime(0.0001, startAt);
+  gainNode.gain.exponentialRampToValueAtTime(gain, startAt + 0.01);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, endAt);
+  oscillator.connect(gainNode);
+  gainNode.connect(audio.destination);
+  oscillator.start(startAt);
+  oscillator.stop(endAt + 0.02);
+}
+
+function playUiSound(kind) {
+  switch (kind) {
+    case "press":
+      playTone({ frequency: 520, duration: 0.035, type: "triangle", gain: 0.012 });
+      break;
+    case "note":
+      playTone({ frequency: 740, duration: 0.045, type: "triangle", gain: 0.016 });
+      break;
+    case "erase":
+      playTone({ frequency: 320, duration: 0.05, type: "triangle", gain: 0.014 });
+      break;
+    case "place":
+      playTone({ frequency: 660, duration: 0.06, type: "sine", gain: 0.02 });
+      playTone({ frequency: 990, duration: 0.08, type: "sine", gain: 0.014, delay: 0.04 });
+      break;
+    case "error":
+      playTone({ frequency: 190, duration: 0.08, type: "sawtooth", gain: 0.022 });
+      playTone({ frequency: 140, duration: 0.11, type: "sawtooth", gain: 0.014, delay: 0.05 });
+      break;
+    case "success":
+      playTone({ frequency: 660, duration: 0.09, type: "sine", gain: 0.02 });
+      playTone({ frequency: 880, duration: 0.11, type: "sine", gain: 0.018, delay: 0.06 });
+      playTone({ frequency: 1320, duration: 0.14, type: "sine", gain: 0.015, delay: 0.12 });
+      break;
+    default:
+      break;
   }
 }
 
@@ -990,6 +1054,7 @@ function resetTransientError() {
 
 function triggerInvalidEntry(row, col) {
   vibrate([24, 18, 44]);
+  playUiSound("error");
   state.transientError = [row, col];
   renderGameBoard();
   window.setTimeout(() => {
@@ -1025,6 +1090,7 @@ function handleValueInput(value) {
     } else {
       state.notes[index].add(value);
     }
+    playUiSound("note");
     renderGameBoard();
     return;
   }
@@ -1036,6 +1102,7 @@ function handleValueInput(value) {
 
   state.board[index] = value;
   vibrate(10);
+  playUiSound("place");
   state.notes[index].clear();
   clearRelatedNotes(row, col, value);
   state.hintCell = null;
@@ -1049,6 +1116,7 @@ function handleValueInput(value) {
   persistSession();
   if (state.board.every((cell) => cell !== 0)) {
     pauseTimer();
+    playUiSound("success");
     els.clearDialog.showModal();
   }
 }
@@ -1063,6 +1131,7 @@ function eraseCell() {
   }
   state.board[index] = 0;
   state.hintCell = null;
+  playUiSound("erase");
   renderGameBoard();
   persistSession();
 }
@@ -1072,6 +1141,7 @@ function clearNotesAtSelection() {
     return;
   }
   state.notes[state.selectedIndex].clear();
+  playUiSound("erase");
   renderGameBoard();
   persistSession();
 }
@@ -1264,9 +1334,11 @@ function attachGlobalEvents() {
   wirePressHaptic(els.resumeButton, 10);
 
   document.getElementById("start-puzzle").addEventListener("click", () => {
+    playUiSound("press");
     startRandomPuzzle();
   });
   els.menuHome.addEventListener("click", () => {
+    playUiSound("press");
     stopAutoFill();
     pauseTimer();
     showScreen("rule");
@@ -1281,6 +1353,7 @@ function attachGlobalEvents() {
     if (!step) {
       return;
     }
+    playUiSound("press");
     state.hintCell = [step.row, step.col];
     renderGameBoard();
     persistSession();
@@ -1289,27 +1362,32 @@ function attachGlobalEvents() {
     if (state.isPaused || state.isAutoFilling) {
       return;
     }
+    playUiSound("press");
     openRuleDialog();
   });
   els.pauseButton.addEventListener("click", () => {
+    playUiSound("press");
     pauseGame();
   });
   els.resetButton.addEventListener("click", () => {
     if (state.isAutoFilling) {
       return;
     }
+    playUiSound("press");
     resetCurrentPuzzle();
   });
   els.nextButton.addEventListener("click", () => {
     if (state.isAutoFilling) {
       return;
     }
+    playUiSound("press");
     if (els.pauseDialog.open) {
       els.pauseDialog.close();
     }
     startRandomPuzzle();
   });
   els.resumeButton.addEventListener("click", () => {
+    playUiSound("press");
     resumeGame();
   });
   els.pauseDialog.addEventListener("cancel", (event) => {
@@ -1353,22 +1431,27 @@ function attachGlobalEvents() {
     if (state.isPaused || state.isAutoFilling) {
       return;
     }
+    playUiSound("press");
     state.noteMode = !state.noteMode;
     renderGameBoard();
     persistSession();
   });
   els.clearNotesButton.addEventListener("click", () => {
+    playUiSound("press");
     clearNotesAtSelection();
   });
   els.eraseCellButton.addEventListener("click", () => {
+    playUiSound("press");
     eraseCell();
   });
 
   document.getElementById("clear-next").addEventListener("click", () => {
+    playUiSound("press");
     els.clearDialog.close();
     startRandomPuzzle();
   });
   document.getElementById("clear-rule").addEventListener("click", () => {
+    playUiSound("press");
     els.clearDialog.close();
     pauseTimer();
     showScreen("rule");
@@ -1376,6 +1459,7 @@ function attachGlobalEvents() {
     persistSession();
   });
   document.getElementById("clear-home").addEventListener("click", () => {
+    playUiSound("press");
     els.clearDialog.close();
     pauseTimer();
     showScreen("rule");
