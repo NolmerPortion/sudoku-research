@@ -1005,11 +1005,15 @@ function startAutoFill() {
       renderGameBoard();
       persistSession();
       pauseTimer();
+      vibrate([12, 18, 28]);
+      playUiSound("success");
       els.clearDialog.showModal();
       return;
     }
     state.board[nextIndex] = solution[nextIndex];
     state.notes[nextIndex].clear();
+    vibrate(8);
+    playUiSound("place");
     renderGameBoard();
     persistSession();
     state.autoFillTimerId = window.setTimeout(step, 300);

@@ -584,13 +584,28 @@ h2 {
   }
 
   .game-head {
-    grid-template-columns: auto 1fr auto;
-    align-items: start;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 10px;
   }
 
   .game-head-center {
     min-width: 0;
+    order: 1;
+  }
+
+  .game-head-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .game-head-actions:first-child {
+    order: 2;
+  }
+
+  .game-head-actions:last-child {
+    order: 3;
   }
 
   #game-title,
